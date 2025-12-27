@@ -1,0 +1,512 @@
+const products = [
+   [
+    {
+      name: "MAXOMILK bolus / Cattle Milk Booster",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Bolus",
+      ingredients: "Tricalcium Phosphate,Vitamin A,Vitamin D3,Vitamin B12,Vitamin H,Vitamin E,Lysine,Magnesium,Copper Sulphate,Manganese Sulphate,Zinc,Cobalt,Selenium,Aswagandha,Jatamansi,Narayani,Jivanti,Shatawari",
+      treatmentsAndFunctions:
+      "Letting down of milk, Enhance of milk yield , Agalactia Calcium deficiency",
+      recommendedFor: "USE FOR VETERINARY USE ONLY , NOT FOR HUMAN",
+      quantity: "20 bolus/box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: " One bolus twice daily, Double the dose in heavy calcium deficiency",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "HEATEX Bolus / Heat Inducer for Cattles",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Bolus",
+      ingredients: "Citruarus colocynthis,Abroona Augusta,Symplacos racemes,Fenugreek,Piper Longum,Plumbago Zeylamica,Nigella Sativa,Desmodium Gangeticum,Utaria Picta,Saraca Indica Linn,Tribulus Terrestris,Caesalpinia Bonduc",
+      treatmentsAndFunctions:
+        "Induces heat and improves conception rate",
+      recommendedFor: "Cattles",
+      quantity: "8 bolus/box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cows/Buffalo/Mares/Heifers : Two bolus at a time for four days consecutively , Sheep/Goats/Sows : One bolus at a time for four days consecutively , Repeat the dose on 11th day , if a weak or no ostrus is observed after first dosage or as directed by the Veterinarian.",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Mcure powder -Medicine for fibrosis",
+      medicineType: "Animal Feed Supplement",
+      physicalForm: "Powder",
+      ingredients: "Trisodium Citrate Dihydrate,Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Potassium lodide,Serratiopeptidase,Niacin,Vitamin B1,Vitamin B2,Pantothenic Acid,Biotin,Methonine,Manganese Sulphate,Copper Sulphate,Zinc Sulphate,Cobalt Sulphate,Selenium,Live Yeast",
+      treatmentsAndFunctions:
+        "Helps in preventing clots & blood in milk , Helps in preventing tissue damage, Helps in reducing inflammation,Helps in reducing of udder",
+      recommendedFor: "Animal Feed Supplement Not For Medicinal Use Not For Human Use",
+      quantity: "4 pkts x 60 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "60 gms daily for 4 days or as directed by the veterinarian ",
+      directionsToUse: "Dissolve 60 gm powder in 250 ml water or mix with jaggery for single administration. It is recommenced for 3-4 consecutive days."
+    },
+    {
+      name: "Livoboost bolus/ Digestive bolus for animals",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Bolus",
+      ingredients: "Strychnos nuxvomica,Picroriza kurror,Andrographiss paniculata,Zinjiber officinalis,Piper nigum,Glycarrhiza glabra,Technomella undulata,Embellica officionale,Termanalia Chebula,Sodabicarb,Assafoetida,Boerrhavia Diffusa,Tinospora cordifolia,Phylanthus Nurari,Tephrosea purpurea",
+      treatmentsAndFunctions:
+        "Liver Stimulant,Growth Promoter,Anorexia,Indigestion",
+      recommendedFor: "Large animals and cattles",
+      quantity: "20 bolus/box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cows/ Buffaloes :Two Bolus twice daily , Small animals : 1-2 Bolus twice dally for 10 days or as per veterinarian suggestions.",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Herbolite liquid 1 ltr/ Energy booster and livertonic for animals",
+      medicineType: "Animal feed supplement ",
+      physicalForm: "Liquid",
+      ingredients: "Gluconeogenic Precursors, Sylimarine with Herbs-12*, Tephrosia Purpurea, Eclipta Alba, Phyllanthus Niruri,Andrographis Paniculata,Terminalia Chebula,Techomalia Undulata,Emblica,Tinosopora Cordifolia,Berberis Species,Picrohiza Kurroa, Acorus Calamus, Raphanus Sativus",
+      treatmentsAndFunctions:
+        "Panting, Nervous Disorder,Metabolic Disease - Ketosis,Milk Fever PPH,Chronic illness / Weakness etc.,Instantly Provides Energy toEliminate Ex. Ketones",
+      recommendedFor: "Large animals and cattles",
+      quantity: "1 ltr, 5 ltr,25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cattle and buffalo: 75 to 150 ml twice a day,Goat/Sheep: 50 to 75 ml twice a day.",
+      directionsToUse: "Put the recommended dose in animal feed or water or as directed by the veterinarian"
+    },
+    {
+      name: "Utericare liquid/ Uterine tonic for animals",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Liquid",
+      ingredients: "Contains extract of Harmal Seed, Abroona Augusta,Fenugreek,Piper Longum Root,Plumbago Zeylamica,Nigella Sativa,Desmodium Gangeticum,Uraria Picta,Saraca Indiaca Linn,Aegle Marmeles,Tribulus Terrestris,Caesalpinia Bonduc",
+      treatmentsAndFunctions:
+        "Retention of placenta,Uterine infection like Metritis, Payometra etc ,Irregular discharge,Delayed Involution of the Uterus",
+      recommendedFor: "Cattles, cow & Mare",
+      quantity: "1 ltr, 5 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "In case of Retention of placenta 250 ml twice on first day, followed by 250 ml once daily for next 3-4 days.In other conditions 100 ml twice daily",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Prolapse gone powder/ medicine for Prolapse",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Powder",
+      ingredients: "Shawar,Hempushp,Raal,Vyakur,Wheat Germ Oil,Negal,Kaseli",
+      treatmentsAndFunctions:" For Uterine Prolapse , For Vaginal Prolapse",
+      recommendedFor: "Animals",
+      quantity: "600 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "100 gms twice daily for 3 days or as directed by the veterinarian",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Livoboost liquid/ digestive and liver tonic for animals",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Liquid",
+      ingredients: "Tephrosia purpurea,Eclipta alba,Phyllanthus niruri,Andrographis paniculata,Terminalia chebula,Tecomella Undulata,Emblica,Tinospora cordifolia,Berberis Species,Picrorhiza Kurroa,Acorus Calamus,Raphanus Sativus",
+      treatmentsAndFunctions:
+        "Fatty liver, Hepatitis, Fibrosis Debility, Hepato Protective, Liver Function, Performance Enhancer",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr",
+      dosage: "Cow/Buffaloes: 50 ml twice daily , Calves/Sheep : 20-25 ml twice daily , Sheep/Goat: 15-20 ml twice daily",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Dermicure spray/ Wound Healer Spray",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "Spray",
+      ingredients: "contains extracts of Azardirachta Indica,Euclyptus,Cedrus Deodara ,Pinus Longifolia,Berberis Aristata",
+      treatmentsAndFunctions:"Heals all types of wounds (Aseptic/ Septic),Helps in FMD lesions,Removes Maggots from wounds,Mosquitos and flies repellent,Useful in sheep after shearing Directions for use :Shake well before use,Clean the affected part and apply the medicine by spraying twice daily until healing,This product solution has a tendency to loose its colour on storage because of its nature but the efficacy ofthe product remains intact.",
+      recommendedFor: "Animals",
+      quantity: "100 ml",
+      StorageInstructions:" • Store in cool and dry place away from fire and heat,Do not expose the product to temperature above 50°C,Avoid contact with eyes,Do not inhale while spraying,Keep the can straight while spraying.",
+      dosage: "As per veterinarian suggestions",
+      directionsToUse: "Shake well before use, Clean the affected part and apply the medicine by spraying twice until healing"
+    },
+    {
+      name: "Pro cal ds liquid/ Calcium Liquid For Animals",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Calcium,Phosphorous,Vitamin D3,Vitamin B12,Vitamin H (Biotin),Vitamin A,Carbohydrate,Cobalt Chloride,Zinc Sulphate,Extract Leptadenia Reticulata,Extract of Shatavari",
+      treatmentsAndFunctions:"Hypocalcaemia, Reduced Milk production and milk fat, Anorexia, Lumber Weakness",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cows, Buffalos and Horses: 25-50 ml/day Calves, Sheep and Pigs: 10-15 ml/day,Dogs and cats: 5-8 ml/day,Poultry: 25 ml/50 birds",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Ecool liquid/ Medicine for Heat strokes in animals",
+      medicineType: "Animal Feed Supplement",
+      physicalForm: "Liquid",
+      ingredients: "Sodium Chloride,Potassium Chloride,Sodium Citrate,Sod. Acid Phosphate,Vitamin C,Calcium Lactate,Magnesium Sulphate,Dextrose",
+      treatmentsAndFunctions:"• Overcomes stress during vaccination,During extensive heat & temp. conditions,Helps in rapid recovery in diarrhea.",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cows/Buffalos : 50-100 ml / head / day,Calfs/Goats/Dogs: 20-30 ml / head / day,Horses : 100-150 ml / head after racing",
+      directionsToUse: "Mix the above dose in half of water intake by animals"
+    },
+    {
+      name: "Ossimin forte powder/ Mineral Mixture for Animals",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Powder",
+      ingredients: "Live Yeast Culture,Vitamin A,Vitamin D3,Vitamin E,Niacin,Biotin FG,Calcium,Phosphorus,Copper Sulphate,Cobalt chloride,Ferrous Sulphate,Potassium lodide,Manganese Sulphate,Magnesium Hydroxide,Zinc Oxide,Selenium,Potassium,Sodium,Lysine HCI,DL Methonine,Protein Hydrolysate",
+      treatmentsAndFunctions:"• To improve Milk Production and butter fat,Helps to improve digestion in animals.,Helps to bring female animal to heat,Improves chances of conception for repeat b,Helps animals to recover fast after illness,To boost Energy, Protein, Fat, Vitamins, Minerals of dry fodder in dry conditions",
+      recommendedFor: "Animals",
+      quantity: "1 kg, 5 kg, 25 kg",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cow, Buffalo, Breeding Bulls (Large Animals) :50 gm per day or 1 Kg Ossimin Forte in 100 Kg feed Caives, Sheep, Goat (Small Animals) :25 gm Ossimin Forte per day.",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Trs bolus/medicine to control bleeding and stimulateshemopoietic organs",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Bolus",
+      ingredients: "Zinc Sulphate,DL-Methionine,L-Lysine HCL,Protein,Vitamin A,Vitamin C,Vitamin D3,Biotin,Vitamin E,Selenium,Aloe Vera,Curcuma longa extract,Cynodon dactylon,Adhatoda vasica,Bombax ceiba",
+      treatmentsAndFunctions:"For speedy recovery of damaged tissues in Mastitis, Metritis, Post Surgical Therapy, Chronic Wounds, FMD Lesions, Degnala Diseases & diseases where tissue damage is extensive",
+      recommendedFor: "Animals",
+      quantity: "20 bolus in a box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cow, Buffalo & Camel : 2 Bolus BD for 4 days. , Sheep, Goat & Calves: 1/2 Bolus BD for 4 Days", 
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Maxomilk bolus/ cattle milk booster",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Bolus",
+      ingredients: "Tricalcium Phosphate,Vitamin A,Vitamin D3,Vitamin B12,Vitamin H,Vitamin E,Lysine,Magnesium,Copper Sulphate,Manganese Sulphate,Zinc,Cobalt,Selenium,Aswagandha,Jatamansi,Narayani,Jivanti,Shatawari",
+      treatmentsAndFunctions:"• Letting down of milk,Enhance of milk yield,Agalactia Calcium deficiency",
+      recommendedFor: "Animals",
+      quantity: "20 bolus/box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "One bolus twice daily, Double the dose in heavy calcium deficiency or as directed by the veterinarian",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Ultrapyrin powder/ Analgesic Antipyretic powder",
+      medicineType: "Herbal Veterinary Medicine",
+      physicalForm: "powder",
+      ingredients: "Acorus Calamus,Allivum Sativum,Boswellia Serrata,Azadirachta indica,Cinchona officianale,Curcuma longa,Nyctanthes arbortristis,Godanti Bhasam,Apium graveolens,Pongania pinnata,Celastrus paniculata,Dicalcium Phosphate",
+      treatmentsAndFunctions:"Antipyretic,Anti-inflammatory,Analgesic,Anti rheumatic",
+      recommendedFor: "Animals",
+      quantity: "200 gms, 400 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Small animal : 20-30 gms B.D. for 5 days,Large animal : 40-60 gms B.D. for 5 days",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Rumiset powder/ Herbal Digestive Powder",
+      medicineType: "Herbal Veterinary medicine",
+      physicalForm: "Powder",
+      ingredients: "Allivum Sativum,Eclipta Alba,Piper Nigrum,Zingiber Officinale,Acorus Calaus,Cincona Officinale,Foeniculum Vulgare,Swerita Chirata,Trigonella,Curcuma Longa,Strychnos Nuxvomica,Terminallia Chebula,Krishan Lavan,Ptychotis Ajowan,Andrographis Paniculata,Terminalia Belleria,Embellica Officinale,Piper Longa",
+      treatmentsAndFunctions:"Atony of Rumen,Anorexia,Flatulence",
+      recommendedFor: "Animals",
+      quantity: "100 gms, 200 gms, 400 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Small Animal: 40-50 gms twice daily , Large Animal : 100 gms twice Daily",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Trumin 7 bolus/ Trace minerals bolus",
+      medicineType: "Animal feed supplement",
+      physicalForm: "Bolus",
+      ingredients: "Copper Sulphate,Cobalt Sulphate,Potassium lodide,Mangenese Sulphate,Selenium,Zinc Sulphate,Ferrous Sulphate",
+      treatmentsAndFunctions:"Support optimum Reproductive Functioning, improve breeding performance, maintain healthy pregnancy and ensure normal delivery., A Micromineral Bolus for Reproductive Problems,Animal comes to heat naturally , Animal conceives successfully,Benefits:Decreases reproductive diseases like Retention of Placenta",
+      recommendedFor: "Animals",
+      quantity: "20 bolus/box",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "1-2 bolus B.D.",
+      directionsToUse: "One bolus to be fed orally every day for 20 days or as directed by the Veterinarian"
+    },
+    {
+      name: "Impacrid powder/ impaction medicine",
+      medicineType: "Herbal Veterinary medicine",
+      physicalForm: "Powder",
+      ingredients: "Himaj,Sonpat,Peetmula,Kazra,Aadi,Krishan Lavan,Nishoth,Audhha,Phinas,Sonhali",
+      treatmentsAndFunctions:"Impaction,Constipation,Atony of Rumen,Flatulence,Anorexia,Other Problems of Digestive System",
+      recommendedFor: "Animals",
+      quantity: "100 gms, 200 gms, 400 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "400 gms in a single dose for Impaction",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Avirol h/ tonic for udder growth",
+      medicineType: "Animal Feed Supplement",
+      physicalForm: "Liquid",
+      ingredients: "Vitamin H,Ele. Selenium,Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Zinc Sulphate,Cobalt",
+      treatmentsAndFunctions:"A balanced anti-stress & anti-oxidant feed supplement.,Strengthens udder tissues & muscles.,Prevents mastitis.,Reconditions the udder.,Improves fertility of breeding bulls.",
+      recommendedFor: "Animals",
+      quantity: "100 ml, 250 ml, 500 ml, 1 ltr, 5 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Cattle : 10 ml. per day,Sheep/Goat : 5 ml per day",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Lacta gel/ Ionic calcium for animals",
+      medicineType: "Animal Feed Supplement",
+      physicalForm: "Gel",
+      ingredients: "lonic Calcium,Phosphorus,Magnesium,Vitamin D3,Vitamin B12,Ashwagandha,Pueraria mirifica ext.,Jivanti,Shatavari",
+      treatmentsAndFunctions:"• As an aid to prevent milk fever & associated complications.,As an aid to increase the milk yield.,As an aid to favour the normal contraction of uterus.,Normal calving & timely expulsion of placenta.,Comprehensive nutritional supplement formulated to supply the essential nutrients to dairy animals.",
+      recommendedFor: "Animals",
+      quantity: "300 ml",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "400 gms in a single dose for Impaction",
+      directionsToUse: "Regular Use : For higher milk yield, administer one bottle per animal per day for 5-10 days , To Prevents Milk Fever : Give one bottle at the first sign of calving & another botle 6 to 12 hours post calving, every 12 hours as needed or as directed by the Veterinarian.,A post calving dose is very beneficial."
+    },
+    {
+      name: "Ascominth liquid/ Herbal Dewormer",
+      medicineType: "Herbal Veterinary medicine",
+      physicalForm: "Liquid",
+      ingredients: "Psoralea coryfolia,Azadirachta indica,Citrullus colocynth,Terminalia chebula,Cassia augustifolia,Ayurvedic Proprietory",
+      treatmentsAndFunctions:"A broad spectrum herbal Dewormer",
+      recommendedFor: "Animals",
+      quantity: "30 ml, 100 ml",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Large animals : 100 ml liquid once a day ,Small animals : 20 -50 ml once a day",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Tickrid spray",
+      medicineType: "Herbal Veterinary medicine",
+      physicalForm: "Spray",
+      ingredients: "Neem Oil , Euclyptus Oil , Cedrus Deodara Oil ,Camphor Oil, Pine Oil , Lavender Oil , I.P.A Q.S.",
+      treatmentsAndFunctions:"TickRid Spray is scientifically formulated for prevention and control of ectoparasites like ticks, flies & lice in cattle, sheep, camel, goat and pet animals.",
+      recommendedFor: "Animals",
+      quantity: "150 ml",
+      StorageInstructions:" Keep out of reach of children. Do not spray on food stuff, utensils, articles made of plastic and allied materials. This is combustible material. Keep in cool & dry place.Away from heat & open flame.",
+      dosage: "",
+      directionsToUse: "As per veterinarian suggestions"
+    },
+    {
+      name: "Ai guard/ conception medicine for animals",
+      medicineType: "Herbal Veterinary medicine",
+      physicalForm: "Liquid",
+      ingredients: "Liquid contains herbal,extracts of Putranjiva Roxburhi,Saraca Indica, Penganum Harmala,Bacopamonnirea, Terminalia Chebula, Aborma Augausta,Rubia Cordifolia, Cyprus Rotundus & Cynodon Dactylon",
+      treatmentsAndFunctions:"for conception after A.I.",
+      recommendedFor: "Animals",
+      quantity: "200 ml",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "As directed by the Veterinarian",
+      directionsToUse: "200 ml orally after A.l."
+    },
+  ],
+   [
+    {
+      name: "Ph care/water sanitizer",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Combinations of different acids.",
+      treatmentsAndFunctions:"PH CARE controls multiplication of enteripathogens like E. Coli, Salmonella and Pseudomonas, It also helps in making conditions favourable for colonization of useful bacterias like lactobacilli within small intestine of birds. Absorption of antibiotics through small gut is also facilitated.Applications:Totally safe for drinking water,Non corrosive and non staining at user dilution,Controls scaling problems within water pipelinesDoes not develop off taste and off odour to the drinking water",
+      recommendedFor: "Water for animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "1-2 ml/5-10 litre of drinking water depending upon the pH and hardness/quality of available drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Grow Up/ growth promotor for animals ",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Protein,Hydrolysate (20%)*,Carbohydrate,Choline Chloride,DL-Methonine,Lysine HCI,Biotin,Proteolysed Liver Ext.,Vitamin B1,Vitamin B2,Vitamin B6,Vitamin B12,Vitamin C,Niacinamide,D-Panthenol,Methionine,Arginine,Histidine,Tyrosine,Tryptophane,Thronine,Leucine,Valine,Isoleucine,Manganese,Diastase,Calcium,Sodium,Iron",
+      treatmentsAndFunctions:"Weight gain,Growth promotor,Hepatic Dropsy,Oxidative destruction of liver,Encephalomalacis,Haemolytic anaemia,Perosis,Aflatoxicosis,Mascular Dystrophy,Fatty Liver Kidney Syndrome,Egg drop syndrome",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "(for 5-7 days in morning water):Chicks : 5 ml/100 birds,Growers : 15 ml/100 birds , Broilers Layers : 20 ml/100 birds",
+      directionsToUse: "200 ml orally after A.l."
+    },
+    {
+      name: "Immunity power-immunity booster for poultry",
+      medicineType: "Poultry Feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Asparagus, Moringa oleifera, Picrorhiza kurroa Microminerals :Zinc, Selenium (Chelated), Co, Cu and Mn Selective Amino acids-Glutamine,Threonine & MHA Vitamin C, E and B6,Nucleotides, Spirulina, Probiotics & B-glucans , Energy Source, Flavour, Stablizers & Electrolytes and Syrup Base",
+      treatmentsAndFunctions:"Boosting of immune system in poultry. , Prevention of immune-suppression due to different stresses or nutritional insufficiencies.,Prevention of mortality in viral and bacterial diseases., For improvement of intestinal health, growth and uniformity.",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Layers: 5 ml/100 birds for 5-7 days twice a month.,Broilers: 5 ml/100 birds for 5-7 days twice a month., Breeders: 5 ml/100 birds - during chick stage & 10 ml/100 birds - during growing stage.",
+      directionsToUse: "Immunity Power liquid is highly concentrated, shake well before use. Prepare a premix in 4-5 times of water and stir well for few minutes. Once Immunity is mixed uniformly distribute to drinkers or add to water tank."
+    },
+    {
+      name: "Avilyte c / electrolyte for animals",
+      medicineType: "Poultry Feed Supplement",
+      physicalForm: "Powder",
+      ingredients: "Sodium Chloride,Potassium Chloride,Sodium Bicarbonate,Sodium Acid Phosphate,Sodium Citrate,Calcium Lactate,Magnesium Sulphate,Lactose,Ascorbic Acid (Coated),Lactobacillus,Viable Spores",
+      treatmentsAndFunctions:"In case of severe diarrhoea & dehydration, increase the dose as per veterinarian suggestions.",
+      recommendedFor: "Animals",
+      quantity: "1 kg, 5 kg ,25 kg",
+      StorageInstructions:" Keep in a cool, dark place",
+      dosage: "Poultry : 2-4 gm/litre of water , Dogs : 5-10 gm/day after exercise , Horses : 10 gm after racing , Cattle : 10-20 gm/head/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Avical liquid/ clear calcium liquid",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Elemental Calcium,Elemental Phosphorus,Vitamin D3,Proteolysed Liver Extract,Vitamin B12,Choline Chloride",
+      treatmentsAndFunctions:" Hypocalcaemia,Reduced Growth,Soft Eggs Shell,Poor Hatching results,Anaemic conditions,Osteomalacia,Leg weakness",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr", 
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 10 ml/100 birds/day, Growers : 25 ml/100 birds/day , Broilers Layers : 50 ml/100 birds/day , Cattle and Dogs and cats : 10-20 ml/day , Calf & Sheep & Pigs : 20-50 ml/day , Cows & Buffaloes & Horses :  50-100 ml/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Cough cure /medicine for cough",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Glycerrhyza Glabra ,Adhatoda Vasaka,Ocimum Sanctum,Bansafa Nepitacilliaris ,K.Singli,Somlata,Feniculam Vulgare,Pippermint,Hansraj,Naushadar",
+      treatmentsAndFunctions:"helps in releving cough during crd , helps to improve lungs function",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 5-10 ml/100 Birds/day , Growers : 20-30 ml/100 birds/day , Broilers/Layers: 20-30- ml/100 Birds/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Toxocare liquid/ liver tonic for poultry",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Tricholine Citrate,Choline Chloride,Methionine,Liver Extract,Protein Hydrolysate,Inositol",
+      treatmentsAndFunctions:"Liver Disorders,Detoxification,Strengthen Immune System,Enhances egg production in Layers,Helps the broilers to gain weight rapidly,Helps to relieve the birds from stress,Improves Feed Conversion Ratio by improving digestion, absorption and assimilation of feed nutrients",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 5 ml, Growers : 15 ml, Layers : 20-25 ml, Broilers : 20-30 ml",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Bplex/ bcomplex for animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Vitamin B2,Vitamin B6,Vitamin B12,Niacinamide,D Panthenol,Choline Chloride,Lysine HCI",
+      treatmentsAndFunctions:"bcomplex liquid for animals",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 10ml/100 birds for 5-7 days , Layers : 20ml/100 birds for 5-7 days ,  Cattle : As per veterinarian suggestion",
+      directionsToUse: "B-Plex - Should be used through drinking water."
+    },
+    {
+      name: "Hemoboost Liquid/ iron tonic for animals",
+      medicineType: "Poultry Feed Supplement",
+      physicalForm: "Liquid",
+      ingredients: "Elemental Iron,Folic Acid,Vitamin B12,Vitamin B6,Methionine activity (MHA),Choline chloride,Lysine Hydrochloride,Sodium,Phosphorus,Magnesium,Copper,Cobalt,Manganese",
+      treatmentsAndFunctions:"Improves feed intake, growth and FCR,To prevent production failures elated to nutritional deficiencies like,Uneven flock weight,Summer stress,Leg weakness,Production fluctuation,Mortality,Inappetance,Improves immune status,Improves size, production and quality of eggs,Improves semen quality - Male breeder,Improves fertility, hatchbility - Female breeder,Improves carcass quality,Reduces mortality,Compensates for loss of nutrients especially during Summer,Haemolytic Anaemia,Fatty Liver Kidney Syndrom,Egg drop syndrom,Encephalomalacia,Perosis,Hepatic dropsy",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks: 10-15 ml/100 birds for 5-7 days ,  Adults: 25-30 ml/100 birds for 5-7 days",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Flusher/ ascitis medicine",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Swait Parpati,Moolichar,Sheetal Chini,Sainda Namak,Sajjikhar,Naushadar,Punerva Ext.,Panchtrin Mool,Ikshu Mool,Gokhru",
+      treatmentsAndFunctions:"• Removes TOXINS from body,Restores KIDNEY functions,Effective in Urinary Disorders,Removes excess uric acid from body and manage GOUT and ASCITIS,Effective in DYSUREA,Very helpful in ODEMA and RENAL ANASARCA,Effective in burning micturation",
+      recommendedFor: "Poultry Animals",
+      quantity: "200 ml",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "CHICKS : 10-15 ml/100 birds for 4-5 days , ADULTS : 25-30 ml/ 100 birds for 4-5 days",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Avitone c/ multivitamin liquid for animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Vitamin B12,Lysine HCI,DL Methonine",
+      treatmentsAndFunctions:"Removes stress, Improves immunity",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 ltr, 5ltr,25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "2-5 ml per 100 birds fo 5-7 days through drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Ovocare Liquid/ medicine for prolapse in poultry animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Contains aquous extract of Shatavari, Jeevanti, Amla, Bans Patra, Genda Patra, Neem Patra, Majuphal, Chaulai, Priyangu Phool, Nagkesar, Ashwagandha, Aam Beej, Gajpippli, Ghritkumari,Putrajeevak, Chandrashur, Sarivan, Pithivan, Gokshru, Choti Kateli, Badi Kateli, Vata Jata, Vansh Patra, Manjitha, Sounth, Santra Chhilka, Anantmool, Sheetal Chini, Tagar, Ravend Chini, Methi, Giloe, Reetha Massi, Shalmali, Haridra and Shilajeet, Swet Jeerak Ark, Rasaunt, Wheat Germ Oil.",
+      treatmentsAndFunctions:"Prevents prolapse, pecking, Improves eggs production, Improves livability.",
+      recommendedFor: "Poultry Animals",
+      quantity: "5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "20-30ml / 100 Birds",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Eplus powder/ Vitamin E",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Powder",
+      ingredients: "Vitamin E (FG),Selenium,Biotin,Folic Acid",
+      treatmentsAndFunctions:"During Stress Periods,Pre and post Vaccination,To minimise stress of transportation debeaking,To enhance immunity,During outbreak of problems like IBD IBH",
+      recommendedFor: "Animals",
+      quantity: "200 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "250-500 E-Plus Powder per Ton of Feed or through Drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Ossical d/ calcium granules",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Granuels",
+      ingredients: " Calcium,Phosphorus,Vitamin D3,Manganese",
+      treatmentsAndFunctions:"Natural Calcium and Phosphorus,Fortified with Vitamin D3 & Manganese,Feed Additive,Quickly Enhances Milk Meat Egg Production,Restores Animal Back to normal production level,Easy to Administer",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 kg, 5 kg, 25 kg",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "500gms-1kg per ton of feed",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+  ],
+
+  //    [
+  //   {
+  //     name: "GLITTER Liquid / Coat Shiner",
+  //     medicineType: "Pet health supplement",
+  //     physicalForm: "Liquid",
+  //     ingredients: "Omega 3, Omega 6",
+  //     treatmentsAndFunctions:
+  //       "Improves coat shine and skin health",
+  //     recommendedFor: "Dogs & Cats",
+  //     dosage: "As directed by veterinarian"
+  //   },
+  //   {
+  //     name: "JOINTCARE Tablets",
+  //     medicineType: "Pet health supplement",
+  //     physicalForm: "Tablet",
+  //     ingredients: "Glucosamine, Chondroitin",
+  //     treatmentsAndFunctions:
+  //       "Supports joint health",
+  //     recommendedFor: "Adult & senior dogs",
+  //     dosage: "1 tablet daily"
+  //   },
+  //   {
+  //     name: "DIGESTO Powder",
+  //     medicineType: "Pet health supplement",
+  //     physicalForm: "Powder",
+  //     ingredients: "Probiotics",
+  //     treatmentsAndFunctions:
+  //       "Improves digestion",
+  //     recommendedFor: "Pets",
+  //     dosage: "As directed"
+  //   },
+  //   {
+  //     name: "CALCI PET Syrup",
+  //     medicineType: "Pet health supplement",
+  //     physicalForm: "Liquid",
+  //     ingredients: "Calcium, Vitamin D3",
+  //     treatmentsAndFunctions:
+  //       "Strengthens bones",
+  //     recommendedFor: "Pets",
+  //     dosage: "5–10 ml daily"
+  //   },
+  //   {
+  //     name: "MULTIVIT Pet Drops",
+  //     medicineType: "Pet health supplement",
+  //     physicalForm: "Liquid",
+  //     ingredients: "Multivitamins",
+  //     treatmentsAndFunctions:
+  //       "Improves overall health",
+  //     recommendedFor: "Pets",
+  //     dosage: "As directed"
+  //   }
+  //   // ✅ ALL PETCARE PRODUCTS INCLUDED
+  // ]
+];
+
+export default products;
