@@ -1,5 +1,6 @@
 "use client"
 import { Link } from "react-router-dom"
+import Dog from "../assets/doggie.png";
 
 export default function NotFound() {
   return (
@@ -18,19 +19,19 @@ export default function NotFound() {
             </div>
 
             {/* Center 0 with Dog Image */}
-            <div className="relative w-[80px] h-[120px] sm:w-[120px] sm:h-[180px] md:w-[160px] md:h-[240px] lg:w-[180px] lg:h-[270px] flex items-center justify-center">
+            <div className="relative w-20 h-30 sm:w-30 sm:h-45 md:w-40 md:h-60 lg:w-45 lg:h-67.5 flex items-center justify-center">
               {/* Outer Circle Background */}
-              <div className="absolute inset-0 rounded-full bg-[#5a9080] opacity-40"></div>
+              {/* <div className="absolute inset-0 rounded-full bg-[#5a9080] opacity-40"></div> */}
 
               {/* Inner Circle Background */}
               <div className="absolute inset-4 sm:inset-6 md:inset-8 rounded-full bg-white flex items-center justify-center shadow-md">
                 {/* Dog Image */}
                 <img
-                  src="/public/images/404-20page-20not-20found.png"
+                  src={Dog}
                   alt="Dog in 404"
-                  width={140}
-                  height={140}
-                  className="w-full h-full object-contain p-2 sm:p-3 md:p-4"
+                  width={240}
+                  height={240}
+                  className="w-[240px] h-[240px] object-contain p-2 sm:p-3 md:p-4"
                   priority
                 />
               </div>
@@ -59,13 +60,13 @@ export default function NotFound() {
         {/* Buttons */}
         <div className="flex flex-col md:-translate-y-4 sm:flex-row gap-4 sm:gap-6 md:gap-8 w-full sm:w-auto">
           <Link
-            href="/"
+            to="/"
             className="px-6 sm:px-8 md:px-8 py-2 sm:py-2 md:py-4 border-2 border-[#5a9080] text-[#2d5f4f] font-semibold rounded-full hover:bg-[#5a9080] hover:text-white transition-all duration-300 transform hover:scale-105 text-center text-sm sm:text-base md:text-lg"
           >
             Back to Home
           </Link>
           <Link
-            href="/categories"
+            to="/categories"
             className="px-6 sm:px-8 md:px-8 py-2 sm:py-2 md:py-4 border-2 border-[#5a9080] text-[#2d5f4f] font-semibold rounded-full hover:bg-[#5a9080] hover:text-white transition-all duration-300 transform hover:scale-105 text-center text-sm sm:text-base md:text-lg"
           >
             View Products

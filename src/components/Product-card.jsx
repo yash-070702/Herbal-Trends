@@ -5,6 +5,10 @@ export default function ProductCard({ categoryId , ind , name, form }) {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
 
+  function trimFirst10(str = "") {
+  return str.slice(0, 3);
+}
+
   return (
     <div
       className="bg-white rounded-lg overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-lg"
@@ -33,7 +37,7 @@ export default function ProductCard({ categoryId , ind , name, form }) {
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
             isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#2d5016] text-white"
           }`}
-          onClick={() => navigate(`/product-page/${categoryId}/${name.replace(/\s+/g, '-').toLowerCase()}/${ind}`)}
+          onClick={() => navigate(`/product-page/${categoryId}/${trimFirst10(name)}/${ind}`)}
         >
           More Info
         </button>
