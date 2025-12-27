@@ -31,7 +31,7 @@ export default function NotFound() {
                   alt="Dog in 404"
                   width={240}
                   height={240}
-                  className="w-[240px] h-[240px] object-contain p-2 sm:p-3 md:p-4"
+                  className="w-60 h-60 object-contain p-2 sm:p-3 md:p-4"
                   priority
                 />
               </div>

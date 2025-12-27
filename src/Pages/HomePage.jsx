@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="w-full min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section id="home" className="relative w-full bg-gradient-to-r from-green-50 to-green-100 overflow-hidden">
+      <section id="home" className="relative w-full bg-linear-to-r from-green-50 to-green-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
@@ -24,7 +24,7 @@ export default function HomePage() {
             {/* Right Content - Hero Image and Products */}
             <div className="flex flex-col gap-6">
               {/* Placeholder for dog image */}
-              <div className="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-200 to-green-300 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-full h-64 sm:h-80 lg:h-96 bg-linear-to-br from-green-200 to-green-300 rounded-lg flex items-center justify-center overflow-hidden">
                 <div className="text-center">
                   <p className="text-green-800 font-semibold">Dog Image</p>
                   <p className="text-green-700 text-sm">(Add your image here)</p>
@@ -80,7 +80,7 @@ export default function HomePage() {
             ].map((category, idx) => (
               <div key={idx} className="bg-green-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
                 {/* Image Placeholder */}
-                <div className="w-full h-48 sm:h-56 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                <div className="w-full h-48 sm:h-56 bg-linear-to-br from-green-100 to-green-200 flex items-center justify-center">
                   <div className="text-center">
                     <p className="text-green-700 font-semibold text-sm">Product Image</p>
                   </div>
@@ -118,7 +118,7 @@ export default function HomePage() {
 
                 {/* Customer Info */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">PG</span>
                   </div>
                   <div>
