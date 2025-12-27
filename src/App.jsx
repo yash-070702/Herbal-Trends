@@ -26,8 +26,8 @@ const App = () => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/product-page" element={<ProductsPage />} />
-          <Route path="/category-page/:id" element={<CategoryPage />} />
+          <Route path="/product-page/:categoryId/:product-name/:id" element={<ProductsPage />} />
+          <Route path="/category-page/:categoryType/:id" element={<CategoryPage />} />
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>

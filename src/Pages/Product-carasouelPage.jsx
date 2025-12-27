@@ -10,16 +10,16 @@ import Video3 from "../assets/BackgroundVedios/PetCare.mp4";
 const heroSlides = [
   {
     id: 1,
-    title: "Poultry Care",
+    title: "Cattle Care",
     description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: Video2,
+    backgroundVideo: Video1,
     imageUrl: dummyImage,
   },
   {
     id: 2,
-    title: "Cattle Care",
+    title: "Poultry Care",
     description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: Video1,
+    backgroundVideo: Video2,
     imageUrl: dummyImage,
   },
   {
@@ -52,7 +52,10 @@ export default function ProductCarousel() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
   }
   const handleCick = (id) => {
-    navigate(`/category-page/${id}`);
+    if(id==1) navigate(`/category-page/cattle-care/${id}`);
+    else if(id==2) navigate(`/category-page/poultry-care/${id}`);
+    else if(id==3) navigate(`/category-page/pet-care/${id}`);
+
   }
 
   const slide = heroSlides[currentSlide]

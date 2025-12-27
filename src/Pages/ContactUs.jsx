@@ -1,7 +1,117 @@
 "use client"
+import { useState } from "react"
 import { Phone, Mail, MapPin, Leaf } from "lucide-react"
 
 export default function ContactUs() {
+
+  const [loading, setLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState({});
+
+   const toast = {
+    success: (message) => {
+      setFormSubmitted(true);
+      setTimeout(() => setFormSubmitted(false), 5000);
+      console.log("Success:", message);
+    },
+    error: (message) => {
+      console.error("Error:", message);
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+      newErrors.email = "Invalid email address";
+    }
+    
+    
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+
+  const submitContactForm = async () => {
+    console.log("Form Data - ", formData);
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    try {
+      setLoading(true);
+
+      const submitData = new FormData();
+      
+      submitData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      
+      submitData.append("name", formData.name);
+      submitData.append("email", formData.email);
+      submitData.append("message", formData.message);
+      
+      // Optional fields
+      submitData.append("subject", "New Contact Us Submission");
+      submitData.append("from_name", formData.name);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: submitData,
+      });
+
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        toast.success("Your message has been sent successfully!");
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        console.error("Web3Forms Error:", result);
+        toast.error(result.message || "Something went wrong. Please try again.");
+      }
+
+    } catch (error) {
+      console.error("ERROR MESSAGE - ", error.message);
+      toast.error("Failed to send message. Please check your internet connection.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <main className="max-w-7xl mx-auto px-6 lg:px-20 py-12">
@@ -68,6 +178,9 @@ export default function ContactUs() {
               <div>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder="Name"
                   className="w-full bg-white rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#4d8155] border-none shadow-sm text-md"
                 />
@@ -75,6 +188,9 @@ export default function ContactUs() {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="Email"
                   className="w-full bg-white rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#4d8155] border-none shadow-sm text-md"
                 />
@@ -82,6 +198,9 @@ export default function ContactUs() {
               <div>
                 <textarea
                   placeholder="Write a Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={4}
                   className="w-full bg-white rounded-xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#4d8155] border-none shadow-sm text-md resize-none"
                 ></textarea>
@@ -89,9 +208,25 @@ export default function ContactUs() {
               <div className="flex justify-center pt-1">
                 <button
                   type="submit"
+                  disabled={loading}
+                  onClick={submitContactForm}
                   className="bg-white text-gray-800 font-bold px-12 py-4 rounded-2xl shadow-md hover:bg-gray-50 transition-colors text-md"
                 >
-                  Send Message
+                 {loading ? (
+                      <div
+                        className="flex items-center gap-2"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      >
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        <span>Sending...</span>
+                      </div>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                       
+                      </>
+                    )}
                 </button>
               </div>
             </form>

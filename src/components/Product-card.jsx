@@ -1,7 +1,9 @@
 import { useState } from "react"
 import ProductImage from "../assets/image.png"
-export default function ProductCard({ name, form }) {
-  const [isHovered, setIsHovered] = useState(false)
+import { useNavigate } from "react-router-dom"
+export default function ProductCard({ categoryId , ind , name, form }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -31,6 +33,7 @@ export default function ProductCard({ name, form }) {
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
             isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#2d5016] text-white"
           }`}
+          onClick={() => navigate(`/product-page/${categoryId}/${name.replace(/\s+/g, '-').toLowerCase()}/${ind}`)}
         >
           More Info
         </button>
