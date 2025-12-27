@@ -182,12 +182,12 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-col gap-3 overflow-y-auto pb-20 scrollbar-hide">
-              {PRODUCTS.map((product) => (
+              {products[categoryId].map((product) => (
                 <button
                   key={product.id}
                   onClick={() => handleProductSelect(product)}
                   className={`text-left px-6 py-4 rounded-2xl transition-all duration-200 text-lg font-medium shrink-0 ${
-                    selectedProduct.id === product.id
+                    selectedProduct?.name === product?.name
                       ? "bg-white text-black shadow-lg"
                       : "text-gray-300 hover:text-white hover:bg-white/10 border border-white/10"
                   }`}
@@ -195,15 +195,7 @@ export default function ProductPage() {
                   {product.name}
                 </button>
               ))}
-              {/* Mock items to test scrollability in mobile menu */}
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <button
-                  key={`mock-${i}`}
-                  className="text-left px-6 py-4 rounded-2xl text-gray-500 font-medium border border-white/5 opacity-50 cursor-not-allowed shrink-0"
-                >
-                  Mcure Powder
-                </button>
-              ))}
+          
             </div>
           </div>
         </div>
