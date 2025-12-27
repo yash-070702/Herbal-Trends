@@ -6,7 +6,7 @@ import Footer from "./components/Footer.jsx"
 
 const HomePage = lazy(() => import("./Pages/HomePage.jsx"))
 const ProductsPage = lazy(() => import("./Pages/ProductPage.jsx"))
-const CategoryPage = lazy(() => import("./Pages/categoryPage.jsx"))
+const CategoryPage = lazy(() => import("./Pages/CategoryPage.jsx"))
 const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
