@@ -9,6 +9,7 @@ const ProductsPage = lazy(() => import("./Pages/ProductPage.jsx"))
 const CategoryPage = lazy(() => import("./Pages/categoryPage.jsx"))
 const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
+const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
 
 function Loader() {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/category-page/:categoryType/:id" element={<CategoryPage />} />
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
 

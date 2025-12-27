@@ -453,60 +453,176 @@ const products = [
       directionsToUse: "As directed by the Veterinarian"
     },
   ],
-
-  //    [
-  //   {
-  //     name: "GLITTER Liquid / Coat Shiner",
-  //     medicineType: "Pet health supplement",
-  //     physicalForm: "Liquid",
-  //     ingredients: "Omega 3, Omega 6",
-  //     treatmentsAndFunctions:
-  //       "Improves coat shine and skin health",
-  //     recommendedFor: "Dogs & Cats",
-  //     dosage: "As directed by veterinarian"
-  //   },
-  //   {
-  //     name: "JOINTCARE Tablets",
-  //     medicineType: "Pet health supplement",
-  //     physicalForm: "Tablet",
-  //     ingredients: "Glucosamine, Chondroitin",
-  //     treatmentsAndFunctions:
-  //       "Supports joint health",
-  //     recommendedFor: "Adult & senior dogs",
-  //     dosage: "1 tablet daily"
-  //   },
-  //   {
-  //     name: "DIGESTO Powder",
-  //     medicineType: "Pet health supplement",
-  //     physicalForm: "Powder",
-  //     ingredients: "Probiotics",
-  //     treatmentsAndFunctions:
-  //       "Improves digestion",
-  //     recommendedFor: "Pets",
-  //     dosage: "As directed"
-  //   },
-  //   {
-  //     name: "CALCI PET Syrup",
-  //     medicineType: "Pet health supplement",
-  //     physicalForm: "Liquid",
-  //     ingredients: "Calcium, Vitamin D3",
-  //     treatmentsAndFunctions:
-  //       "Strengthens bones",
-  //     recommendedFor: "Pets",
-  //     dosage: "5–10 ml daily"
-  //   },
-  //   {
-  //     name: "MULTIVIT Pet Drops",
-  //     medicineType: "Pet health supplement",
-  //     physicalForm: "Liquid",
-  //     ingredients: "Multivitamins",
-  //     treatmentsAndFunctions:
-  //       "Improves overall health",
-  //     recommendedFor: "Pets",
-  //     dosage: "As directed"
-  //   }
-  //   // ✅ ALL PETCARE PRODUCTS INCLUDED
-  // ]
+   [
+    {
+      name: "Ph care/water sanitizer",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Combinations of different acids.",
+      treatmentsAndFunctions:"PH CARE controls multiplication of enteripathogens like E. Coli, Salmonella and Pseudomonas, It also helps in making conditions favourable for colonization of useful bacterias like lactobacilli within small intestine of birds. Absorption of antibiotics through small gut is also facilitated.Applications:Totally safe for drinking water,Non corrosive and non staining at user dilution,Controls scaling problems within water pipelinesDoes not develop off taste and off odour to the drinking water",
+      recommendedFor: "Water for animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "1-2 ml/5-10 litre of drinking water depending upon the pH and hardness/quality of available drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Grow Up/ growth promotor for animals ",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Protein,Hydrolysate (20%)*,Carbohydrate,Choline Chloride,DL-Methonine,Lysine HCI,Biotin,Proteolysed Liver Ext.,Vitamin B1,Vitamin B2,Vitamin B6,Vitamin B12,Vitamin C,Niacinamide,D-Panthenol,Methionine,Arginine,Histidine,Tyrosine,Tryptophane,Thronine,Leucine,Valine,Isoleucine,Manganese,Diastase,Calcium,Sodium,Iron",
+      treatmentsAndFunctions:"Weight gain,Growth promotor,Hepatic Dropsy,Oxidative destruction of liver,Encephalomalacis,Haemolytic anaemia,Perosis,Aflatoxicosis,Mascular Dystrophy,Fatty Liver Kidney Syndrome,Egg drop syndrome",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "(for 5-7 days in morning water):Chicks : 5 ml/100 birds,Growers : 15 ml/100 birds , Broilers Layers : 20 ml/100 birds",
+      directionsToUse: "200 ml orally after A.l."
+    },
+    {
+      name: "Immunity power-immunity booster for poultry",
+      medicineType: "Poultry Feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Asparagus, Moringa oleifera, Picrorhiza kurroa Microminerals :Zinc, Selenium (Chelated), Co, Cu and Mn Selective Amino acids-Glutamine,Threonine & MHA Vitamin C, E and B6,Nucleotides, Spirulina, Probiotics & B-glucans , Energy Source, Flavour, Stablizers & Electrolytes and Syrup Base",
+      treatmentsAndFunctions:"Boosting of immune system in poultry. , Prevention of immune-suppression due to different stresses or nutritional insufficiencies.,Prevention of mortality in viral and bacterial diseases., For improvement of intestinal health, growth and uniformity.",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Layers: 5 ml/100 birds for 5-7 days twice a month.,Broilers: 5 ml/100 birds for 5-7 days twice a month., Breeders: 5 ml/100 birds - during chick stage & 10 ml/100 birds - during growing stage.",
+      directionsToUse: "Immunity Power liquid is highly concentrated, shake well before use. Prepare a premix in 4-5 times of water and stir well for few minutes. Once Immunity is mixed uniformly distribute to drinkers or add to water tank."
+    },
+    {
+      name: "Avilyte c / electrolyte for animals",
+      medicineType: "Poultry Feed Supplement",
+      physicalForm: "Powder",
+      ingredients: "Sodium Chloride,Potassium Chloride,Sodium Bicarbonate,Sodium Acid Phosphate,Sodium Citrate,Calcium Lactate,Magnesium Sulphate,Lactose,Ascorbic Acid (Coated),Lactobacillus,Viable Spores",
+      treatmentsAndFunctions:"In case of severe diarrhoea & dehydration, increase the dose as per veterinarian suggestions.",
+      recommendedFor: "Animals",
+      quantity: "1 kg, 5 kg ,25 kg",
+      StorageInstructions:" Keep in a cool, dark place",
+      dosage: "Poultry : 2-4 gm/litre of water , Dogs : 5-10 gm/day after exercise , Horses : 10 gm after racing , Cattle : 10-20 gm/head/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Avical liquid/ clear calcium liquid",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Elemental Calcium,Elemental Phosphorus,Vitamin D3,Proteolysed Liver Extract,Vitamin B12,Choline Chloride",
+      treatmentsAndFunctions:" Hypocalcaemia,Reduced Growth,Soft Eggs Shell,Poor Hatching results,Anaemic conditions,Osteomalacia,Leg weakness",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr", 
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 10 ml/100 birds/day, Growers : 25 ml/100 birds/day , Broilers Layers : 50 ml/100 birds/day , Cattle and Dogs and cats : 10-20 ml/day , Calf & Sheep & Pigs : 20-50 ml/day , Cows & Buffaloes & Horses :  50-100 ml/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Cough cure /medicine for cough",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Glycerrhyza Glabra ,Adhatoda Vasaka,Ocimum Sanctum,Bansafa Nepitacilliaris ,K.Singli,Somlata,Feniculam Vulgare,Pippermint,Hansraj,Naushadar",
+      treatmentsAndFunctions:"helps in releving cough during crd , helps to improve lungs function",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 5-10 ml/100 Birds/day , Growers : 20-30 ml/100 birds/day , Broilers/Layers: 20-30- ml/100 Birds/day",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Toxocare liquid/ liver tonic for poultry",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Tricholine Citrate,Choline Chloride,Methionine,Liver Extract,Protein Hydrolysate,Inositol",
+      treatmentsAndFunctions:"Liver Disorders,Detoxification,Strengthen Immune System,Enhances egg production in Layers,Helps the broilers to gain weight rapidly,Helps to relieve the birds from stress,Improves Feed Conversion Ratio by improving digestion, absorption and assimilation of feed nutrients",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 5 ml, Growers : 15 ml, Layers : 20-25 ml, Broilers : 20-30 ml",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Bplex/ bcomplex for animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Vitamin B2,Vitamin B6,Vitamin B12,Niacinamide,D Panthenol,Choline Chloride,Lysine HCI",
+      treatmentsAndFunctions:"bcomplex liquid for animals",
+      recommendedFor: "Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks : 10ml/100 birds for 5-7 days , Layers : 20ml/100 birds for 5-7 days ,  Cattle : As per veterinarian suggestion",
+      directionsToUse: "B-Plex - Should be used through drinking water."
+    },
+    {
+      name: "Hemoboost Liquid/ iron tonic for animals",
+      medicineType: "Poultry Feed Supplement",
+      physicalForm: "Liquid",
+      ingredients: "Elemental Iron,Folic Acid,Vitamin B12,Vitamin B6,Methionine activity (MHA),Choline chloride,Lysine Hydrochloride,Sodium,Phosphorus,Magnesium,Copper,Cobalt,Manganese",
+      treatmentsAndFunctions:"Improves feed intake, growth and FCR,To prevent production failures elated to nutritional deficiencies like,Uneven flock weight,Summer stress,Leg weakness,Production fluctuation,Mortality,Inappetance,Improves immune status,Improves size, production and quality of eggs,Improves semen quality - Male breeder,Improves fertility, hatchbility - Female breeder,Improves carcass quality,Reduces mortality,Compensates for loss of nutrients especially during Summer,Haemolytic Anaemia,Fatty Liver Kidney Syndrom,Egg drop syndrom,Encephalomalacia,Perosis,Hepatic dropsy",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 ltr, 5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "Chicks: 10-15 ml/100 birds for 5-7 days ,  Adults: 25-30 ml/100 birds for 5-7 days",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Flusher/ ascitis medicine",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Swait Parpati,Moolichar,Sheetal Chini,Sainda Namak,Sajjikhar,Naushadar,Punerva Ext.,Panchtrin Mool,Ikshu Mool,Gokhru",
+      treatmentsAndFunctions:"• Removes TOXINS from body,Restores KIDNEY functions,Effective in Urinary Disorders,Removes excess uric acid from body and manage GOUT and ASCITIS,Effective in DYSUREA,Very helpful in ODEMA and RENAL ANASARCA,Effective in burning micturation",
+      recommendedFor: "Poultry Animals",
+      quantity: "200 ml",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "CHICKS : 10-15 ml/100 birds for 4-5 days , ADULTS : 25-30 ml/ 100 birds for 4-5 days",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Avitone c/ multivitamin liquid for animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Vitamin B12,Lysine HCI,DL Methonine",
+      treatmentsAndFunctions:"Removes stress, Improves immunity",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 ltr, 5ltr,25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "2-5 ml per 100 birds fo 5-7 days through drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Ovocare Liquid/ medicine for prolapse in poultry animals",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Liquid",
+      ingredients: "Contains aquous extract of Shatavari, Jeevanti, Amla, Bans Patra, Genda Patra, Neem Patra, Majuphal, Chaulai, Priyangu Phool, Nagkesar, Ashwagandha, Aam Beej, Gajpippli, Ghritkumari,Putrajeevak, Chandrashur, Sarivan, Pithivan, Gokshru, Choti Kateli, Badi Kateli, Vata Jata, Vansh Patra, Manjitha, Sounth, Santra Chhilka, Anantmool, Sheetal Chini, Tagar, Ravend Chini, Methi, Giloe, Reetha Massi, Shalmali, Haridra and Shilajeet, Swet Jeerak Ark, Rasaunt, Wheat Germ Oil.",
+      treatmentsAndFunctions:"Prevents prolapse, pecking, Improves eggs production, Improves livability.",
+      recommendedFor: "Poultry Animals",
+      quantity: "5 ltr, 25 ltr",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "20-30ml / 100 Birds",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Eplus powder/ Vitamin E",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Powder",
+      ingredients: "Vitamin E (FG),Selenium,Biotin,Folic Acid",
+      treatmentsAndFunctions:"During Stress Periods,Pre and post Vaccination,To minimise stress of transportation debeaking,To enhance immunity,During outbreak of problems like IBD IBH",
+      recommendedFor: "Animals",
+      quantity: "200 gms",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "250-500 E-Plus Powder per Ton of Feed or through Drinking water",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+    {
+      name: "Ossical d/ calcium granules",
+      medicineType: "Poultry feed supplement",
+      physicalForm: "Granuels",
+      ingredients: " Calcium,Phosphorus,Vitamin D3,Manganese",
+      treatmentsAndFunctions:"Natural Calcium and Phosphorus,Fortified with Vitamin D3 & Manganese,Feed Additive,Quickly Enhances Milk Meat Egg Production,Restores Animal Back to normal production level,Easy to Administer",
+      recommendedFor: "Poultry Animals",
+      quantity: "1 kg, 5 kg, 25 kg",
+      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
+      dosage: "500gms-1kg per ton of feed",
+      directionsToUse: "As directed by the Veterinarian"
+    },
+  ],
 ];
 
 export default products;
