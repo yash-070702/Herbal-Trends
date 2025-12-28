@@ -1,30 +1,37 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { lazy, Suspense } from "react"
+import { lazy} from "react"
+import { useState, useEffect } from "react"
 
 import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx"
 
 const HomePage = lazy(() => import("./Pages/HomePage.jsx"))
+const LoaderPage = lazy(() => import("./Pages/LoaderPage.jsx"))
 const ProductsPage = lazy(() => import("./Pages/ProductPage.jsx"))
 const CategoryPage = lazy(() => import("./Pages/CategoryPage.jsx"))
 const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
 
-function Loader() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <p className="text-lg font-semibold">Loading...</p>
-    </div>
-  )
-}
 
 const App = () => {
+const [showLoader, setShowLoader] = useState(true)
+
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false)
+    }, 2000) // 3 seconds
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (showLoader) {
+    return <LoaderPage />
+  }
+
   return (
     <BrowserRouter>
       <Header />
-
-      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage/>} />
           <Route path="/product-page/:categoryId/:product-name/:id" element={<ProductsPage />} />
@@ -33,7 +40,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Suspense>
+      
 
       <Footer />
     </BrowserRouter>
