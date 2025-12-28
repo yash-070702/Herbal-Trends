@@ -1,10 +1,18 @@
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import logo from "../assets/logo.png"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const categories = [
+    { label: "Cattle Care", value: "cattle-care" },
+    { label: "Poultry Care", value: "poultry-care" },
+    { label: "Pet Care", value: "pet-care" },
+  ]
 
   const navLinks = [
     { label: "Home", to: "/" },
@@ -14,6 +22,11 @@ export default function Header() {
   ]
 
   const closeMenu = () => setIsOpen(false)
+  const handleCategoryClick = (category,idx) => {
+    navigate(`/category-page/${category}/${idx}`);
+    setIsDropdownOpen(false)
+    closeMenu()
+  }
 
   return (
     <>
@@ -43,6 +56,27 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+                <div className="relative group">
+                <button className="text-white text-sm font-medium hover:text-green-200 transition-colors flex items-center gap-1">
+                  Categories
+                  <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div className="absolute left-0 top-full pt-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <div className="bg-white rounded-lg shadow-lg py-2 min-w-max">
+                    {categories.map((category,idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleCategoryClick(category.value,idx+1)}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors"
+                      >
+                        {category.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </nav>
 
             
@@ -88,6 +122,34 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+
+               <div>
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="text-white text-lg font-medium hover:text-green-200 transition-colors flex items-center gap-2 w-full"
+                >
+                  Categories
+                  <ChevronDown
+                    size={20}
+                    className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {/* Mobile Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="mt-3 ml-4 flex flex-col gap-2">
+                    {categories.map((category,idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleCategoryClick(category.value,idx+1)}
+                        className="text-green-200 text-sm hover:text-white transition-colors text-left"
+                      >
+                        {category.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </nav>
           </div>
         </div>

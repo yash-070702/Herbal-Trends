@@ -5,10 +5,6 @@ import products from "../data/products_data.js"
 
 export default function CategoryPage() {
   const { categoryType, id } = useParams();
-
-  console.log("Category Type:", products[id-1]);
-
-
   function capitalizeWords(str) {
   return str
     .split(" ")
