@@ -51,13 +51,13 @@ export default function Header() {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="text-white text-sm font-medium hover:text-green-200 transition-colors"
+                  className="text-white text-md font-medium hover:text-green-200 transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
               <div className="relative group">
-                <button className="text-white text-sm font-medium hover:text-green-200 transition-colors flex items-center gap-1">
+                <button className="text-white text-md font-medium hover:text-green-200 transition-colors flex items-center gap-1">
                   Categories
                   <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
