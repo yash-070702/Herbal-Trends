@@ -41,8 +41,8 @@ export default function Header() {
                 <img src={logo} alt="Logo" className="h-10" />
               </Link>
               <div className="text-white font-semibold hidden sm:block">
-                <p className="text-sm">Herbal</p>
-                <p className="text-sm leading-none">Trends</p>
+                <p className="text-md">Herbal</p>
+                <p className="text-md leading-none">Trends</p>
               </div>
             </div>
 
