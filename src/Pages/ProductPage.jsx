@@ -1,15 +1,20 @@
-"use client"
-
 import { useState, useEffect } from "react"
-import { Menu, X, CheckCircle2 } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import image1 from "../assets/image.png";
 import { useParams } from "react-router-dom"
 import products from "../data/products_data";
 
 
 export default function ProductPage() {
-   const { id, "product-name": productName, categoryId } = useParams();
-  const [selectedProduct, setSelectedProduct] = useState(products[categoryId][id])
+ const params = useParams()
+  const id = (params?.id ) || "0"
+  const categoryId = (params?.categoryId ) || "cattle-care"
+
+  const categoryProducts = products[categoryId] || products["default"]
+  const initialProduct = categoryProducts.find((p) => p.id === id) || categoryProducts[0]
+
+  const [selectedProduct, setSelectedProduct] = useState(initialProduct)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isIngredientsExpanded, setIsIngredientsExpanded] = useState(false)
  
@@ -61,101 +66,119 @@ export default function ProductPage() {
         </aside>
 
         {/* Main Content Area */}
-        <div className="flex-1 p-6 md:p-12 lg:p-16 flex flex-col xl:flex-row gap-12">
-          <div className="flex-1 space-y-10">
-            <div>
-              <h1 className="text-[#1b4313] text-5xl md:text-6xl font-serif mb-6">{selectedProduct.name}</h1>
+           <div className="flex-1 p-6 md:p-12 lg:p-16 flex flex-col xl:flex-row gap-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedProduct.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="flex-1 space-y-10"
+            >
+              <div>
+                <h1 className="text-[#1b4313] text-5xl md:text-6xl font-serif mb-6">{selectedProduct.name}</h1>
 
-              <div className="space-y-8 max-w-2xl">
-                <section>
-                  <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Physical Form</h3>
-                  <p className="text-lg text-slate-600">{selectedProduct.physicalForm}</p>
-                </section>
+                <div className="space-y-8 max-w-2xl">
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Physical Form</h3>
+                    <p className="text-lg text-slate-600">{selectedProduct.physicalForm}</p>
+                  </section>
 
-                <section>
-                  <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Ingredients</h3>
-                  <div className="text-lg text-slate-600 leading-relaxed">
-                    {isIngredientsExpanded
-                      ? selectedProduct.ingredients
-                      : `${selectedProduct.ingredients.split(",").slice(0, 5).join(",")}...`}
-                    <button
-                      onClick={() => setIsIngredientsExpanded(!isIngredientsExpanded)}
-                      className="ml-2 text-green-700 font-bold hover:underline"
-                    >
-                      {isIngredientsExpanded ? "See less" : "See more..."}
-                    </button>
-                  </div>
-                </section>
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Ingredients</h3>
+                    <div className="text-lg text-slate-600 leading-relaxed">
+                      {isIngredientsExpanded
+                        ? selectedProduct.ingredients
+                        : `${selectedProduct.ingredients.split(",").slice(0, 5).join(",")}...`}
+                      <button
+                        onClick={() => setIsIngredientsExpanded(!isIngredientsExpanded)}
+                        className="ml-2 text-green-700 font-bold hover:underline"
+                      >
+                        {isIngredientsExpanded ? "See less" : "See more..."}
+                      </button>
+                    </div>
+                  </section>
 
-                <hr className="border-gray-200" />
+                  <hr className="border-gray-200" />
 
-                <section>
-                  <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-4">Treatments</h3>
-                  {/* <ul className="space-y-3">
-                    {selectedProduct.treatments.map((treatment, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-lg text-slate-700">
-                        <CheckCircle2 className="text-green-600 w-6 h-6 shrink-0" />
-                        {treatment}
-                      </li>
-                    ))}
-                  </ul> */}
-                </section>
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-4">Treatments</h3>
+                    {/* <ul className="space-y-3">
+                      {selectedProduct.treatments.map((treatment, idx) => (
+                        <li key={idx} className="flex items-center gap-3 text-lg text-slate-700">
+                          <CheckCircle2 className="text-green-600 w-6 h-6 shrink-0" />
+                          {treatment}
+                        </li>
+                      ))}
+                    </ul> */}
+                  </section>
 
-                <hr className="border-gray-200" />
+                  <hr className="border-gray-200" />
 
-                <section>
-                  <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Quantity</h3>
-                  <p className="text-lg text-slate-600">{selectedProduct.quantity}</p>
-                </section>
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Quantity</h3>
+                    <p className="text-lg text-slate-600">{selectedProduct.quantity}</p>
+                  </section>
 
-                <section>
-                  <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Dosage</h3>
-                  <div className="space-y-1 text-lg">
-                    <p>
-                      <span className="font-bold text-slate-700">Small Animal:</span>{" "}
-                      <span className="text-slate-600">{selectedProduct.dosage.small}</span>
-                    </p>
-                    <p>
-                      <span className="font-bold text-slate-700">Large Animal:</span>{" "}
-                      <span className="text-slate-600">{selectedProduct.dosage.large}</span>
-                    </p>
-                  </div>
-                </section>
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Dosage</h3>
+                    <div className="space-y-1 text-lg">
+                      <p>
+                        <span className="font-bold text-slate-700">Small Animal:</span>{" "}
+                        <span className="text-slate-600">{selectedProduct.dosage.small}</span>
+                      </p>
+                      <p>
+                        <span className="font-bold text-slate-700">Large Animal:</span>{" "}
+                        <span className="text-slate-600">{selectedProduct.dosage.large}</span>
+                      </p>
+                    </div>
+                  </section>
+                </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
 
           {/* Right Floating Card */}
-          <div className="xl:w-96">
-            <div className="bg-white rounded-[2.5rem] shadow-2xl p-6 md:p-8 sticky top-24 border border-gray-100">
-              <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50">
-                <img
-                  src={selectedProduct.image || "/placeholder.svg"}
-                  alt={selectedProduct.name}
-                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${selectedProduct.name}-card`}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="xl:w-96"
+            >
+              <div className="bg-white rounded-[2.5rem] shadow-2xl p-6 md:p-8 sticky top-24 border border-gray-100">
+                <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50">
+                  <img
+                    src={selectedProduct.image || "/placeholder.svg"}
+                    alt={selectedProduct.name}
+                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Dosage</h3>
-                  <div className="space-y-1 text-slate-600">
-                    <p>
-                      <span className="font-bold text-slate-800">Small Animal:</span> {selectedProduct.dosage.small}
-                    </p>
-                    <p>
-                      <span className="font-bold text-slate-800">Large Animal:</span> {selectedProduct.dosage.large}
-                    </p>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Dosage</h3>
+                    <div className="space-y-1 text-slate-600">
+                      <p>
+                        <span className="font-bold text-slate-800">Small Animal:</span> {selectedProduct.dosage.small}
+                      </p>
+                      <p>
+                        <span className="font-bold text-slate-800">Large Animal:</span> {selectedProduct.dosage.large}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Storage</h3>
+                    <p className="text-slate-600 leading-relaxed">{selectedProduct.storage}</p>
                   </div>
                 </div>
-
-                <div>
-                  <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Storage</h3>
-                  <p className="text-slate-600 leading-relaxed">{selectedProduct.storage}</p>
-                </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
@@ -182,7 +205,7 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-col gap-3 overflow-y-auto pb-20 scrollbar-hide">
-              {products[categoryId].map((product) => (
+              {categoryProducts.map((product) => (
                 <button
                   key={product.id}
                   onClick={() => handleProductSelect(product)}
@@ -195,7 +218,6 @@ export default function ProductPage() {
                   {product.name}
                 </button>
               ))}
-          
             </div>
           </div>
         </div>
