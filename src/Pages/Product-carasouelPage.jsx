@@ -2,10 +2,10 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
-import dummyImage from "../assets/image.png";
-import Video1 from "../assets/BackgroundVedios/CattleCare.mp4";
-import Video2 from "../assets/BackgroundVedios/PoultryCare.mp4";
-import Video3 from "../assets/BackgroundVedios/PetCare.mp4";
+import dummyImage from "../assets/image.png"
+import Video1 from "../assets/BackgroundVedios/CattleCare.mp4"
+import Video2 from "../assets/BackgroundVedios/PoultryCare.mp4"
+import Video3 from "../assets/BackgroundVedios/PetCare.mp4"
 
 const heroSlides = [
   {
@@ -32,10 +32,9 @@ const heroSlides = [
 ]
 
 export default function ProductCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const navigate = useNavigate()
 
- 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
@@ -52,51 +51,82 @@ export default function ProductCarousel() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
   }
   const handleCick = (id) => {
-    if(id==1) navigate(`/category-page/cattle-care/${id}`);
-    else if(id==2) navigate(`/category-page/poultry-care/${id}`);
-    else if(id==3) navigate(`/category-page/pet-care/${id}`);
-
+    if (id == 1) navigate(`/category-page/cattle-care/${id}`)
+    else if (id == 2) navigate(`/category-page/poultry-care/${id}`)
+    else if (id == 3) navigate(`/category-page/pet-care/${id}`)
   }
 
   const slide = heroSlides[currentSlide]
 
   return (
-    <section
-      className="relative w-full h-[90vh] min-h-[90vh] xl:h-[88.5vh] xl:min-h-[88.5vh] overflow-hidden"
-      
-    >
-    <video
-    key={slide.id}
-    className="absolute inset-0 w-full h-full object-cover"
-    src={slide.backgroundVideo}
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+    <section className="relative w-full h-[90vh] min-h-[90vh] xl:h-[88.5vh] xl:min-h-[88.5vh] overflow-hidden">
+      <video
+        key={slide.id}
+        className="absolute inset-0 w-full h-full object-cover"
+        src={slide.backgroundVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40"  />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content container */}
       <div className="relative h-full flex  items-center px-4 sm:px-8 lg:px-12">
-        <div className="w-screen bg-black/30 p-10  rounded-2xl max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+        <div
+          key={currentSlide}
+          className="w-screen bg-black/30 p-10  rounded-2xl max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center"
+        >
           {/* Left content */}
-          <div className="text-white space-y-6 sm:space-y-8 order-2 lg:order-1"> 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">{slide.title}</h1>
-            <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-pretty max-w-xl">{slide.description}</p>
-            <button className="bg-green-700 hover:bg-green-800 transition-colors text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto" onClick={()=> handleCick(slide.id)}>
+          <div
+            className="text-white space-y-6 sm:space-y-8 order-2 lg:order-1"
+            style={{
+              animation: "fadeInUp 0.8s ease-out forwards",
+            }}
+          >
+            <h1
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance"
+              style={{
+                animation: "fadeInUp 0.8s ease-out 0.1s forwards",
+                opacity: 0,
+              }}
+            >
+              {slide.title}
+            </h1>
+            <p
+              className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-pretty max-w-xl"
+              style={{
+                animation: "fadeInUp 0.8s ease-out 0.2s forwards",
+                opacity: 0,
+              }}
+            >
+              {slide.description}
+            </p>
+            <button
+              className="bg-green-700 hover:bg-green-800 transition-colors text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto"
+              onClick={() => handleCick(slide.id)}
+              style={{
+                animation: "fadeInUp 0.8s ease-out 0.3s forwards",
+                opacity: 0,
+              }}
+            >
               Explore
             </button>
           </div>
 
           {/* Right image placeholder */}
-          <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden order-1 lg:order-2">
+          <div
+            className="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden order-1 lg:order-2"
+            style={{
+              animation: "fadeInRight 0.8s ease-out forwards",
+            }}
+          >
             <img
               src={slide.imageUrl || "/placeholder.svg"}
               alt={slide.title}
-              fill
-              className="object-cover"
-              priority
+              className="object-cover w-full h-full"
+              key={slide.id}
             />
           </div>
         </div>
@@ -134,6 +164,30 @@ export default function ProductCarousel() {
           />
         ))}
       </div>
+
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </section>
   )
 }

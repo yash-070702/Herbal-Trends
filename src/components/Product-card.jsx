@@ -1,13 +1,14 @@
 import { useState } from "react"
 import ProductImage from "../assets/image.png"
 import { useNavigate } from "react-router-dom"
-export default function ProductCard({ categoryId , ind , name, form }) {
-  const [isHovered, setIsHovered] = useState(false);
-  const navigate = useNavigate();
 
+export default function ProductCard({ categoryId, ind, name, form }) {
+const [isHovered, setIsHovered] = useState(false)
+const navigate = useNavigate()
+ 
   function trimFirst10(str = "") {
-  return str.slice(0, 3);
-}
+    return str.slice(0, 3)
+  }
 
   return (
     <div
@@ -37,7 +38,7 @@ export default function ProductCard({ categoryId , ind , name, form }) {
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
             isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#2d5016] text-white"
           }`}
-          onClick={() => navigate(`/product-page/${categoryId}/${trimFirst10(name)}/${ind}`)}
+            onClick={() => navigate(`/product-page/${categoryId}/${trimFirst10(name)}/${ind}`)}
         >
           More Info
         </button>
@@ -45,3 +46,4 @@ export default function ProductCard({ categoryId , ind , name, form }) {
     </div>
   )
 }
+

@@ -1,17 +1,18 @@
 import { useParams } from "react-router-dom"
 import ProductCard from "../components/Product-card.jsx"
 import products from "../data/products_data.js"
-
+import { motion } from "framer-motion"
 
 export default function CategoryPage() {
   const { categoryType, id } = useParams();
+  const categoryId = parseInt(id, 10);
   function capitalizeWords(str) {
   return str
     .split(" ")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
-const truncate = (text = "", limit = 15) =>
+const truncate = (text = "", limit = 15) => 
   text.length > limit ? text.slice(0, limit) + "..." : text;
 
 
@@ -24,9 +25,25 @@ const truncate = (text = "", limit = 15) =>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-pretty">{capitalizeWords(categoryType)}</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+<div
+  key={id}
+  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+>
+
           {products[id-1].map((product,idx) => (
-            <ProductCard key={idx} ind={idx} categoryId={id-1} name={truncate(product.name)} form={product.physicalForm} />
+           <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+            >
+              <ProductCard
+                ind={idx}
+                categoryId={categoryId}
+                name={truncate(product.name)}
+                form={product.physicalForm}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
