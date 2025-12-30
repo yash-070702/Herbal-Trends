@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-[#2d5016] shadow-lg">
+      <header className="sticky top-0 z-50 bg-green-950 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center h-20">
               <div className="flex items-center gap-2">

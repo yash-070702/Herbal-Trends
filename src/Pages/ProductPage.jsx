@@ -54,7 +54,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gray-50 font-sans">
       <div className="flex relative">
-        <aside className="hidden lg:block w-72 bg-[#377024] h-screen sticky top-0 p-8 overflow-y-auto">
+        <aside className="hidden lg:block w-72 bg-[#0f431d] h-screen sticky top-0 p-8 overflow-y-auto">
           <div className="mb-8 relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -248,7 +248,7 @@ export default function Page() {
           />
 
           <div
-            className="relative bg-[#377024] h-full w-[80%] max-w-sm p-8 shadow-2xl flex flex-col transform transition-transform duration-300 animate-in slide-in-from-left"
+            className="relative bg-[#0f431d] h-full w-[80%] max-w-sm p-8 shadow-2xl flex flex-col transform transition-transform duration-300 animate-in slide-in-from-left"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-8 shrink-0">
@@ -321,7 +321,7 @@ export default function Page() {
 
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed bottom-25 right-6 z-60 bg-[#1b4313] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
+        className="lg:hidden fixed bottom-25 right-6 z-60 bg-[#0f2f09] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
       >
         {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
       </button>

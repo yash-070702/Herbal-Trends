@@ -181,7 +181,7 @@ const products = [
       medicineType: "Animal feed supplement",
       physicalForm: "Bolus",
       ingredients: "Tricalcium Phosphate,Vitamin A,Vitamin D3,Vitamin B12,Vitamin H,Vitamin E,Lysine,Magnesium,Copper Sulphate,Manganese Sulphate,Zinc,Cobalt,Selenium,Aswagandha,Jatamansi,Narayani,Jivanti,Shatawari",
-      treatmentsAndFunctions:"• Letting down of milk,Enhance of milk yield,Agalactia Calcium deficiency",
+      treatmentsAndFunctions:"Letting down of milk,Enhance of milk yield,Agalactia Calcium deficiency",
       recommendedFor: "Animals",
       quantity: "20 bolus/box",
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",

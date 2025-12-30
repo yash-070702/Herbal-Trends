@@ -104,7 +104,7 @@ export default function ProductCarousel() {
               {slide.description}
             </p>
             <button
-              className="bg-green-700 hover:bg-green-800 transition-colors text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto"
+              className="bg-green-950 hover:bg-green-900 transition-colors text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-lg sm:text-xl w-full sm:w-auto"
               onClick={() => handleCick(slide.id)}
               style={{
                 animation: "fadeInUp 0.8s ease-out 0.3s forwards",

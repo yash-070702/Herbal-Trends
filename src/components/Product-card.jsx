@@ -36,7 +36,7 @@ const navigate = useNavigate()
         {/* More Info Button */}
         <button
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
-            isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#2d5016] text-white"
+            isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#0f4523] text-white"
           }`}
             onClick={() => navigate(`/product-page/${categoryId-1}/${trimFirst10(name)}/${ind}`)}
         >
