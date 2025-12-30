@@ -1,25 +1,27 @@
+"use client"
+
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import image1 from "../assets/image.png";
-import { useParams } from "react-router-dom"
-import products from "../data/products_data";
+import products from "../data/products_data"
 
+export default function Page() {
+  const categories = [
+    { id: 0, label: "Cattle Care" },
+    { id: 1, label: "Poultry Care" },
+    { id: 2, label: "Pet Care" },
+  ]
 
-export default function ProductPage() {
- const params = useParams()
-  const id = (params?.id ) || "0"
-  const categoryId = (params?.categoryId ) || "cattle-care"
+  const [selectedCategory, setSelectedCategory] = useState(0)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const categoryId = selectedCategory
 
   const categoryProducts = products[categoryId] || products["default"]
-  const initialProduct = categoryProducts.find((p) => p.id === id) || categoryProducts[0]
+  const initialProduct = categoryProducts[0]
 
   const [selectedProduct, setSelectedProduct] = useState(initialProduct)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isIngredientsExpanded, setIsIngredientsExpanded] = useState(false)
- 
-   
-  // console.log("id:", id, "product-name:", productName, "categoryId:", categoryId);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -34,21 +36,67 @@ export default function ProductPage() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId)
+    setIsDropdownOpen(false)
+    setSelectedProduct(products[categoryId][0])
+    setIsIngredientsExpanded(false)
+  }
+
   const handleProductSelect = (product) => {
     setSelectedProduct(product)
     setIsMenuOpen(false)
     setIsIngredientsExpanded(false)
   }
 
-  return (
-    <main className="min-h-screen bg-gray-50 font-sans ">
-  
-      <div className="flex relative">
+  const currentCategory = categories.find((cat) => cat.id === selectedCategory)
 
-        <aside className="hidden lg:block w-72 bg-[#377024] h-[calc(100vh-68px)] sticky top-17 p-8 overflow-y-auto">
-          <h2 className="text-white text-3xl font-serif mb-8 border-b border-gray-800 pb-4">Cattle Care</h2>
+  return (
+    <main className="min-h-screen bg-gray-50 font-sans">
+      <div className="flex relative">
+        <aside className="hidden lg:block w-72 bg-[#377024] h-screen sticky top-0 p-8 overflow-y-auto">
+          <div className="mb-8 relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full text-[#377024]  flex items-center justify-between  transition-all duration-200 text-white text-3xl font-serif mb-8 border-b border-gray-800 pb-4"
+            >
+              <span>{currentCategory?.label}</span>
+              <ChevronDown
+                size={20}
+                className={`transform transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+           
+
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-20  mt-2 bg-white rounded-xl shadow-2xl overflow-hidden z-50"
+                >
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => handleCategorySelect(category.id)}
+                      className={`w-full text-left px-5 py-3 font-medium transition-colors duration-200 ${
+                        selectedCategory === category.id
+                          ? "bg-[#377024] text-white"
+                          : "text-[#377024] hover:bg-gray-100"
+                      }`}
+                    >
+                      {category.label}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           <div className="flex flex-col gap-2">
-            {products[categoryId].map((product,idx) => (
+            {categoryProducts.map((product, idx) => (
               <button
                 key={idx}
                 onClick={() => handleProductSelect(product)}
@@ -61,12 +109,11 @@ export default function ProductPage() {
                 {product.name}
               </button>
             ))}
-           
           </div>
         </aside>
 
         {/* Main Content Area */}
-           <div className="flex-1 p-6 md:p-12 lg:p-16 flex flex-col xl:flex-row gap-12">
+        <div className="flex-1 p-6 md:p-12 lg:p-16 flex flex-col xl:flex-row gap-12">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedProduct.name}
@@ -77,9 +124,14 @@ export default function ProductPage() {
               className="flex-1 space-y-10"
             >
               <div>
-                <h1 className="text-[#1b4313] text-5xl md:text-6xl font-serif mb-6">{selectedProduct.name}</h1>
+                <h1 className="text-[#1b4313] text-3xl md:text-5xl font-serif mb-6">{selectedProduct.name}</h1>
 
-                <div className="space-y-8 max-w-2xl">
+                <div className="space-y-6 max-w-2xl">
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Medicine Type</h3>
+                    <p className="text-lg text-slate-600">{selectedProduct.medicineType}</p>
+                  </section>
+
                   <section>
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Physical Form</h3>
                     <p className="text-lg text-slate-600">{selectedProduct.physicalForm}</p>
@@ -103,36 +155,41 @@ export default function ProductPage() {
                   <hr className="border-gray-200" />
 
                   <section>
-                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-4">Treatments</h3>
-                    {/* <ul className="space-y-3">
-                      {selectedProduct.treatments.map((treatment, idx) => (
-                        <li key={idx} className="flex items-center gap-3 text-lg text-slate-700">
-                          <CheckCircle2 className="text-green-600 w-6 h-6 shrink-0" />
-                          {treatment}
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-4">
+                      Treatments & Functions
+                    </h3>
+                    <ul className="text-lg text-slate-600 leading-relaxed space-y-2">
+                      {selectedProduct.treatmentsAndFunctions.split(",").map((treatment, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="text-[#377024] font-bold mt-1">•</span>
+                          <span>{treatment.trim()}</span>
                         </li>
                       ))}
-                    </ul> */}
+                    </ul>
                   </section>
 
                   <hr className="border-gray-200" />
+
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Recommended For</h3>
+                    <p className="text-lg text-slate-600">{selectedProduct.recommendedFor}</p>
+                  </section>
 
                   <section>
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Quantity</h3>
                     <p className="text-lg text-slate-600">{selectedProduct.quantity}</p>
                   </section>
 
-                  <section>
+                  {/* <section>
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Dosage</h3>
-                    <div className="space-y-1 text-lg">
-                      <p>
-                        <span className="font-bold text-slate-700">Small Animal:</span>{" "}
-                        <span className="text-slate-600">{selectedProduct.dosage.small}</span>
-                      </p>
-                      <p>
-                        <span className="font-bold text-slate-700">Large Animal:</span>{" "}
-                        <span className="text-slate-600">{selectedProduct.dosage.large}</span>
-                      </p>
-                    </div>
+                    <p className="text-lg text-slate-600 leading-relaxed">{selectedProduct.dosage}</p>
+                  </section> */}
+
+                  <section>
+                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">
+                      Directions To Use
+                    </h3>
+                    <p className="text-lg text-slate-600 leading-relaxed">{selectedProduct.directionsToUse}</p>
                   </section>
                 </div>
               </div>
@@ -150,30 +207,30 @@ export default function ProductPage() {
               className="xl:w-96"
             >
               <div className="bg-white rounded-[2.5rem] shadow-2xl p-6 md:p-8 sticky top-24 border border-gray-100">
-                <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50">
+                <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50 h-64">
                   <img
-                    src={selectedProduct.image || "/placeholder.svg"}
+                    src={selectedProduct.image || "/placeholder.svg?height=256&width=256&query=product"}
                     alt={selectedProduct.name}
-                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Dosage</h3>
-                    <div className="space-y-1 text-slate-600">
-                      <p>
-                        <span className="font-bold text-slate-800">Small Animal:</span> {selectedProduct.dosage.small}
-                      </p>
-                      <p>
-                        <span className="font-bold text-slate-800">Large Animal:</span> {selectedProduct.dosage.large}
-                      </p>
-                    </div>
+                    <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Storage</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">{selectedProduct.StorageInstructions}</p>
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl font-serif text-[#1b4313] mb-3">Storage</h3>
-                    <p className="text-slate-600 leading-relaxed">{selectedProduct.storage}</p>
+                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <h3 className="text-xl font-serif text-[#1b4313] mb-3">Quick Dosage</h3>
+                    <ul className="text-slate-600 text-sm leading-relaxed space-y-2">
+                      {selectedProduct.dosage.split(",").map((dose, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="text-[#377024] font-bold mt-0.5">•</span>
+                          <span>{dose.trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -195,16 +252,55 @@ export default function ProductPage() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center mb-8 shrink-0">
-              <h2 className="text-white text-3xl font-serif">Cattle Care</h2>
+              <h2 className="text-white text-3xl font-serif">{currentCategory?.label}</h2>
               <button
                 onClick={toggleMenu}
-                className="text-white p-2  hover:rounded-full hover:bg-white/20 transition-colors"
+                className="text-white p-2 hover:rounded-full hover:bg-white/20 transition-colors"
               >
                 <X size={28} />
               </button>
             </div>
 
-            <div className="flex flex-col gap-3 overflow-y-auto pb-20 scrollbar-hide">
+            <div className="mb-6 pb-6 border-b border-white/20">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="w-full bg-white text-[#377024] px-5 py-3 rounded-xl font-bold flex items-center justify-between hover:shadow-lg transition-all duration-200"
+              >
+                <span>{currentCategory?.label}</span>
+                <ChevronDown
+                  size={20}
+                  className={`transform transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="mt-2 bg-white rounded-xl shadow-2xl overflow-hidden"
+                  >
+                    {categories.map((category) => (
+                      <button
+                        key={category.id}
+                        onClick={() => handleCategorySelect(category.id)}
+                        className={`w-full text-left px-5 py-3 font-medium transition-colors duration-200 ${
+                          selectedCategory === category.id
+                            ? "bg-[#377024] text-white"
+                            : "text-[#377024] hover:bg-gray-100"
+                        }`}
+                      >
+                        {category.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="flex flex-col gap-3 overflow-y-auto pb-20">
               {categoryProducts.map((product) => (
                 <button
                   key={product.id}
@@ -225,7 +321,7 @@ export default function ProductPage() {
 
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed bottom-6 right-6 z-60 bg-[#1b4313] text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
+        className="lg:hidden fixed bottom-25 right-6 z-60 bg-[#1b4313] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all"
       >
         {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
       </button>
