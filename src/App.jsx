@@ -12,7 +12,7 @@ const CategoryPage = lazy(() => import("./Pages/CategoryPage.jsx"))
 const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
-
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
 const [showLoader, setShowLoader] = useState(true)
@@ -36,7 +36,9 @@ useEffect(() => {
   }
 
   return (
+
     <BrowserRouter>
+      <Toaster  reverseOrder={false} />
       <Header />
         <Routes>
           <Route path="/" element={<HomePage/>} />

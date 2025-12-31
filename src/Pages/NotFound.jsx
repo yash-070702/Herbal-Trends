@@ -2,8 +2,6 @@
 import { Link } from "react-router-dom"
 import Dog from "../assets/doggie.png";
 
-
-
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full bg-linear-to-b from-[#55ac45] to-[#d4ede4] flex flex-col items-center  -translate-y-23 md:-translate-y-5 p-4 sm:p-6 md:p-8">

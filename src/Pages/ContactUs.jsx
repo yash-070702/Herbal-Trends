@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { Phone, Mail, MapPin } from "lucide-react"
+import { toast } from "react-hot-toast"
 
-const WEB3FORMS_ACCESS_KEY = "your_access_key_here" // Declare the variable here
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 export default function ContactUs() {
   const [loading, setLoading] = useState(false)
@@ -14,16 +15,16 @@ export default function ContactUs() {
 
   const [errors, setErrors] = useState({})
 
-  const toast = {
-    success: (message) => {
-      setFormSubmitted(true)
-      setTimeout(() => setFormSubmitted(false), 5000)
-      console.log("Success:", message)
-    },
-    error: (message) => {
-      console.error("Error:", message)
-    },
-  }
+  // const toast = {
+  //   success: (message) => {
+  //     setFormSubmitted(true)
+  //     setTimeout(() => setFormSubmitted(false), 5000)
+  //     console.log("Success:", message)
+  //   },
+  //   error: (message) => {
+  //     console.error("Error:", message)
+  //   },
+  // }
 
   const validateForm = () => {
     const newErrors = {}
