@@ -126,7 +126,7 @@ export default function Header() {
 
       
           <div
-            className="absolute right-0 top-0 h-full w-72 bg-[#2d5016] shadow-xl p-6 flex flex-col"
+            className="absolute right-0 top-0 h-full w-72 bg-green-950 shadow-xl p-6 flex flex-col"
             style={{
               animation: "slideInRight 0.3s ease-out",
             }}
