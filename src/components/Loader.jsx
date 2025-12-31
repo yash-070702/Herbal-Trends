@@ -48,7 +48,7 @@ export default function VeterinaryLoader({
   `
 
   const containerClasses = fullScreen
-    ? "fixed inset-0 bg-[#2d5016] flex items-center justify-center z-50"
+    ? "fixed inset-0 bg-green-950 flex items-center justify-center z-50"
     : "flex items-center justify-center"
 
   const iconSize = {

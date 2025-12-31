@@ -1,7 +1,10 @@
 import { ChevronRight, Plus, Microscope, ShieldCheck, Factory } from "lucide-react"
 import Lab from "../assets/professional-veterinary-laboratory-background.jpg";
 import man from "../assets/high-tech-veterinary-manufacturing-facility.jpg";
+import pimage from "../assets/ProductImage.png"
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -20,14 +23,14 @@ export default function Home() {
             Pioneering the Future of <span className="text-emerald-400">Animal Health.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 font-medium max-w-2xl mx-auto mb-10 text-pretty">
-            Amorvet is a global leader in manufacturing high-quality veterinary products, blending innovation with
+            Herbal Trends is a global leader in manufacturing high-quality veterinary products, blending innovation with
             clinical excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-10 py-5 bg-emerald-500 text-white rounded-full font-black text-lg hover:bg-emerald-400 hover:scale-105 transition-all shadow-2xl shadow-emerald-500/40">
               Explore Our Products
             </button>
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black text-lg hover:bg-white/20 transition-all">
+            <button className="px-10 py-5 bg-white backdrop-blur-md border border-white/20 text-black rounded-full font-black text-lg hover:bg-white/20 transition-all">
               Our Research
             </button>
           </div>
@@ -119,7 +122,7 @@ export default function Home() {
 
           <div className="max-w-2xl mx-auto text-center mt-16">
             <p className="text-xl text-white/80 font-medium leading-relaxed mb-10 text-pretty">
-              Amorvet is committed to the food transition in the marine products sector. We propose sustainable
+              Herbal Trends is committed to the food transition in the marine products sector. We propose sustainable
               solutions serving the enterprises of tomorrow.
             </p>
             <button className="px-12 py-5 bg-white text-green-950 rounded-full font-black text-lg hover:bg-emerald-50 hover:scale-105 transition-all">
@@ -143,7 +146,7 @@ export default function Home() {
           ].map((item, idx) => (
             <div key={idx} className="relative aspect-[3/4] rounded-[2rem] overflow-hidden group">
               <img
-                src={`/.jpg?height=800&width=600&query=${item.query}`}
+                src={pimage}
                 alt={item.label}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
@@ -163,10 +166,11 @@ export default function Home() {
       <section className="py-40 text-center bg-green-50 rounded-t-[5rem]">
         <h2 className="text-5xl md:text-7xl font-black text-green-950 tracking-tighter mb-12">
           Let's talk about <br />
-          your project.
+          our Products.
         </h2>
-        <button className="px-16 py-6 bg-green-950 text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-green-950/30">
-          Contact our team
+        <button className="px-16 py-6 bg-green-950 text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-green-950/30" 
+        onClick={()=>navigate("/categories")}>
+          Explore Products
         </button>
       </section>
     </main>
