@@ -1,15 +1,14 @@
 import { ChevronRight, Plus, Microscope, ShieldCheck, Factory } from "lucide-react"
-
+import Lab from "../assets/professional-veterinary-laboratory-background.jpg";
+import man from "../assets/high-tech-veterinary-manufacturing-facility.jpg";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-  
-
-      {/* Hero Section - Inspired by the water/cinematic overlay image */}
+      {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/professional-veterinary-laboratory-background.jpg"
+            src={Lab}
             alt="Laboratory"
             className="w-full h-full object-cover brightness-[0.3]"
           />
@@ -35,14 +34,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Principles Section - Inspired by the numbered card image */}
+      {/* Main Principles Section */}
       <section className="py-32 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <h2 className="text-5xl font-black text-primary tracking-tighter max-w-md leading-none">
+          <h2 className="text-5xl font-black text-green-950 tracking-tighter max-w-md leading-none">
             Our core <br />
             commitments.
           </h2>
-          <p className="text-lg text-primary/60 font-medium max-w-sm">
+          <p className="text-lg text-green-950/60 font-medium max-w-sm">
             We focus on three pillars that define our manufacturing excellence and global influence.
           </p>
         </div>
@@ -70,19 +69,21 @@ export default function Home() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="group p-10 bg-secondary rounded-[2.5rem] hover:bg-primary hover:translate-y-[-8px] transition-all duration-500"
+              className="group p-10 bg-green-50 rounded-[2.5rem] hover:bg-green-950 hover:translate-y-[-8px] transition-all duration-500"
             >
               <div className="flex justify-between items-start mb-12">
-                <span className="text-6xl font-black text-primary/10 group-hover:text-white/10 transition-colors">
+                <span className="text-6xl font-black text-green-950/10 group-hover:text-white/10 transition-colors">
                   {item.num}
                 </span>
-                <item.icon className="w-10 h-10 text-primary group-hover:text-emerald-400 transition-colors" />
+                <item.icon className="w-10 h-10 text-green-950 group-hover:text-emerald-400 transition-colors" />
               </div>
-              <h3 className="text-3xl font-black text-primary group-hover:text-white mb-6 tracking-tight">
+              <h3 className="text-3xl font-black text-green-950 group-hover:text-white mb-6 tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-primary/60 group-hover:text-white/70 font-medium leading-relaxed mb-8">{item.desc}</p>
-              <button className="flex items-center gap-2 font-bold text-primary group-hover:text-emerald-400 transition-colors">
+              <p className="text-green-950/60 group-hover:text-white/70 font-medium leading-relaxed mb-8">
+                {item.desc}
+              </p>
+              <button className="flex items-center gap-2 font-bold text-green-950 group-hover:text-emerald-400 transition-colors">
                 Learn more <ChevronRight className="w-4 h-4" />
               </button>
             </div>
@@ -90,8 +91,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Narrative Section - Inspired by the wide photo/center text image */}
-      <section className="py-20 bg-primary overflow-hidden">
+      {/* Narrative Section */}
+      <section className="py-20 bg-green-950 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-8 leading-tight">
@@ -102,14 +103,14 @@ export default function Home() {
 
           <div className="relative rounded-[3rem] overflow-hidden group">
             <img
-              src="/high-tech-veterinary-manufacturing-facility.jpg"
+              src={man}
               alt="Facility"
               className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute inset-0 flex items-center justify-center">
               <button className="w-24 h-24 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30 hover:scale-110 active:scale-95 transition-all group/play">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-green-950">
                   <Plus className="w-8 h-8 rotate-45" />
                 </div>
               </button>
@@ -121,16 +122,16 @@ export default function Home() {
               Amorvet is committed to the food transition in the marine products sector. We propose sustainable
               solutions serving the enterprises of tomorrow.
             </p>
-            <button className="px-12 py-5 bg-white text-primary rounded-full font-black text-lg hover:bg-emerald-50 hover:scale-105 transition-all">
+            <button className="px-12 py-5 bg-white text-green-950 rounded-full font-black text-lg hover:bg-emerald-50 hover:scale-105 transition-all">
               Our Engagement
             </button>
           </div>
         </div>
       </section>
 
-      {/* Grid Portfolio - Inspired by the 3-column black/white photo section */}
+      {/* Grid Portfolio */}
       <section className="py-32 px-4 max-w-7xl mx-auto">
-        <h2 className="text-5xl font-black text-primary tracking-tighter mb-20 text-balance leading-[0.9]">
+        <h2 className="text-5xl font-black text-green-950 tracking-tighter mb-20 text-balance leading-[0.9]">
           A global approach for <br />a model of the future.
         </h2>
 
@@ -146,10 +147,10 @@ export default function Home() {
                 alt={item.label}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <span className="text-white font-black text-2xl">{item.label}</span>
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-green-950">
                   <Plus className="w-6 h-6" />
                 </div>
               </div>
@@ -158,13 +159,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA - Inspired by "Parlons de votre projet" */}
-      <section className="py-40 text-center bg-secondary rounded-t-[5rem]">
-        <h2 className="text-5xl md:text-7xl font-black text-primary tracking-tighter mb-12">
+      {/* Final CTA */}
+      <section className="py-40 text-center bg-green-50 rounded-t-[5rem]">
+        <h2 className="text-5xl md:text-7xl font-black text-green-950 tracking-tighter mb-12">
           Let's talk about <br />
           your project.
         </h2>
-        <button className="px-16 py-6 bg-primary text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-primary/30">
+        <button className="px-16 py-6 bg-green-950 text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-green-950/30">
           Contact our team
         </button>
       </section>
