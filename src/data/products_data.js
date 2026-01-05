@@ -13,7 +13,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: " One bolus twice daily, Double the dose in heavy calcium deficiency",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639520/Gemini_Generated_Image_58uhym58uhym58uh_knggak.png"],
     },
     {
       name: "HEATEX Bolus / Heat Inducer for Cattles",
@@ -27,7 +27,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cows/Buffalo/Mares/Heifers : Two bolus at a time for four days consecutively , Sheep/Goats/Sows : One bolus at a time for four days consecutively , Repeat the dose on 11th day , if a weak or no ostrus is observed after first dosage or as directed by the Veterinarian.",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639540/Gemini_Generated_Image_yo4gz0yo4gz0yo4g_cblb1x.png"],
     },
     {
       name: "Mcure powder -Medicine for fibrosis",
@@ -41,7 +41,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "60 gms daily for 4 days or as directed by the veterinarian ",
       directionsToUse: "Dissolve 60 gm powder in 250 ml water or mix with jaggery for single administration. It is recommenced for 3-4 consecutive days.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639521/Gemini_Generated_Image_92quee92quee92qu_ztgnly.png"],
     },
     {
       name: "Livoboost bolus/ Digestive bolus for animals",
@@ -55,7 +55,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cows/ Buffaloes :Two Bolus twice daily , Small animals : 1-2 Bolus twice dally for 10 days or as per veterinarian suggestions.",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639528/Gemini_Generated_Image_gff7uzgff7uzgff7_mf5osm.png"],
     },
     {
       name: "Herbolite liquid 1 ltr/ Energy booster and livertonic for animals",
@@ -69,7 +69,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cattle and buffalo: 75 to 150 ml twice a day,Goat/Sheep: 50 to 75 ml twice a day.",
       directionsToUse: "Put the recommended dose in animal feed or water or as directed by the veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_e81elpe81elpe81e_js85vn.png"],
     },
     {
       name: "Utericare liquid/ Uterine tonic for animals",
@@ -96,7 +96,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "100 gms twice daily for 3 days or as directed by the veterinarian",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639514/Gemini_Generated_Image_5e8tg45e8tg45e8t_ikadxx.png"],
     },
     {
       name: "Livoboost liquid/ digestive and liver tonic for animals",
@@ -109,7 +109,7 @@ const products = [
       quantity: "1 ltr, 5 ltr",
       dosage: "Cow/Buffaloes: 50 ml twice daily , Calves/Sheep : 20-25 ml twice daily , Sheep/Goat: 15-20 ml twice daily",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639530/Gemini_Generated_Image_ev11g2ev11g2ev11_s7xj52.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639524/Gemini_Generated_Image_dd7d32dd7d32dd7d_zfelqq.png"],
     },
     {
       name: "Dermicure spray/ Wound Healer Spray",
@@ -135,7 +135,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cows, Buffalos and Horses: 25-50 ml/day Calves, Sheep and Pigs: 10-15 ml/day,Dogs and cats: 5-8 ml/day,Poultry: 25 ml/50 birds",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639530/Gemini_Generated_Image_j1bzrpj1bzrpj1bz_kauvlk.png"],
     },
     {
       name: "Ecool liquid/ Medicine for Heat strokes in animals",

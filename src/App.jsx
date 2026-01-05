@@ -11,6 +11,7 @@ const ProductsPage = lazy(() => import("./Pages/ProductPage.jsx"))
 const CategoryPage = lazy(() => import("./Pages/CategoryPage.jsx"))
 const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
+const AboutUs = lazy(() => import("./Pages/AboutUs.jsx"))
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
 import { Toaster } from "react-hot-toast"
 
@@ -46,6 +47,7 @@ useEffect(() => {
           <Route path="/category-page/:categoryType/:id" element={<CategoryPage />} />
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

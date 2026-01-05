@@ -3,30 +3,28 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 import dummyImage from "../assets/image.png"
-import Video1 from "../assets/BackgroundVedios/CattleCare.mp4"
-import Video2 from "../assets/BackgroundVedios/PoultryCare.mp4"
-import Video3 from "../assets/BackgroundVedios/PetCare.mp4"
+
 
 const heroSlides = [
   {
     id: 1,
     title: "Cattle Care",
     description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: Video1,
+    backgroundVideo: "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639613/CattleCare_xyqwff.mp4",
     imageUrl: dummyImage,
   },
   {
     id: 2,
     title: "Poultry Care",
     description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: Video2,
+    backgroundVideo:"https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639612/PoultryCare_galuqj.mp4",
     imageUrl: dummyImage,
   },
   {
     id: 3,
     title: "Pet Care",
     description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: Video3,
+    backgroundVideo: "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639600/PetCare_tsdznh.mp4",
     imageUrl: dummyImage,
   },
 ]

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import products from "../data/products_data"
 
@@ -22,6 +22,7 @@ export default function Page() {
   const [selectedProduct, setSelectedProduct] = useState(initialProduct)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isIngredientsExpanded, setIsIngredientsExpanded] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -33,6 +34,10 @@ export default function Page() {
       document.body.style.overflow = "unset"
     }
   }, [isMenuOpen])
+
+  useEffect(() => {
+    setCurrentImageIndex(0)
+  }, [selectedProduct])
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -47,6 +52,21 @@ export default function Page() {
     setSelectedProduct(product)
     setIsMenuOpen(false)
     setIsIngredientsExpanded(false)
+  }
+
+  const getImagesArray = () => {
+    const images = selectedProduct.images || selectedProduct.image
+    return Array.isArray(images) ? images : [images]
+  }
+
+  const handlePrevImage = () => {
+    const imagesArray = getImagesArray()
+    setCurrentImageIndex((prev) => (prev === 0 ? imagesArray.length - 1 : prev - 1))
+  }
+
+  const handleNextImage = () => {
+    const imagesArray = getImagesArray()
+    setCurrentImageIndex((prev) => (prev === imagesArray.length - 1 ? 0 : prev + 1))
   }
 
   const currentCategory = categories.find((cat) => cat.id === selectedCategory)
@@ -66,7 +86,6 @@ export default function Page() {
                 className={`transform transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
               />
             </button>
-           
 
             <AnimatePresence>
               {isDropdownOpen && (
@@ -180,11 +199,6 @@ export default function Page() {
                     <p className="text-lg text-slate-600">{selectedProduct.quantity}</p>
                   </section>
 
-                  {/* <section>
-                    <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Dosage</h3>
-                    <p className="text-lg text-slate-600 leading-relaxed">{selectedProduct.dosage}</p>
-                  </section> */}
-
                   <section>
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">
                       Directions To Use
@@ -206,13 +220,67 @@ export default function Page() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="xl:w-96"
             >
-              <div className="bg-white rounded-[2.5rem] shadow-2xl p-6 md:p-8 sticky top-24 border border-gray-100">
-                <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50 h-64">
+              <div className="bg-[#dafbdd] rounded-[2.5rem] shadow-2xl p-6 md:p-8 sticky top-24 border border-gray-100">
+                 <div className="rounded-3xl overflow-hidden mb-8 shadow-inner bg-gray-50 h-64 relative group">
+                  {/* Image display */}
                   <img
-                    src={selectedProduct.image || "/placeholder.svg?height=256&width=256&query=product"}
-                    alt={selectedProduct.name}
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    src={getImagesArray()[currentImageIndex]  }
+                   alt="Optimized"
+                    onClick={() => window.open(getImagesArray()[currentImageIndex], "_blank", "noopener,noreferrer")}
+                    className="w-full h-full object-contain cursor-pointer"
+                    style={{
+                      transformOrigin: 'var(--mouse-x, 50%) var(--mouse-y, 50%)',
+                      transition: 'transform 0.1s ease-out'
+                    }}
+
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const x = ((e.clientX - rect.left) / rect.width) * 100;
+                      const y = ((e.clientY - rect.top) / rect.height) * 100;
+                      e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+                      e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+                      e.currentTarget.style.transform = 'scale(2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
                   />
+
+                  {getImagesArray().length > 1 && (
+                    <>
+                      {/* Previous button */}
+                      <button
+                        onClick={handlePrevImage}
+                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 z-10"
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft size={20} />
+                      </button>
+
+                      {/* Next button */}
+                      <button
+                        onClick={handleNextImage}
+                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 z-10"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight size={20} />
+                      </button>
+
+                      {/* Image counter/dots */}
+                      <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                        {getImagesArray().map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setCurrentImageIndex(idx)}
+                            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                              idx === currentImageIndex ? "bg-white w-6" : "bg-white/50 hover:bg-white/75"
+                            }`}
+                            aria-label={`Go to image ${idx + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 <div className="space-y-6">
@@ -221,7 +289,7 @@ export default function Page() {
                     <p className="text-slate-600 leading-relaxed text-sm">{selectedProduct.StorageInstructions}</p>
                   </div>
 
-                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                  <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                     <h3 className="text-xl font-serif text-[#1b4313] mb-3">Quick Dosage</h3>
                     <ul className="text-slate-600 text-sm leading-relaxed space-y-2">
                       {selectedProduct.dosage.split(",").map((dose, idx) => (
