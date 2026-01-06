@@ -78,7 +78,7 @@ export default function Page() {
           <div className="mb-8 relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full text-[#377024]  flex items-center justify-between  transition-all duration-200 text-white text-3xl font-serif mb-8 border-b border-gray-800 pb-4"
+              className="w-full  flex items-center justify-between  transition-all duration-200 text-white text-3xl font-serif mb-8 border-b border-gray-800 pb-4"
             >
               <span>{currentCategory?.label}</span>
               <ChevronDown
@@ -332,7 +332,7 @@ export default function Page() {
             <div className="mb-6 pb-6 border-b border-white/20">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full bg-white text-[#377024] px-5 py-3 rounded-xl font-bold flex items-center justify-between hover:shadow-lg transition-all duration-200"
+                className="w-full  text-white px-5 py-3 rounded-xl font-serif text-2xl flex items-center justify-between hover:shadow-lg transition-all duration-200"
               >
                 <span>{currentCategory?.label}</span>
                 <ChevronDown

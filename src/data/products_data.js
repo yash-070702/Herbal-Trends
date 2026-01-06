@@ -122,7 +122,7 @@ const products = [
       StorageInstructions:" • Store in cool and dry place away from fire and heat,Do not expose the product to temperature above 50°C,Avoid contact with eyes,Do not inhale while spraying,Keep the can straight while spraying.",
       dosage: "As per veterinarian suggestions",
       directionsToUse: "Shake well before use, Clean the affected part and apply the medicine by spraying twice until healing",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639547/Gemini_Generated_Image_nhthernhthernhth_xvggss.png"],
     },
     {
       name: "Pro cal ds liquid/ Calcium Liquid For Animals",
@@ -148,7 +148,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cows/Buffalos : 50-100 ml / head / day,Calfs/Goats/Dogs: 20-30 ml / head / day,Horses : 100-150 ml / head after racing",
       directionsToUse: "Mix the above dose in half of water intake by animals",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639536/Gemini_Generated_Image_tztjettztjettztj_qdjtjs.png"],
     },
     {
       name: "Ossimin forte powder/ Mineral Mixture for Animals",
@@ -174,20 +174,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cow, Buffalo & Camel : 2 Bolus BD for 4 days. , Sheep, Goat & Calves: 1/2 Bolus BD for 4 Days", 
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
-    },
-    {
-      name: "Maxomilk bolus/ cattle milk booster",
-      medicineType: "Animal feed supplement",
-      physicalForm: "Bolus",
-      ingredients: "Tricalcium Phosphate,Vitamin A,Vitamin D3,Vitamin B12,Vitamin H,Vitamin E,Lysine,Magnesium,Copper Sulphate,Manganese Sulphate,Zinc,Cobalt,Selenium,Aswagandha,Jatamansi,Narayani,Jivanti,Shatawari",
-      treatmentsAndFunctions:"Letting down of milk,Enhance of milk yield,Agalactia Calcium deficiency",
-      recommendedFor: "Animals",
-      quantity: "20 bolus/box",
-      StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
-      dosage: "One bolus twice daily, Double the dose in heavy calcium deficiency or as directed by the veterinarian",
-      directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639522/Gemini_Generated_Image_ase73tase73tase7_shz4un.png"],
     },
     {
       name: "Ultrapyrin powder/ Analgesic Antipyretic powder",
@@ -200,7 +187,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Small animal : 20-30 gms B.D. for 5 days,Large animal : 40-60 gms B.D. for 5 days",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_bswxl1bswxl1bswx_pmaloi.png"],
     },
     {
       name: "Rumiset powder/ Herbal Digestive Powder",
@@ -213,7 +200,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Small Animal: 40-50 gms twice daily , Large Animal : 100 gms twice Daily",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639519/Gemini_Generated_Image_7qj1nw7qj1nw7qj1_g4fat2.png"],
     },
     {
       name: "Trumin 7 bolus/ Trace minerals bolus",
@@ -226,7 +213,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "1-2 bolus B.D.",
       directionsToUse: "One bolus to be fed orally every day for 20 days or as directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639520/Gemini_Generated_Image_81po0981po0981po_cgvp1x.png"],
     },
     {
       name: "Impacrid powder/ impaction medicine",
@@ -239,7 +226,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "400 gms in a single dose for Impaction",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639547/Gemini_Generated_Image_mrtlw1mrtlw1mrtl_jpdryd.png"],
     },
     {
       name: "Avirol h/ tonic for udder growth",
@@ -252,7 +239,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cattle : 10 ml. per day,Sheep/Goat : 5 ml per day",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639522/Gemini_Generated_Image_3kdeaw3kdeaw3kde_lrmm5w.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639513/Gemini_Generated_Image_4pmxdv4pmxdv4pmx_iaz544.png"],
     },
     {
       name: "Lacta gel/ Ionic calcium for animals",
@@ -265,7 +252,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "400 gms in a single dose for Impaction",
       directionsToUse: "Regular Use : For higher milk yield, administer one bottle per animal per day for 5-10 days , To Prevents Milk Fever : Give one bottle at the first sign of calving & another botle 6 to 12 hours post calving, every 12 hours as needed or as directed by the Veterinarian.,A post calving dose is very beneficial.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639535/Gemini_Generated_Image_t193nxt193nxt193_kzwomi.png"],
     },
     {
       name: "Ascominth liquid/ Herbal Dewormer",
@@ -278,7 +265,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Large animals : 100 ml liquid once a day ,Small animals : 20 -50 ml once a day",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639535/Gemini_Generated_Image_sazuh0sazuh0sazu_vh9jj3.png"],
     },
     {
       name: "Tickrid spray",
@@ -291,7 +278,7 @@ const products = [
       StorageInstructions:" Keep out of reach of children. Do not spray on food stuff, utensils, articles made of plastic and allied materials. This is combustible material. Keep in cool & dry place.Away from heat & open flame.",
       dosage: "",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639518/Gemini_Generated_Image_7i1ns17i1ns17i1n_rdoupd.png"],
     },
     {
       name: "Ai guard/ conception medicine for animals",
@@ -319,7 +306,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "1-2 ml/5-10 litre of drinking water depending upon the pH and hardness/quality of available drinking water",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639549/Gemini_Generated_Image_jdwpsojdwpsojdwp_csxrhk.png"],
     },
     {
       name: "Grow Up/ growth promotor for animals ",
@@ -332,7 +319,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "(for 5-7 days in morning water):Chicks : 5 ml/100 birds,Growers : 15 ml/100 birds , Broilers Layers : 20 ml/100 birds",
       directionsToUse: "200 ml orally after A.l.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639539/Gemini_Generated_Image_u9tjyvu9tjyvu9tj_kc6dos.png"],
     },
     {
       name: "Immunity power-immunity booster for poultry",
@@ -371,7 +358,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks : 10 ml/100 birds/day, Growers : 25 ml/100 birds/day , Broilers Layers : 50 ml/100 birds/day , Cattle and Dogs and cats : 10-20 ml/day , Calf & Sheep & Pigs : 20-50 ml/day , Cows & Buffaloes & Horses :  50-100 ml/day",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639510/Gemini_Generated_Image_2pi1dy2pi1dy2pi1_rf2mrh.png"],
     },
     {
       name: "Cough cure /medicine for cough",
@@ -384,7 +371,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks : 5-10 ml/100 Birds/day , Growers : 20-30 ml/100 birds/day , Broilers/Layers: 20-30- ml/100 Birds/day",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_c73r8zc73r8zc73r_mcm2md.png"],
     },
     {
       name: "Toxocare liquid/ liver tonic for poultry",
@@ -397,7 +384,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks : 5 ml, Growers : 15 ml, Layers : 20-25 ml, Broilers : 20-30 ml",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639538/Gemini_Generated_Image_x9jx64x9jx64x9jx_lmwyam.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639537/Gemini_Generated_Image_thwtujthwtujthwt_ejuntq.png"],
     },
     {
       name: "Bplex/ bcomplex for animals",
@@ -436,7 +423,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "CHICKS : 10-15 ml/100 birds for 4-5 days , ADULTS : 25-30 ml/ 100 birds for 4-5 days",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639529/Gemini_Generated_Image_ig0u0yig0u0yig0u_jabjs0.png"],
     },
     {
       name: "Avitone c/ multivitamin liquid for animals",
@@ -449,7 +436,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "2-5 ml per 100 birds fo 5-7 days through drinking water",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639528/Gemini_Generated_Image_h6ei4lh6ei4lh6ei_xrkmiz.png"],
     },
     {
       name: "Ovocare Liquid/ medicine for prolapse in poultry animals",
@@ -516,7 +503,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Small animals: A few drops to half teaspoonful orally daily, Medium sized animals: half to one teaspoonful daily orally,Large Animal: Two teaspoonful daily orally",
        directionsToUse: "As directed by the Veterinarian",
-       image: ProductImage,
+       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639555/Generated_Image_November_01_2025_-_9_53AM_yvy4pc.png"],
     },
     {
       name: "Calplus pet/ Calcium Liquid For Pets",
@@ -542,10 +529,10 @@ const products = [
       StorageInstructions:" Keep in a cool, dark place",
       dosage: "",
       directionsToUse: "Avoid to spray near fire., Do not spray on eyes , Keep away from the reach of children. , Do not use on broken skin. , Avoid contact with eyes.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639561/Generated_Image_November_17_2025_-_6_08PM_g6tdun.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639549/Generated_Image_November_01_2025_-_9_33AM_asr1x1.png"],
     },
     {
-      name: "Urid syrup/ Medicine for U.T.I. for pets",
+      name: "U-Rid syrup/ Medicine for U.T.I. for pets",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
       ingredients: "Shudh Shilajeet (Asphaltum punjabinum),Swait parpati,Moolishar (Raphanus Sativas),Sheetal Chini,Saindha Namak,Sajjikhar (Soda bicarb),Punernava (Boerhaviadiffasa),Panchtrin Mool (Trin panch mool),Ikshu Mool (Saccharum officinarum),Gokshru (Tribulus Terrestris),Charilla (Parmelia Perlata),Pashan Bhed (Bergenia ciliata),Varun Twak (Crataeva Nurbala),Kulattha (Bigna Umquicalata),Palashpushp (Butea monosperma),Lajaloomool (Mimosa pundica),Makoj (Solanum nigrum),Kakribeej (Cucumis satibus),**Dacuharidra (Berberis aristata)",
@@ -555,10 +542,10 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Adults - 2-3 TSF twice a day., Small breed- 1-2 TSF twice a day",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639553/Generated_Image_November_01_2025_-_9_51AM_udjbdj.png"],
     },
     {
-      name: "Herbolite pet syrup/ Liver tonic and energy booster for pets",
+      name: "Herbo-Lite pet syrup/ Liver tonic and energy booster for pets",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
       ingredients: "Gluconeogenic Precursors, Sylimarine with Herbs-12,Tephrosia Purpurea,Eclipta Alba,Phyllanthus Niruri,Andrographis Paniculata,Terminalia Chebula,Techomalia Undulata,Emblica,Tinosopora Cordifolia,Berberis Species,Picrohiza Kurroa,Acorus Calamus,Raphanus Sativus",
@@ -568,7 +555,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Small Breeds: 5-8ml twice daily , Big Breeds: 10-15ml twice daily , Cats: 5-10ml twice daily or as directed by the veterinarian",
       directionsToUse: "Stir into your animal's drinking water or add to food or administer with dropper / spoon.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_55AM_vi8knw.png"],
     },
     {
       name: "Antilick pet syrup",
@@ -594,7 +581,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Small Breeds & Cats: 2g twice a day,Medium Breeds: 3g twice a day,Large & Giant Breeds: 5g twice a day",
       directionsToUse: "Put directly in the mouth of the pet or sprinkles it on the food",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639527/Gemini_Generated_Image_eyesdxeyesdxeyes_1_awp4pl.png"],
     },
     {
       name: "Immunity power/ Immunity booster for pets",
@@ -607,7 +594,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Pups: 5 ml twice daily orally , Cats: 5-10 ml twice daily , Adult Dogs / Bitches : 10-15 ml twice daily orally or as directed by the Veterinarian",
       directionsToUse: "Put directly into the mouth of animals or sprinkles over the food.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639555/Generated_Image_November_01_2025_-_9_52AM_jyo6at.png"],
     },
     {
       name: "Plasma care / platlets booster for pets",
@@ -620,7 +607,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Pups: 5 ml twice daily orally , Adult Dogs/Bitches : 10-15 ml twice daily orally or as directed by the Veterinarian",
       directionsToUse: "Put directly into the mouth of pets or sprinkles it over the food",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_54AM_loavyq.png"],
     },
     {
       name: "Oyan pet bath - dry shampoo for pets",
@@ -633,7 +620,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "As directed by the Veterinarian",
       directionsToUse: "For clean and shiny coat spray it properly over the coat of your pet and rub it. Avoid Mouth, nose and eyes Easy Clean will evaporate away to leave the coat dry, clean and sweet smelling.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639546/Generated_Image_November_01_2025_-_5_30PM_petvft.png"],
     },
     {
       name: "Oyan pet mouth freshner ",
@@ -646,7 +633,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "As directed by the Veterinarian",
       directionsToUse: "Apply in the mouth. of pet two or three times a day. Don't allow pet to eat any thing just after application.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639551/Generated_Image_November_01_2025_-_9_29AM_evyj7n.png"],
     },
     {
       name: "Procal plus/ Calcium chewable tablets for dogs",
@@ -659,10 +646,10 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "2Puppies and dogs under 5kg 1 tab daily, dogs above 5 kg 2 tabs twice daily, or as recommended by the veterinarian",
       directionsToUse: "Feed directly to the pets",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_01AM_ty6ntq.png"],
     },
     {
-      name: "Promin H SYRUP/ Multivitamin Liquid For Dogs",
+      name: "Promin-H syrup/ Multivitamin Liquid For Dogs",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
       ingredients: " L-Leucine, Folic Acid,L-Isoleucine,Vitamin C,L-Lysine Hcl., Vitamin D3,L-Phenylalanine,Vitamin E,L-Threonine,Biotin,DL-Methionine,Nicotinamide,L-Tryptophan, Protein Hydrolysate Proteolysed,L-Valine,Vitamin B1,,Vitamin B2,Liver Ext.,Vitamin B6,Vitamin B12,Calcium Pantothenate",
@@ -672,7 +659,7 @@ const products = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Pups: 5 ml twice daily orally , Cats: 5-10 ml twice daily , Adult Dogs/Bitches: 10 - 15 ml twice daily orally or as directed by the Veterinarian.",
       directionsToUse: "Stir into your pet's drinking water or add to food or administer with dropper / spoon",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_50AM_o71nqc.png"],
     },
   ],
 ];
