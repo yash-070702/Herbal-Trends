@@ -1,6 +1,7 @@
 import { ChevronRight, Plus, Microscope, ShieldCheck, Factory } from "lucide-react"
 import Lab from "../assets/professional-veterinary-laboratory-background.jpg";
 import man from "../assets/high-tech-veterinary-manufacturing-facility.jpg";
+import ProductImage from "../assets/image.png"
 import pimage from "../assets/ProductImage.png"
 import { useNavigate } from "react-router-dom";
 export default function Home() {
@@ -133,20 +134,20 @@ export default function Home() {
       </section>
 
       {/* Grid Portfolio */}
-      <section className="py-32 px-4 max-w-7xl mx-auto">
+      <section className="pt-32 px-4 max-w-7xl mx-auto">
         <h2 className="text-5xl font-black text-green-950 tracking-tighter mb-20 text-balance leading-[0.9]">
           A global approach for <br />a model of the future.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { query: "veterinary handshake business", label: "Global Partnership" },
-            { query: "medical lab close up aesthetic", label: "Precision Research" },
-            { query: "animal care clinic interior", label: "Clinical Support" },
+            { query: "veterinary handshake business", label: "Global Partnership",image:ProductImage },
+            { query: "medical lab close up aesthetic", label: "Precision Research",image:pimage },
+            { query: "animal care clinic interior", label: "Clinical Support",image:ProductImage },
           ].map((item, idx) => (
             <div key={idx} className="relative aspect-[3/4] rounded-[2rem] overflow-hidden group">
               <img
-                src={pimage}
+                src={item.image}
                 alt={item.label}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />

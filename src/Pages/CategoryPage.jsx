@@ -42,6 +42,7 @@ const truncate = (text = "", limit = 15) =>
                 categoryId={categoryId}
                 name={truncate(product.name)}
                 form={product.physicalForm}
+                image={product.image[0]}
               />
             </motion.div>
           ))}

@@ -1,8 +1,7 @@
 import { useState } from "react"
-import ProductImage from "../assets/image.png"
 import { useNavigate } from "react-router-dom"
 
-export default function ProductCard({ categoryId, ind, name, form }) {
+export default function ProductCard({ categoryId, ind, name, form, image }) {
 const [isHovered, setIsHovered] = useState(false)
 const navigate = useNavigate()
  
@@ -18,11 +17,11 @@ const navigate = useNavigate()
     >
       <div className="relative w-full aspect-video bg-linear-to-br from-green-50 to-green-100 flex items-center justify-center overflow-hidden">
         <img
-          src={ProductImage}
+          src={image}
           alt={name}
           width={400}
           height={250}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
 
