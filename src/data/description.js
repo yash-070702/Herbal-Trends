@@ -1,0 +1,5 @@
+const description=[ "At herbal trends, we recognize that every animal and every health challenge is unique. That is why we have moved beyond one-size-fits-all treatments. We specialize in the research, development, and manufacturing of high-efficacy herbal cattle medicines delivered in the formats that work best for your farm s daily operations.",
+"At herbal trends, we understand that in poultry farming, every bird and every day matters. We specialize in high-performance herbal formulations designed to optimize growth, enhance egg production, and improve FCR without the use of harmful antibiotic growth promoters (AGPs).",
+"At herbal trends, we recognize that every animal and every health challenge is unique. That is why we have moved beyond one-size-fits-all treatments. We specialize in the research, development, and manufacturing of high-efficacy herbal cattle medicines delivered in the formats that work best for your farm s daily operations."]
+
+export default description;
