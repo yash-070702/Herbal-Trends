@@ -9,7 +9,7 @@ export default function NotFound() {
        
           {/* 404 Text */}
           <div className="mb-8 md:mb-12">
-            <h1 className="text-9xl md:text-[200px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-green-950 to-green-950/70 leading-none mb-2">
+            <h1 className="text-9xl md:text-[200px] font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-green-950 to-green-950/70 leading-none mb-2">
               404
             </h1>
             <p className="text-sm md:text-base font-bold tracking-widest uppercase text-emerald-600 mt-4">

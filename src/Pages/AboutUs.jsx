@@ -16,7 +16,7 @@ export default function AboutUs() {
             alt="Veterinary Excellence"
             className="w-full h-full object-cover brightness-[0.4]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-950/20 to-white" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-green-950/20 to-white" />
         </div>
 
         <div className="relative z-10 text-center max-w-5xl px-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -104,7 +104,7 @@ export default function AboutUs() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="p-8 bg-white rounded-[2rem] hover:shadow-2xl hover:shadow-green-950/5 transition-all duration-500 border border-green-950/5 group"
+                className="p-8 bg-white rounded-4xl hover:shadow-2xl hover:shadow-green-950/5 transition-all duration-500 border border-green-950/5 group"
               >
                 <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
                   <item.icon className="w-6 h-6" />
@@ -155,7 +155,7 @@ export default function AboutUs() {
               className="group relative overflow-hidden rounded-[2.5rem] border border-green-950/10 hover:border-emerald-500/30 transition-all duration-500"
             >
               {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-emerald-500/0 to-emerald-500/0 group-hover:from-emerald-500/5 group-hover:via-emerald-500/3 group-hover:to-emerald-500/5 transition-all duration-500" />
+              <div className="absolute inset-0 bg-linear-to-br from-emerald-500/0 via-emerald-500/0 to-emerald-500/0 group-hover:from-emerald-500/5 group-hover:via-emerald-500/3 group-hover:to-emerald-500/5 transition-all duration-500" />
 
               <div className="relative p-8 md:p-10 bg-white/50 backdrop-blur-sm">
                 {/* Card number badge */}
@@ -183,7 +183,7 @@ export default function AboutUs() {
         </div>
 
         {/* Visual connector line (hidden on mobile) */}
-        <div className="mt-16 hidden lg:flex justify-between items-start relative h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0">
+        <div className="mt-16 hidden lg:flex justify-between items-start relative h-1 bg-linear-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0">
           <div className="w-2 h-2 rounded-full bg-emerald-500" />
           <div className="w-2 h-2 rounded-full bg-emerald-500" />
           <div className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -272,7 +272,7 @@ export default function AboutUs() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-8 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500"
+                  className="p-8 bg-white/5 backdrop-blur-xl rounded-4xl border border-white/10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500"
                 >
                   <item.icon className="w-12 h-12 text-emerald-400 mb-6 group-hover:scale-110 transition-transform" />
                   <span className="text-xl font-black tracking-tight">{item.label}</span>
