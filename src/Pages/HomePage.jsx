@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* Main Principles Section */}
-      <section className="py-32 px-4 max-w-7xl mx-auto">
+      <section className="pt-32 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
           <h2 className="text-5xl font-black text-green-950 tracking-tighter max-w-md leading-none">
             Our core <br />

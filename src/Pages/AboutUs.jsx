@@ -1,14 +1,18 @@
+"use client"
+
 import { ChevronRight, ShieldCheck, History, Award, BookOpen, Microscope, Globe, Users } from "lucide-react"
-import picture1 from "../assets/pic1.png";
-import picture2 from "../assets/pic2.png";
+import picture1 from "../assets/pic1.png"
+import picture2 from "../assets/pic2.png"
+import { useNavigate } from "react-router-dom"
 export default function AboutUs() {
+  const navigate = useNavigate()
   return (
     <main className="min-h-screen bg-white font-sans antialiased text-green-950">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={picture2}
+            src={picture2 || "/placeholder.svg"}
             alt="Veterinary Excellence"
             className="w-full h-full object-cover brightness-[0.4]"
           />
@@ -39,19 +43,21 @@ export default function AboutUs() {
             </h2>
             <div className="space-y-6 text-lg text-green-950/70 font-medium leading-relaxed">
               <p>
-                At Herbal Trends, we believe the future of veterinary medicine lies in sustainable, plant-based
-                innovation. Our journey began with a simple mission: to provide veterinarians with clinical-grade herbal
-                solutions that rival traditional pharmaceuticals in efficacy while offering a superior safety profile.
+                At herbal trends, we believe that the best medicine for animals has already been perfected by nature.
+                Our mission is to transform traditional botanical wisdom into evidence-based healthcare solutions for
+                the modern veterinary world.
               </p>
               <p>
-                Today, we operate at the intersection of traditional ethnobotany and modern biotechnology, ensuring
-                every product that leaves our facility meets the most stringent global quality standards.
+                We specialize in developing high-potency, herbal and supplement formulations that support animal health
+                without the side effects. From livestock productivity to pet wellness, our products are rigorously
+                tested to ensure they meet the highest standards of safety and efficacy. We aren't just offering
+                supplements; we are offering a sustainable, chemical-free future for animal care.
               </p>
             </div>
           </div>
           <div className="relative aspect-square rounded-[3rem] overflow-hidden group">
             <img
-              src={picture1}
+              src={picture1 || "/placeholder.svg"}
               alt="Lab Innovation"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
@@ -114,16 +120,86 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Our Mission & Vision.</h2>
+          <p className="text-xl text-green-950/60 font-medium">Guiding principles that shape our journey.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              id: 1,
+              mission:
+                "To revolutionize animal healthcare by providing scientifically validated, high-performance herbal solutions that offer a safe and effective alternative to synthetic pharmaceuticals.",
+              vision:
+                "To become the global leader in phyto-veterinary medicine, where nature-based treatments are the first choice for practitioners and farmers worldwide.",
+            },
+            {
+              id: 2,
+              mission:
+                "To enhance the quality of life for every animal we touch through gentle, plant-based remedies that work in harmony with their natural biology.",
+              vision:
+                "A world where every pet and livestock animal lives a longer, healthier life through the healing power of nature's finest ingredients.",
+            },
+            {
+              id: 3,
+              mission:
+                "To empower farmers and pet owners with sustainable, residue-free herbal products that promote animal vitality and protect the integrity of our environment.",
+              vision:
+                "To lead a global shift toward 'One Health'—where healthy animals, healthy people, and a healthy planet are achieved through botanical excellence.",
+            },
+          ].map((item, idx) => (
+            <div
+              key={item.id}
+              className="group relative overflow-hidden rounded-[2.5rem] border border-green-950/10 hover:border-emerald-500/30 transition-all duration-500"
+            >
+              {/* Background gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/0 via-emerald-500/0 to-emerald-500/0 group-hover:from-emerald-500/5 group-hover:via-emerald-500/3 group-hover:to-emerald-500/5 transition-all duration-500" />
+
+              <div className="relative p-8 md:p-10 bg-white/50 backdrop-blur-sm">
+                {/* Card number badge */}
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-600 font-black text-lg mb-6 group-hover:bg-emerald-500/20 transition-all duration-500">
+                  {item.id}
+                </div>
+
+                {/* Mission Section */}
+                <div className="mb-8 pb-8 border-b border-green-950/10">
+                  <h3 className="text-sm font-black uppercase tracking-widest text-emerald-600 mb-3">Mission</h3>
+                  <p className="text-base md:text-lg text-green-950/80 font-medium leading-relaxed">{item.mission}</p>
+                </div>
+
+                {/* Vision Section */}
+                <div>
+                  <h3 className="text-sm font-black uppercase tracking-widest text-emerald-600 mb-3">Vision</h3>
+                  <p className="text-base md:text-lg text-green-950/70 font-medium leading-relaxed">{item.vision}</p>
+                </div>
+
+                {/* Hover indicator */}
+                <div className="absolute top-0 left-0 w-1 h-0 bg-emerald-500 group-hover:h-full transition-all duration-500" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Visual connector line (hidden on mobile) */}
+        <div className="mt-16 hidden lg:flex justify-between items-start relative h-1 bg-gradient-to-r from-emerald-500/0 via-emerald-500/20 to-emerald-500/0">
+          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+        </div>
+      </section>
+
       {/* History Section */}
-      <section className="py-24 px-4 max-w-7xl mx-auto overflow-hidden">
+      {/* <section className="py-24 px-4 max-w-7xl mx-auto overflow-hidden">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Our Legacy.</h2>
           <p className="text-xl text-green-950/60 font-medium">A timeline of innovation and commitment.</p>
-        </div>
+        </div> */}
 
-        <div className="relative">
+        {/* <div className="relative"> */}
           {/* Timeline Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-green-950/10 hidden md:block" />
+          {/* <div className="absolute left-1/2 top-0 bottom-0 w-px bg-green-950/10 hidden md:block" />
 
           {[
             {
@@ -173,7 +249,7 @@ export default function AboutUs() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements Section */}
       <section className="py-24 bg-green-950 rounded-[5rem] mx-4 mb-12 text-white">
@@ -188,23 +264,11 @@ export default function AboutUs() {
                 Our commitment to quality has earned us the trust of professionals and the highest industry
                 certifications.
               </p>
-              <div className="grid grid-cols-2 gap-8">
-                <div className="border-l-4 border-emerald-500 pl-6">
-                  <span className="text-4xl font-black block mb-2">15+</span>
-                  <p className="text-white/60 font-bold uppercase tracking-widest text-sm">International Awards</p>
-                </div>
-                <div className="border-l-4 border-emerald-500 pl-6">
-                  <span className="text-4xl font-black block mb-2">100%</span>
-                  <p className="text-white/60 font-bold uppercase tracking-widest text-sm">Clinical Safety</p>
-                </div>
-              </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { label: "ISO Certified", icon: ShieldCheck },
-                { label: "GMP Compliant", icon: Award },
-                { label: "Eco-Design Award", icon: Award },
-                { label: "Top Innovator 2024", icon: ShieldCheck },
+                { label: "100 % Clinical Safety", icon: ShieldCheck },
               ].map((item, idx) => (
                 <div
                   key={idx}
@@ -226,16 +290,14 @@ export default function AboutUs() {
           <span className="text-emerald-500">future of animal health.</span>
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-12 py-6 bg-green-950 text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-green-950/30">
+          <button
+            className="px-12 py-6 bg-green-950 text-white rounded-full font-black text-xl hover:scale-105 transition-all shadow-2xl shadow-green-950/30"
+            onClick={() => navigate("/contact-us")}
+          >
             Contact Us
-          </button>
-          <button className="px-12 py-6 bg-green-50 text-green-950 rounded-full font-black text-xl hover:bg-green-100 transition-all">
-            Join the Network
           </button>
         </div>
       </section>
-
-      
     </main>
   )
 }

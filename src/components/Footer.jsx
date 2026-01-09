@@ -3,6 +3,13 @@ import { Facebook, Linkedin, Twitter, Instagram, Mail, Phone, Clock, MapPin, Che
 import Logo from "../assets/logo.png"
 import { Link } from 'react-router-dom'
 const Footer = () => {
+
+  const navLinks = [
+    { label: "About", to: "/about-us" },
+    { label: "Our Products", to: "/categories" },
+    { label: "Contact Us", to: "/contact-us" },
+    { label: "Categories", to: "/categories" }
+  ]
    return (
     <footer className="bg-green-950 text-green-50/80 pt-16 pb-8 border-t border-green-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,14 +59,14 @@ const Footer = () => {
             </div>
 
             <ul className="space-y-3">
-              {["About Us", "Our Products",  "Contact Us" , "Categories"].map((link) => (
-                <li key={link}>
+              {navLinks.map((link,idx) => (
+                <li key={idx}>
                   <Link
-                    to="#"
+                    to={link.to}
                     className="flex items-center group text-green-100/70 hover:text-emerald-400 transition-colors duration-200"
                   >
                     <ChevronRight className="w-4 h-4 mr-2 text-emerald-500 group-hover:translate-x-1 transition-transform" />
-                    <span className="font-medium">{link}</span>
+                    <span className="font-medium">{link.label}</span>
                   </Link>
                 </li>
               ))}
@@ -140,16 +147,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-green-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-green-100/40 font-medium">
+        <div className="mt-16 pt-8 border-t border-green-900 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-green-100/40 font-medium">
           <p>© 2025 Herbal Trends. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-emerald-400 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-emerald-400 transition-colors">
-              Terms of Service
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>
