@@ -1,5 +1,14 @@
 import ProductImage from "../assets/image.png";
-const products = [
+
+const generateId = (name) =>
+  name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s]/g, "") 
+    .replace(/\s+/g, "-");  
+
+
+const productsWithOutId = [
    [
     {
       name: "MAXOMILK bolus / Cattle Milk Booster",
@@ -663,5 +672,15 @@ const products = [
     },
   ],
 ];
+
+
+const products = productsWithOutId.map((category) =>
+  category.map((product) => ({
+    id: generateId(product.name),
+    ...product,
+  }))
+);
+
+
 
 export default products;

@@ -5,8 +5,17 @@ import { motion } from "framer-motion"
 import description from "../data/description.js"
 
 export default function CategoryPage() {
-  const { categoryType, id } = useParams();
-  const categoryId = parseInt(id, 10);
+  const { categoryType } = useParams();
+  
+  let categoryId;
+
+  if (categoryType === "cattle-care") {
+    categoryId = 1;
+  } else if (categoryType === "poultry-care") {
+    categoryId = 2;
+  } else if (categoryType === "pet-care") {
+    categoryId = 3;
+  }
   function capitalizeWords(str) {
   return str
     .split(" ")
@@ -32,11 +41,11 @@ const truncate = (text = "", limit = 15) =>
         </div>
 
 <div
-  key={id}
+  key={categoryId}
   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
 >
 
-          {products[id-1].map((product,idx) => (
+          {products[categoryId - 1].map((product,idx) => (
            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
@@ -44,9 +53,11 @@ const truncate = (text = "", limit = 15) =>
               transition={{ duration: 0.4, delay: idx * 0.1 }}
             >
               <ProductCard
-                ind={idx}
+                id={product.id}
                 categoryId={categoryId}
-                name={truncate(product.name)}
+                categoryType={categoryType}
+                displayName={truncate(product.name)}
+                name={product.name}
                 form={product.physicalForm}
                 image={product.image[0]}
               />

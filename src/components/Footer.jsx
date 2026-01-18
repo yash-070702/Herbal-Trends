@@ -37,7 +37,7 @@ const Footer = () => {
                   For Export Enquiry:
                 </h4>
                 <p className="text-white font-semibold">
-                  Ms. Yash Aggarwal <span className="text-green-800 font-normal">|</span> +91-8273230778
+                  Mr. Yash Aggarwal <span className="text-green-800 font-normal">|</span> +91-8273230778
                 </p>
               </div>
               <div>
@@ -45,7 +45,7 @@ const Footer = () => {
                   For Domestic Enquiry:
                 </h4>
                 <p className="text-white font-semibold">
-                  Ms. Arsh <span className="text-green-800 font-normal">|</span> +91-9208585875
+                  Mr. Arsh <span className="text-green-800 font-normal">|</span> +91-9208585875
                 </p>
               </div>
             </div>

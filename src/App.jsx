@@ -42,9 +42,10 @@ useEffect(() => {
       <Toaster  reverseOrder={false} />
       <Header />
         <Routes>
+        
           <Route path="/" element={<HomePage/>} />
-          <Route path="/product-page/:categoryId/:product-name/:id" element={<ProductsPage />} />
-          <Route path="/category-page/:categoryType/:id" element={<CategoryPage />} />
+          <Route path="/product-page/:categoryType/:id" element={<ProductsPage />} />
+          <Route path="/category-page/:categoryType" element={<CategoryPage />} />
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about-us" element={<AboutUs />} />

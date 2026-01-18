@@ -48,9 +48,9 @@ export default function ProductCarousel() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)
   }
   const handleCick = (id) => {
-    if (id == 1) navigate(`/category-page/cattle-care/${id}`)
-    else if (id == 2) navigate(`/category-page/poultry-care/${id}`)
-    else if (id == 3) navigate(`/category-page/pet-care/${id}`)
+    if (id == 1) navigate(`/category-page/cattle-care`)
+    else if (id == 2) navigate(`/category-page/poultry-care`)
+    else if (id == 3) navigate(`/category-page/pet-care`)
   }
 
   const slide = heroSlides[currentSlide]

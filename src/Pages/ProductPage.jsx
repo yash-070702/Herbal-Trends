@@ -4,26 +4,71 @@ import { useState, useEffect } from "react"
 import { Menu, X, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import products from "../data/products_data"
+import { useParams, useNavigate} from "react-router-dom"
 
-export default function Page() {
+
+
+export default function ProductPage() {
+  const { categoryType, id } = useParams()
+  const navigate = useNavigate()
+
+
+  const categoryMap = {
+    "cattle-care": 0,
+    "poultry-care": 1,
+    "pet-care": 2,
+  }
+  
+
   const categories = [
     { id: 0, label: "Cattle Care" },
     { id: 1, label: "Poultry Care" },
     { id: 2, label: "Pet Care" },
   ]
 
-  const [selectedCategory, setSelectedCategory] = useState(0)
+
+  const categoryId = categoryMap[categoryType] ?? 0
+  const categoryProducts = products[categoryId] || []
+  const [selectedCategory, setSelectedCategory] = useState(categoryId)
+  const [selectedProduct, setSelectedProduct] = useState(null)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const categoryId = selectedCategory
-
-  const categoryProducts = products[categoryId] || products["default"]
-  const initialProduct = categoryProducts[0]
-
-  const [selectedProduct, setSelectedProduct] = useState(initialProduct)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isIngredientsExpanded, setIsIngredientsExpanded] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+
+  const createSlug = (text) =>
+    text
+      ?.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, "")
+      .trim()
+      .replace(/\s+/g, "-")
+
+
+   useEffect(() => {
+    if (!categoryProducts.length) return
+
+    if (id) {
+      const matched = categoryProducts.find(
+        (p) => p.id === id
+      )
+      if (matched) {
+        setSelectedProduct(matched)
+        setIsIngredientsExpanded(false)
+        return
+      }
+    }
+
+    // fallback
+    setSelectedProduct(categoryProducts[0])
+  }, [categoryId, id])
+
+  // ---------- reset image on product change ----------
+  useEffect(() => {
+    if (selectedProduct) setCurrentImageIndex(0)
+  }, [selectedProduct])
+
+  
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden"
@@ -39,37 +84,62 @@ export default function Page() {
     setCurrentImageIndex(0)
   }, [selectedProduct])
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
-  const handleCategorySelect = (categoryId) => {
-    setSelectedCategory(categoryId)
-    setIsDropdownOpen(false)
-    setSelectedProduct(products[categoryId][0])
-    setIsIngredientsExpanded(false)
-  }
-
-  const handleProductSelect = (product) => {
-    setSelectedProduct(product)
-    setIsMenuOpen(false)
-    setIsIngredientsExpanded(false)
-  }
+  const currentCategory = categories.find((c) => c.id === selectedCategory)
 
   const getImagesArray = () => {
+    if (!selectedProduct) return []
     const images = selectedProduct.images || selectedProduct.image
     return Array.isArray(images) ? images : [images]
   }
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+ const handleCategorySelect = (categoryId) => {
+  const categorySlug = Object.keys(categoryMap).find(
+    (key) => categoryMap[key] === categoryId
+  )
+
+  const firstProduct = products[categoryId]?.[0]
+  if (!firstProduct) return
+
+  navigate(`/product-page/${categorySlug}/${firstProduct.id}`, {
+    replace: false,
+  })
+
+  setSelectedCategory(categoryId)
+  setIsDropdownOpen(false)
+  setIsMenuOpen(false)
+  setIsIngredientsExpanded(false)
+}
+
+
+
+  const handleProductSelect = (product) => {
+  const slug = createSlug(product.name)
+
+  navigate(`/product-page/${categoryType}/${slug}`, {
+    replace: false,
+  })
+
+  setSelectedProduct(product)
+  setIsMenuOpen(false)
+  setIsIngredientsExpanded(false)
+}
+
+
   const handlePrevImage = () => {
-    const imagesArray = getImagesArray()
-    setCurrentImageIndex((prev) => (prev === 0 ? imagesArray.length - 1 : prev - 1))
+    const imgs = getImagesArray()
+    setCurrentImageIndex((i) => (i === 0 ? imgs.length - 1 : i - 1))
   }
 
   const handleNextImage = () => {
-    const imagesArray = getImagesArray()
-    setCurrentImageIndex((prev) => (prev === imagesArray.length - 1 ? 0 : prev + 1))
+    const imgs = getImagesArray()
+    setCurrentImageIndex((i) => (i === imgs.length - 1 ? 0 : i + 1))
   }
 
-  const currentCategory = categories.find((cat) => cat.id === selectedCategory)
+   if (!selectedProduct) return null
+
 
   return (
     <main className="min-h-screen bg-gray-50 font-sans">

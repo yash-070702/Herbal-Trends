@@ -24,7 +24,7 @@ export default function Header() {
 
   const closeMenu = () => setIsOpen(false)
   const handleCategoryClick = (category,idx) => {
-    navigate(`/category-page/${category}/${idx}`);
+    navigate(`/category-page/${category}`);
     setIsDropdownOpen(false)
     closeMenu()
   }

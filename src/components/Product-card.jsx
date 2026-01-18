@@ -1,13 +1,17 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function ProductCard({ categoryId, ind, name, form, image }) {
+export default function ProductCard({id,displayName, name, form, image,categoryType }) {
 const [isHovered, setIsHovered] = useState(false)
 const navigate = useNavigate()
  
-  function trimFirst10(str = "") {
-    return str.slice(0, 3)
-  }
+//   function formatString(input) {
+//   if (typeof input !== "string") return "";
+  
+//   const beforeSlash = input.toLowerCase().split("/")[0];
+//   return beforeSlash.trim().replace(/\s+/g, "-");
+// }
+
 
   return (
     <div
@@ -28,7 +32,7 @@ const navigate = useNavigate()
       {/* Product Info */}
       <div className="flex justify-between items-center p-4 sm:p-6">
         <div className="mb-3">
-          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{name}</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{displayName}</h3>
           <p className="text-sm sm:text-base text-gray-600">Physical Form : {form}</p>
         </div>
 
@@ -37,10 +41,10 @@ const navigate = useNavigate()
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
             isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#0f4523] text-white"
           }`}
-            onClick={() => navigate(`/product-page/${categoryId-1}/${trimFirst10(name)}/${ind}`)}
+            onClick={() => navigate(`/product-page/${categoryType}/${id}`)}
         >
           More Info
-        </button>
+        </button> 
       </div>
     </div>
   )
