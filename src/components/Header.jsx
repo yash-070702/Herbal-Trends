@@ -43,11 +43,11 @@ export default function Header() {
           <div className="relative flex items-center h-20">
               <div className="flex items-center gap-2">
               <Link to="/">
-                <img src={logo || "/placeholder.svg"} alt="Logo" className="h-10" />
+                <img src={logo || "/placeholder.svg"} alt="Logo" className="h-14" />
               </Link>
               <div className="text-white font-semibold hidden sm:block">
-                <p className="text-md">Herbal</p>
-                <p className="text-md leading-none">Trends</p>
+                <p className="text-lg">Herbal</p>
+                <p className="text-lg leading-none">Trends</p>
               </div>
             </div>
 

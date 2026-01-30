@@ -1,16 +1,16 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export default function ProductCard({id,displayName, name, form, image,categoryType }) {
+export default function ProductCard({id,displayName, name,keyword, form, image,categoryType }) {
 const [isHovered, setIsHovered] = useState(false)
 const navigate = useNavigate()
  
-//   function formatString(input) {
-//   if (typeof input !== "string") return "";
+  function formatString(input) {
+  if (typeof input !== "string") return "";
   
-//   const beforeSlash = input.toLowerCase().split("/")[0];
-//   return beforeSlash.trim().replace(/\s+/g, "-");
-// }
+  const beforeSlash = input.toLowerCase().split("/")[0];
+  return beforeSlash.trim().replace(/\s+/g, "-");
+}
 
 
   return (
@@ -41,7 +41,7 @@ const navigate = useNavigate()
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
             isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#0f4523] text-white"
           }`}
-            onClick={() => navigate(`/product-page/${categoryType}/${id}`)}
+            onClick={() => navigate(`/product-page/${categoryType}/${formatString(keyword)}/${id}`)}
         >
           More Info
         </button> 

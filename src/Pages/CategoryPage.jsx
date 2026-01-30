@@ -54,6 +54,7 @@ const truncate = (text = "", limit = 15) =>
             >
               <ProductCard
                 id={product.id}
+                keyword={product?.keyword}
                 categoryId={categoryId}
                 categoryType={categoryType}
                 displayName={truncate(product.name)}

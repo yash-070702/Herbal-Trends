@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useNavigate } from "react-router-dom"
@@ -30,15 +32,19 @@ const heroSlides = [
 
 export default function ProductCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
   const navigate = useNavigate()
 
   useEffect(() => {
+    // Only set up the interval if not hovering
+    if (isHovering) return
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
-    }, 5000)
+    }, 4500)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [isHovering])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
@@ -74,6 +80,8 @@ export default function ProductCarousel() {
         <div
           key={currentSlide}
           className="w-screen bg-black/30 p-10  rounded-2xl max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
         >
           {/* Left content */}
           <div

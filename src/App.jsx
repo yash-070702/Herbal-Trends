@@ -44,7 +44,7 @@ useEffect(() => {
         <Routes>
         
           <Route path="/" element={<HomePage/>} />
-          <Route path="/product-page/:categoryType/:id" element={<ProductsPage />} />
+          <Route path="/product-page/:categoryType/:keyword/:id" element={<ProductsPage />} />
           <Route path="/category-page/:categoryType" element={<CategoryPage />} />
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />

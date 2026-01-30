@@ -103,7 +103,7 @@ export default function ProductPage() {
   const firstProduct = products[categoryId]?.[0]
   if (!firstProduct) return
 
-  navigate(`/product-page/${categorySlug}/${firstProduct.id}`, {
+  navigate(`/product-page/${categorySlug}/${createSlug(firstProduct.keyword)}/${firstProduct.id}`, {
     replace: false,
   })
 
@@ -117,8 +117,8 @@ export default function ProductPage() {
 
   const handleProductSelect = (product) => {
   const slug = createSlug(product.name)
-
-  navigate(`/product-page/${categoryType}/${slug}`, {
+  const keySlug=createSlug(product?.keyword)
+  navigate(`/product-page/${categoryType}/${keySlug}/${slug}`, {
     replace: false,
   })
 
