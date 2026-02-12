@@ -182,7 +182,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cow, Buffalo, Breeding Bulls (Large Animals) :50 gm per day or 1 Kg Ossimin Forte in 100 Kg feed Caives, Sheep, Goat (Small Animals) :25 gm Ossimin Forte per day.",
       directionsToUse: "As per veterinarian suggestions",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915511/file_00000000a2dc72098e98fe577e2ebb64_g9pn5y.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915511/file_00000000a2dc72098e98fe577e2ebb64_g9pn5y.png"],
     },
     {
       name: "Trs bolus",
@@ -366,7 +366,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Layers: 5 ml/100 birds for 5-7 days twice a month.,Broilers: 5 ml/100 birds for 5-7 days twice a month., Breeders: 5 ml/100 birds - during chick stage & 10 ml/100 birds - during growing stage.",
       directionsToUse: "Immunity Power liquid is highly concentrated, shake well before use. Prepare a premix in 4-5 times of water and stir well for few minutes. Once Immunity is mixed uniformly distribute to drinkers or add to water tank.",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000374c7206ba209cc0cce45a67_oadhww.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000374c7206ba209cc0cce45a67_oadhww.png"],
     },
     {
       name: "Avilyte C",
@@ -380,7 +380,7 @@ const productsWithOutId = [
       StorageInstructions:" Keep in a cool, dark place",
       dosage: "Poultry : 2-4 gm/litre of water , Dogs : 5-10 gm/day after exercise , Horses : 10 gm after racing , Cattle : 10-20 gm/head/day",
       directionsToUse: "As directed by the Veterinarian",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918103/ChatGPT_Image_Feb_12_2026_11_11_09_PM_bf8ipe.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918103/ChatGPT_Image_Feb_12_2026_11_11_09_PM_bf8ipe.png"],
     },
     {
       name: "Avical liquid",
@@ -436,7 +436,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks : 10ml/100 birds for 5-7 days , Layers : 20ml/100 birds for 5-7 days ,  Cattle : As per veterinarian suggestion",
       directionsToUse: "B-Plex - Should be used through drinking water.",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915512/file_000000002a1c7209b381c4d1956998e4_aodctj.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915512/file_000000002a1c7209b381c4d1956998e4_aodctj.png"],
     },
     {
       name: "Hemoboost Liquid",
@@ -492,7 +492,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "20-30ml / 100 Birds",
       directionsToUse: "As directed by the Veterinarian",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000c7a47206b4bb54cbee347617_lbvnrs.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000c7a47206b4bb54cbee347617_lbvnrs.png"],
     },
     {
       name: "Eplus powder",
@@ -506,7 +506,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "250-500 E-Plus Powder per Ton of Feed or through Drinking water",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770921777/ChatGPT_Image_Feb_13_2026_12_12_14_AM_tf0xl9.png"],
     },
     {
       name: "Ossical d",
@@ -520,12 +520,12 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "500gms-1kg per ton of feed",
       directionsToUse: "As directed by the Veterinarian",
-      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918108/ChatGPT_Image_Feb_12_2026_11_11_02_PM_tvuyfh.png",
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918108/ChatGPT_Image_Feb_12_2026_11_11_02_PM_tvuyfh.png"],
     },
   ],
    [
     {
-      name: "Glitter Liquid",
+      name: "Cana Shine",
       keyword:"Coat shiner for Dog and Cat",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -536,7 +536,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: " 0.5ml/kg body weight per day or as directed by the Veterinarian.",
       directionsToUse: "Shake well before use,Pour directly into the mouth of pet or mix in the pet's feed.",
-      image: ProductImage,
+      image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639543/Generated_Image_November_01_2025_-_10_03AM_ukvcbx.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_02AM_gfxhzc.png"],
     },
     {
       name: "Make me happy",
@@ -553,7 +553,7 @@ const productsWithOutId = [
        image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639555/Generated_Image_November_01_2025_-_9_53AM_yvy4pc.png"],
     },
     {
-      name: "Calplus pet",
+      name: "Oyancal plus",
       keyword:" Calcium Liquid For Pets",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Liquid",
@@ -564,7 +564,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Pups: 5 ml twice daily orally.,Adult Dogs/Bitches: 10 ml twice daily orally ",
       directionsToUse: "As directed by the Veterinarian.",
-      image: ProductImage,
+      image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770921700/ChatGPT_Image_Feb_13_2026_12_10_26_AM_gsk41y.png"],
     },
     {
       name: "Aroma perfume ",
@@ -609,7 +609,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_55AM_vi8knw.png"],
     },
     {
-      name: "Antilick pet syrup",
+      name: "Oyan Antilick pet syrup",
       keyword:" lick syrup",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Liquid",
@@ -620,7 +620,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Drop few drops on the wound to stop it from licking",
       directionsToUse: "Do not apply Oyan Anti Lick Liquid directly to any wound or sore. Instead first apply a small piece of gauze or cover the wound with bandage. Then apply Oyan Anti Lick Liquid over the gauze or bandage covering the wound with the help of dropper provided.",
-      image: ProductImage,
+      image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639550/Generated_Image_November_01_2025_-_9_48AM_cwawuk.png"],
     },
     {
       name: "Gset pet powder",
@@ -707,7 +707,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_01AM_ty6ntq.png"],
     },
     {
-      name: "Promin-H syrup",
+      name: "Oyanvit Plus syrup",
       keyword:"Multivitamin Liquid For Dogs",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -718,7 +718,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Pups: 5 ml twice daily orally , Cats: 5-10 ml twice daily , Adult Dogs/Bitches: 10 - 15 ml twice daily orally or as directed by the Veterinarian.",
       directionsToUse: "Stir into your pet's drinking water or add to food or administer with dropper / spoon",
-      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_50AM_o71nqc.png"],
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770922021/ChatGPT_Image_Feb_13_2026_12_16_31_AM_kuscwj.png"],
     },
   ],
 ];
