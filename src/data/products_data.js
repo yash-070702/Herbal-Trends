@@ -369,7 +369,7 @@ const productsWithOutId = [
       image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000374c7206ba209cc0cce45a67_oadhww.png",
     },
     {
-      name: "Avilyte c",
+      name: "Avilyte C",
       keyword:"electrolyte for animals",
       medicineType: "Poultry Feed Supplement",
       physicalForm: "Powder",
@@ -380,7 +380,7 @@ const productsWithOutId = [
       StorageInstructions:" Keep in a cool, dark place",
       dosage: "Poultry : 2-4 gm/litre of water , Dogs : 5-10 gm/day after exercise , Horses : 10 gm after racing , Cattle : 10-20 gm/head/day",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918103/ChatGPT_Image_Feb_12_2026_11_11_09_PM_bf8ipe.png",
     },
     {
       name: "Avical liquid",
@@ -520,7 +520,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "500gms-1kg per ton of feed",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918108/ChatGPT_Image_Feb_12_2026_11_11_02_PM_tvuyfh.png",
     },
   ],
    [
