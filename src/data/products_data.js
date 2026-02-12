@@ -182,7 +182,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Cow, Buffalo, Breeding Bulls (Large Animals) :50 gm per day or 1 Kg Ossimin Forte in 100 Kg feed Caives, Sheep, Goat (Small Animals) :25 gm Ossimin Forte per day.",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915511/file_00000000a2dc72098e98fe577e2ebb64_g9pn5y.png",
     },
     {
       name: "Trs bolus",
@@ -366,7 +366,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Layers: 5 ml/100 birds for 5-7 days twice a month.,Broilers: 5 ml/100 birds for 5-7 days twice a month., Breeders: 5 ml/100 birds - during chick stage & 10 ml/100 birds - during growing stage.",
       directionsToUse: "Immunity Power liquid is highly concentrated, shake well before use. Prepare a premix in 4-5 times of water and stir well for few minutes. Once Immunity is mixed uniformly distribute to drinkers or add to water tank.",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000374c7206ba209cc0cce45a67_oadhww.png",
     },
     {
       name: "Avilyte c",
@@ -436,7 +436,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks : 10ml/100 birds for 5-7 days , Layers : 20ml/100 birds for 5-7 days ,  Cattle : As per veterinarian suggestion",
       directionsToUse: "B-Plex - Should be used through drinking water.",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915512/file_000000002a1c7209b381c4d1956998e4_aodctj.png",
     },
     {
       name: "Hemoboost Liquid",
@@ -492,7 +492,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "20-30ml / 100 Birds",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000c7a47206b4bb54cbee347617_lbvnrs.png",
     },
     {
       name: "Eplus powder",
