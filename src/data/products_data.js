@@ -98,7 +98,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "In case of Retention of placenta 250 ml twice on first day, followed by 250 ml once daily for next 3-4 days.In other conditions 100 ml twice daily",
       directionsToUse: "As per veterinarian suggestions",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1771177207/ChatGPT_Image_Feb_15_2026_11_09_42_PM_tkg7zm.png"],
     },
     {
       name: "Prolapse gone powder",
@@ -322,7 +322,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "As directed by the Veterinarian",
       directionsToUse: "200 ml orally after A.l.",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1771177324/ChatGPT_Image_Feb_15_2026_11_11_27_PM_xfjmms.png"],
     },
   ],
    [
@@ -450,7 +450,7 @@ const productsWithOutId = [
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
       dosage: "Chicks: 10-15 ml/100 birds for 5-7 days ,  Adults: 25-30 ml/100 birds for 5-7 days",
       directionsToUse: "As directed by the Veterinarian",
-      image: ProductImage,
+      image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1771177208/ChatGPT_Image_Feb_15_2026_11_09_48_PM_k8rxon.png"],
     },
     {
       name: "Flusher",
