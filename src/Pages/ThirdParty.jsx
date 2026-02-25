@@ -21,14 +21,14 @@ export default function ThirdParty() {
     <main className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="relative py-40 bg-green-950 text-center overflow-hidden">
+      <section className="relative py-40 bg-green-950  bg-linear-to-b from-transparent to-white text-center overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8">
+          <h1 className="text-5xl md:text-8xl font-black text-white md:tracking-tighter md:leading-[0.9] mb-8">
             Third Party <br />
-            <span className="text-emerald-400">Manufacturing</span>
+            <span className="text-green-950">Manufacturing</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/80 font-medium max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-green-950/60 font-medium max-w-3xl mx-auto">
             We offer veterinary PCD franchise and third-party manufacturing services,
             ensuring that our high-quality herbal veterinary products reach a wider audience
             with reliability and excellence.
@@ -85,7 +85,7 @@ export default function ThirdParty() {
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 text-green-950 font-medium text-lg">
         {products.map((product, idx) => (
           <li key={idx} className="flex items-start gap-3">
-            <span className="w-2.5 h-2.5 mt-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+            <span className="w-2.5 h-2.5 mt-2 rounded-full bg-emerald-500 shrink-0"></span>
             {product}
           </li>
         ))}
