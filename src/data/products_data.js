@@ -143,7 +143,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639547/Gemini_Generated_Image_nhthernhthernhth_xvggss.png"],
     },
     {
-      name: "Pro cal ds liquid",
+      name: "Procal - DS Liquid",
       keyword:" Calcium Liquid For Animals",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -176,7 +176,7 @@ const productsWithOutId = [
       medicineType: "Animal feed supplement",
       physicalForm: "Powder",
       ingredients: "Live Yeast Culture,Vitamin A,Vitamin D3,Vitamin E,Niacin,Biotin FG,Calcium,Phosphorus,Copper Sulphate,Cobalt chloride,Ferrous Sulphate,Potassium lodide,Manganese Sulphate,Magnesium Hydroxide,Zinc Oxide,Selenium,Potassium,Sodium,Lysine HCI,DL Methonine,Protein Hydrolysate",
-      treatmentsAndFunctions:"• To improve Milk Production and butter fat,Helps to improve digestion in animals.,Helps to bring female animal to heat,Improves chances of conception for repeat b,Helps animals to recover fast after illness,To boost Energy, Protein, Fat, Vitamins, Minerals of dry fodder in dry conditions",
+      treatmentsAndFunctions:"To improve Milk Production and butter fat,Helps to improve digestion in animals.,Helps to bring female animal to heat,Improves chances of conception for repeat b,Helps animals to recover fast after illness,To boost Energy, Protein, Fat, Vitamins, Minerals of dry fodder in dry conditions",
       recommendedFor: "Animals",
       quantity: "1 kg, 5 kg, 25 kg",
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
@@ -227,7 +227,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639519/Gemini_Generated_Image_7qj1nw7qj1nw7qj1_g4fat2.png"],
     },
     {
-      name: "Trumin 7 bolus",
+      name: "Trumin - 7 bolus",
       keyword:"Trace minerals bolus",
       medicineType: "Animal feed supplement",
       physicalForm: "Bolus",
@@ -311,7 +311,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639518/Gemini_Generated_Image_7i1ns17i1ns17i1n_rdoupd.png"],
     },
     {
-      name: "Ai guard",
+      name: "AI Guard",
       keyword:" conception medicine for animals",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
@@ -369,7 +369,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000374c7206ba209cc0cce45a67_oadhww.png"],
     },
     {
-      name: "Avilyte C",
+      name: "Avilyte - C",
       keyword:"electrolyte for animals",
       medicineType: "Poultry Feed Supplement",
       physicalForm: "Powder",
@@ -425,7 +425,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639538/Gemini_Generated_Image_x9jx64x9jx64x9jx_lmwyam.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639537/Gemini_Generated_Image_thwtujthwtujthwt_ejuntq.png"],
     },
     {
-      name: "Bplex",
+      name: "B - Plex",
       keyword:"complex for animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
@@ -467,7 +467,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639529/Gemini_Generated_Image_ig0u0yig0u0yig0u_jabjs0.png"],
     },
     {
-      name: "Avitone c",
+      name: "Avitone - C",
       keyword:"multivitamin liquid for animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
@@ -495,7 +495,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000c7a47206b4bb54cbee347617_lbvnrs.png"],
     },
     {
-      name: "Eplus powder",
+      name: "E- Plus powder",
       keyword:"Vitamin E",
       medicineType: "Poultry feed supplement",
       physicalForm: "Powder",
@@ -509,7 +509,7 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770921777/ChatGPT_Image_Feb_13_2026_12_12_14_AM_tf0xl9.png"],
     },
     {
-      name: "Ossical d",
+      name: "Ossical - D",
       keyword:"calcium granules",
       medicineType: "Poultry feed supplement",
       physicalForm: "Granuels",
@@ -525,7 +525,7 @@ const productsWithOutId = [
   ],
    [
     {
-      name: "Cana Shine",
+      name: "CanaShine Syrup",
       keyword:"Coat shiner for Dog and Cat",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -539,12 +539,12 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639543/Generated_Image_November_01_2025_-_10_03AM_ukvcbx.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_02AM_gfxhzc.png"],
     },
     {
-      name: "Make me happy",
+      name: "Make Me  Happy Syrup ",
       keyword:"The Ideal Nutritional Supplement for All Animals",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
       ingredients: "Herbal Yeast Plasmolysate , Malt Extract , Honey  and Orange Juice ",
-      treatmentsAndFunctions:"* Promotes growth,Builds up resistance and increase vitality,Improves appetite during convalescence,Helps to produce a healthy shiny coat",
+      treatmentsAndFunctions:"Promotes growth,Builds up resistance and increase vitality,Improves appetite during convalescence,Helps to produce a healthy shiny coat",
       recommendedFor: "For Dogs & Cats",
       quantity: "200 ml",
       StorageInstructions:" Store in a cool, dry place away from direct sunlight.",
@@ -553,7 +553,7 @@ const productsWithOutId = [
        image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639555/Generated_Image_November_01_2025_-_9_53AM_yvy4pc.png"],
     },
     {
-      name: "Oyancal plus",
+      name: "Oyancal Plus Syrup",
       keyword:" Calcium Liquid For Pets",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Liquid",
@@ -567,7 +567,7 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770921700/ChatGPT_Image_Feb_13_2026_12_10_26_AM_gsk41y.png"],
     },
     {
-      name: "Aroma perfume ",
+      name: "Aroma Perfume ",
       keyword:"Perfume for Pets",
       medicineType: "Herbal Veterinary Drug",
       physicalForm: "Liquid",
@@ -581,7 +581,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639561/Generated_Image_November_17_2025_-_6_08PM_g6tdun.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639549/Generated_Image_November_01_2025_-_9_33AM_asr1x1.png"],
     },
     {
-      name: "U-Rid syrup",
+      name: "U-Rid Syrup",
       keyword:"Medicine for U.T.I. for pets",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
@@ -595,7 +595,7 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639553/Generated_Image_November_01_2025_-_9_51AM_udjbdj.png"],
     },
     {
-      name: "Herbo-Lite pet syrup",
+      name: "Herbo-Lite pet Syrup",
       keyword:" Liver tonic and energy booster for pets",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -637,7 +637,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639527/Gemini_Generated_Image_eyesdxeyesdxeyes_1_awp4pl.png"],
     },
     {
-      name: "Immunity power",
+      name: "Immunity Power Syrup",
       keyword:"Immunity booster for pets",
       medicineType: " Herbal Veterinary Medicine",
       physicalForm: "Liquid",
@@ -651,7 +651,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639555/Generated_Image_November_01_2025_-_9_52AM_jyo6at.png"],
     },
     {
-      name: "Plasma care",
+      name: "Plasma Care Syrup",
       keyword:"platlets booster for pets",
       medicineType: "Herbal Veterinary Medicines",
       physicalForm: "Liquid",
@@ -665,7 +665,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_54AM_loavyq.png"],
     },
     {
-      name: "Oyan pet bath",
+      name: "Oyan pet bath Spray" ,
       keyword:"dry shampoo for pets",
       medicineType: "Pet spray",
       physicalForm: "Spray",
@@ -679,7 +679,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639546/Generated_Image_November_01_2025_-_5_30PM_petvft.png"],
     },
     {
-      name: "Oyan pet mouth freshner ",
+      name: "Oyan pet mouth Freshner Spray ",
       keyword:"mouth freshener",
       medicineType: "Herbal Veterinary Drug",
       physicalForm: "Spray",
@@ -693,7 +693,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639551/Generated_Image_November_01_2025_-_9_29AM_evyj7n.png"],
     },
     {
-      name: "Procal plus",
+      name: "OyanCal Plus Tablets",
       keyword:" Calcium chewable tablets for dogs",
       medicineType: "Animal feed supplement",
       physicalForm: "Chewable Tablets",
@@ -707,7 +707,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_01AM_ty6ntq.png"],
     },
     {
-      name: "Oyanvit Plus syrup",
+      name: "Oyanvit Plus Syrup",
       keyword:"Multivitamin Liquid For Dogs",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import logo from "../assets/logo.png"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 export default function Header() {
@@ -20,6 +20,7 @@ export default function Header() {
     { label: "About", to: "/about-us" },
     { label: "Product", to: "/categories" },
     { label: "Contact", to: "/contact-us" },
+    { label: "ThirdParty", to: "/blog" },
   ]
 
   const closeMenu = () => setIsOpen(false)
@@ -42,27 +43,37 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative flex items-center h-20">
               <div className="flex items-center gap-2">
-              <Link to="/">
+              <NavLink to="/">
                 <img src={logo || "/placeholder.svg"} alt="Logo" className="h-14" />
-              </Link>
-              <div className="text-white font-semibold hidden sm:block">
-                <p className="text-lg">Herbal</p>
-                <p className="text-lg leading-none">Trends</p>
-              </div>
+              </NavLink>
+             <div className="hidden sm:block leading-tight">
+  <p className="text-white text-xl font-bold tracking-wide"
+     style={{ fontFamily: "'Playfair Display', serif" }}>
+    Herbal
+  </p>
+  <p className="text-green-400 text-xl font-semibold tracking-wider"
+     style={{ fontFamily: "'Playfair Display', serif" }}>
+    Trends
+  </p>
+</div>
             </div>
 
-            <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+            <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-10">
               {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  className="text-white text-md font-medium hover:text-green-200 transition-colors"
-                >
-                  {link.label}
-                </Link>
+              <NavLink
+  key={link.label}
+  to={link.to}
+  end={link.to === "/"}
+  className={({ isActive }) =>
+    `text-green-200 text-md font-medium transition-colors hover:text-green-400 
+     ${isActive ? "border-b-2 border-green-400 text-green-400" : ""}`
+  }
+>
+  {link.label}
+</NavLink>
               ))}
               <div className="relative group">
-                <button className="text-white text-md font-medium hover:text-green-200 transition-colors flex items-center gap-1">
+                <button className="text-green-200 text-md font-medium hover:text-green-400 transition-colors flex items-center gap-1">
                   Categories
                   <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
@@ -145,23 +156,24 @@ export default function Header() {
 
             <nav className="flex flex-col gap-6">
               {navLinks.map((link, idx) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  onClick={closeMenu}
-                  className="text-white text-lg font-medium hover:text-green-200 transition-colors"
-                  style={{
-                    animation: `slideInRight 0.3s ease-out ${idx * 50}ms backwards`,
-                  }}
-                >
-                  {link.label}
-                </Link>
+               <NavLink
+  key={link.label}
+  to={link.to}
+  end={link.to === "/"}
+  onClick={closeMenu}
+  className={({ isActive }) =>
+    `text-green-200 text-lg font-medium transition-colors hover:text-green-400
+     ${isActive ? "underline underline-offset-4 decoration-2 text-green-400" : ""}`
+  }
+>
+  {link.label}
+</NavLink>
               ))}
 
               <div>
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-white text-lg font-medium hover:text-green-200 transition-colors flex items-center gap-2 w-full"
+                  className="text-green-200 text-lg font-medium hover:text-green-400 transition-colors flex items-center gap-2 w-full"
                   style={{
                     animation: `slideInRight 0.3s ease-out ${navLinks.length * 50}ms backwards`,
                   }}

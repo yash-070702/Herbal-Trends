@@ -88,7 +88,7 @@ export default function AboutUs() {
               },
               {
                 title: "Global Supply",
-                desc: "Strategic logistics network serving over 40 countries.",
+                desc: "Strategic logistics network serving over different countries.",
                 icon: Globe,
               },
               {
@@ -111,9 +111,6 @@ export default function AboutUs() {
                 </div>
                 <h3 className="text-2xl font-black mb-4 tracking-tight">{item.title}</h3>
                 <p className="text-green-950/60 font-medium leading-relaxed mb-6">{item.desc}</p>
-                <button className="flex items-center gap-2 font-bold text-emerald-600 hover:text-emerald-500 transition-colors">
-                  Details <ChevronRight className="w-4 h-4" />
-                </button>
               </div>
             ))}
           </div>
