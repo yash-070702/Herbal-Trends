@@ -21,7 +21,7 @@ export default function ThirdParty() {
     <main className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="relative py-40 bg-green-950  bg-linear-to-b from-transparent to-white text-center overflow-hidden">
+      <section className="relative py-40 bg-green-900  bg-linear-to-b from-transparent to-white text-center overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
           <h1 className="text-5xl md:text-8xl font-black text-white md:tracking-tighter md:leading-[0.9] mb-8">
             Third Party <br />

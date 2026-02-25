@@ -25,7 +25,7 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-4xl px-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
-            Nature's Solution <br></br> to the <span className="text-emerald-400">Animal Health.</span>
+            Nature's Solution <br></br> to the <span className="text-green-950">Animal Health.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 font-medium max-w-2xl mx-auto mb-10 text-pretty">
             Herbal Trends is a global leader in manufacturing high-quality veterinary products, blending innovation with
