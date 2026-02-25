@@ -11,7 +11,7 @@ const generateId = (name) =>
 const productsWithOutId = [
    [
     {
-      name: "MAXOMILK bolus",
+      name: "Maxomilk Bolus",
       keyword:"Cattle Milk Booster",
       medicineType: "Animal feed supplement",
       physicalForm: "Bolus",
@@ -26,7 +26,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639520/Gemini_Generated_Image_58uhym58uhym58uh_knggak.png"],
     },
     {
-      name: "HEATEX Bolus",
+      name: "Heatex Bolus",
       keyword:"Heat Inducer for Cattles",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Bolus",
@@ -41,8 +41,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639540/Gemini_Generated_Image_yo4gz0yo4gz0yo4g_cblb1x.png"],
     },
     {
-      name: "Mcure powder",
-      keyword:"Medicine for fibrosis",
+      name: "MCure Powder",
+      keyword:"Medicine for Fibrosis",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Powder",
       ingredients: "Trisodium Citrate Dihydrate,Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Potassium lodide,Serratiopeptidase,Niacin,Vitamin B1,Vitamin B2,Pantothenic Acid,Biotin,Methonine,Manganese Sulphate,Copper Sulphate,Zinc Sulphate,Cobalt Sulphate,Selenium,Live Yeast",
@@ -56,8 +56,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639521/Gemini_Generated_Image_92quee92quee92qu_ztgnly.png"],
     },
     {
-      name: "Livoboost bolus",
-      keyword:"Digestive bolus for animals",
+      name: "Livoboost Bolus",
+      keyword:"Digestive Bolus for Animals",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Bolus",
       ingredients: "Strychnos nuxvomica,Picroriza kurror,Andrographiss paniculata,Zinjiber officinalis,Piper nigum,Glycarrhiza glabra,Technomella undulata,Embellica officionale,Termanalia Chebula,Sodabicarb,Assafoetida,Boerrhavia Diffusa,Tinospora cordifolia,Phylanthus Nurari,Tephrosea purpurea",
@@ -71,8 +71,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639528/Gemini_Generated_Image_gff7uzgff7uzgff7_mf5osm.png"],
     },
     {
-      name: "Herbolite liquid 1 ltr",
-      keyword:"Energy booster and livertonic for animals",
+      name: "Herbolite Liquid",
+      keyword:"Energy Booster and Livertonic for Animals",
       medicineType: "Animal feed supplement ",
       physicalForm: "Liquid",
       ingredients: "Gluconeogenic Precursors, Sylimarine with Herbs-12*, Tephrosia Purpurea, Eclipta Alba, Phyllanthus Niruri,Andrographis Paniculata,Terminalia Chebula,Techomalia Undulata,Emblica,Tinosopora Cordifolia,Berberis Species,Picrohiza Kurroa, Acorus Calamus, Raphanus Sativus",
@@ -86,8 +86,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_e81elpe81elpe81e_js85vn.png"],
     },
     {
-      name: "Utericare liquid",
-      keyword:"Uterine tonic for animals",
+      name: "Utericare Liquid",
+      keyword:"Uterine Tonic for Animals",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Liquid",
       ingredients: "Contains extract of Harmal Seed, Abroona Augusta,Fenugreek,Piper Longum Root,Plumbago Zeylamica,Nigella Sativa,Desmodium Gangeticum,Uraria Picta,Saraca Indiaca Linn,Aegle Marmeles,Tribulus Terrestris,Caesalpinia Bonduc",
@@ -101,8 +101,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1771177207/ChatGPT_Image_Feb_15_2026_11_09_42_PM_tkg7zm.png"],
     },
     {
-      name: "Prolapse gone powder",
-      keyword:"medicine for Prolapse",
+      name: "Prolapse Gone",
+      keyword:"Medicine for Prolapse",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Powder",
       ingredients: "Shawar,Hempushp,Raal,Vyakur,Wheat Germ Oil,Negal,Kaseli",
@@ -115,8 +115,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639514/Gemini_Generated_Image_5e8tg45e8tg45e8t_ikadxx.png"],
     },
     {
-      name: "Livoboost liquid",
-      keyword:"digestive and liver tonic for animals",
+      name: "Livoboost Liquid",
+      keyword:"Digestive and Liver Tonic for Animals",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Liquid",
       ingredients: "Tephrosia purpurea,Eclipta alba,Phyllanthus niruri,Andrographis paniculata,Terminalia chebula,Tecomella Undulata,Emblica,Tinospora cordifolia,Berberis Species,Picrorhiza Kurroa,Acorus Calamus,Raphanus Sativus",
@@ -129,7 +129,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639530/Gemini_Generated_Image_ev11g2ev11g2ev11_s7xj52.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639524/Gemini_Generated_Image_dd7d32dd7d32dd7d_zfelqq.png"],
     },
     {
-      name: "Dermicure spray",
+      name: "Dermicure Spray",
       keyword:"Wound Healer Spray",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Spray",
@@ -157,8 +157,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639530/Gemini_Generated_Image_j1bzrpj1bzrpj1bz_kauvlk.png"],
     },
     {
-      name: "Ecool liquid",
-      keyword:"Medicine for Heat strokes in animals",
+      name: "E - Cool Liquid",
+      keyword:"Medicine for Heat Strokes in Animals",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Liquid",
       ingredients: "Sodium Chloride,Potassium Chloride,Sodium Citrate,Sod. Acid Phosphate,Vitamin C,Calcium Lactate,Magnesium Sulphate,Dextrose",
@@ -171,7 +171,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639536/Gemini_Generated_Image_tztjettztjettztj_qdjtjs.png"],
     },
     {
-      name: "Ossimin forte powder",
+      name: "Ossimin Forte Powder",
       keyword:" Mineral Mixture for Animals",
       medicineType: "Animal feed supplement",
       physicalForm: "Powder",
@@ -185,8 +185,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915511/file_00000000a2dc72098e98fe577e2ebb64_g9pn5y.png"],
     },
     {
-      name: "Trs bolus",
-      keyword:"medicine to control bleeding and stimulateshemopoietic organs",
+      name: "TRS Bolus",
+      keyword:"Medicine to Control Bleeding and Stimulates Hemopoietic Organs",
       medicineType: "Animal feed supplement",
       physicalForm: "Bolus",
       ingredients: "Zinc Sulphate,DL-Methionine,L-Lysine HCL,Protein,Vitamin A,Vitamin C,Vitamin D3,Biotin,Vitamin E,Selenium,Aloe Vera,Curcuma longa extract,Cynodon dactylon,Adhatoda vasica,Bombax ceiba",
@@ -199,8 +199,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639522/Gemini_Generated_Image_ase73tase73tase7_shz4un.png"],
     },
     {
-      name: "Ultrapyrin powder",
-      keyword:"Analgesic Antipyretic powder",
+      name: "Ultrapyrin Powder",
+      keyword:"Analgesic Antipyretic Powder",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "powder",
       ingredients: "Acorus Calamus,Allivum Sativum,Boswellia Serrata,Azadirachta indica,Cinchona officianale,Curcuma longa,Nyctanthes arbortristis,Godanti Bhasam,Apium graveolens,Pongania pinnata,Celastrus paniculata,Dicalcium Phosphate",
@@ -213,7 +213,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_bswxl1bswxl1bswx_pmaloi.png"],
     },
     {
-      name: "Rumiset powder",
+      name: "Rumiset Powder",
       keyword:"Herbal Digestive Powder",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Powder",
@@ -227,8 +227,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639519/Gemini_Generated_Image_7qj1nw7qj1nw7qj1_g4fat2.png"],
     },
     {
-      name: "Trumin - 7 bolus",
-      keyword:"Trace minerals bolus",
+      name: "Trumin - 7 Bolus",
+      keyword:"Trace Minerals bolus",
       medicineType: "Animal feed supplement",
       physicalForm: "Bolus",
       ingredients: "Copper Sulphate,Cobalt Sulphate,Potassium lodide,Mangenese Sulphate,Selenium,Zinc Sulphate,Ferrous Sulphate",
@@ -241,8 +241,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639520/Gemini_Generated_Image_81po0981po0981po_cgvp1x.png"],
     },
     {
-      name: "Impacrid powder",
-      keyword:"impaction medicine",
+      name: "Impacrid Powder",
+      keyword:"Impaction Medicine",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Powder",
       ingredients: "Himaj,Sonpat,Peetmula,Kazra,Aadi,Krishan Lavan,Nishoth,Audhha,Phinas,Sonhali",
@@ -255,8 +255,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639547/Gemini_Generated_Image_mrtlw1mrtlw1mrtl_jpdryd.png"],
     },
     {
-      name: "Avirol h",
-      keyword:"tonic for udder growth",
+      name: "Avirol - H",
+      keyword:"Tonic for Udder Growth",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Liquid",
       ingredients: "Vitamin H,Ele. Selenium,Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Zinc Sulphate,Cobalt",
@@ -269,8 +269,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639522/Gemini_Generated_Image_3kdeaw3kdeaw3kde_lrmm5w.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639513/Gemini_Generated_Image_4pmxdv4pmxdv4pmx_iaz544.png"],
     },
     {
-      name: "Lacta gel",
-      keyword:"Ionic calcium for animals",
+      name: "Lacta Gel",
+      keyword:"Ionic Calcium for Animals",
       medicineType: "Animal Feed Supplement",
       physicalForm: "Gel",
       ingredients: "lonic Calcium,Phosphorus,Magnesium,Vitamin D3,Vitamin B12,Ashwagandha,Pueraria mirifica ext.,Jivanti,Shatavari",
@@ -283,7 +283,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639535/Gemini_Generated_Image_t193nxt193nxt193_kzwomi.png"],
     },
     {
-      name: "Ascominth liquid",
+      name: "Ascominth Liquid",
       keyword:"Herbal Dewormer",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
@@ -297,7 +297,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639535/Gemini_Generated_Image_sazuh0sazuh0sazu_vh9jj3.png"],
     },
     {
-      name: "Tickrid spray",
+      name: "Tickrid Spray",
       keyword:"Herbal Dewormer",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Spray",
@@ -312,7 +312,7 @@ const productsWithOutId = [
     },
     {
       name: "AI Guard",
-      keyword:" conception medicine for animals",
+      keyword:"Conception Medicine for Animals",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
       ingredients: "Liquid contains herbal,extracts of Putranjiva Roxburhi,Saraca Indica, Penganum Harmala,Bacopamonnirea, Terminalia Chebula, Aborma Augausta,Rubia Cordifolia, Cyprus Rotundus & Cynodon Dactylon",
@@ -327,8 +327,8 @@ const productsWithOutId = [
   ],
    [
     {
-      name: "Ph care",
-      keyword:"water sanitizer",
+      name: "Ph Care",
+      keyword:"Water Sanitizer",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Combinations of different acids.",
@@ -342,7 +342,7 @@ const productsWithOutId = [
     },
     {
       name: "Grow Up",
-      keyword:"growth promotor for animals",
+      keyword:"Growth Promotor for Animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Protein,Hydrolysate (20%)*,Carbohydrate,Choline Chloride,DL-Methonine,Lysine HCI,Biotin,Proteolysed Liver Ext.,Vitamin B1,Vitamin B2,Vitamin B6,Vitamin B12,Vitamin C,Niacinamide,D-Panthenol,Methionine,Arginine,Histidine,Tyrosine,Tryptophane,Thronine,Leucine,Valine,Isoleucine,Manganese,Diastase,Calcium,Sodium,Iron",
@@ -356,7 +356,7 @@ const productsWithOutId = [
     },
     {
       name: "Immunity power",
-      keyword:"immunity booster for poultry",
+      keyword:"Immunity Booster for Poultry",
       medicineType: "Poultry Feed supplement",
       physicalForm: "Liquid",
       ingredients: "Asparagus, Moringa oleifera, Picrorhiza kurroa Microminerals :Zinc, Selenium (Chelated), Co, Cu and Mn Selective Amino acids-Glutamine,Threonine & MHA Vitamin C, E and B6,Nucleotides, Spirulina, Probiotics & B-glucans , Energy Source, Flavour, Stablizers & Electrolytes and Syrup Base",
@@ -370,7 +370,7 @@ const productsWithOutId = [
     },
     {
       name: "Avilyte - C",
-      keyword:"electrolyte for animals",
+      keyword:"Electrolyte for Animals",
       medicineType: "Poultry Feed Supplement",
       physicalForm: "Powder",
       ingredients: "Sodium Chloride,Potassium Chloride,Sodium Bicarbonate,Sodium Acid Phosphate,Sodium Citrate,Calcium Lactate,Magnesium Sulphate,Lactose,Ascorbic Acid (Coated),Lactobacillus,Viable Spores",
@@ -383,8 +383,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770918103/ChatGPT_Image_Feb_12_2026_11_11_09_PM_bf8ipe.png"],
     },
     {
-      name: "Avical liquid",
-      keyword:"clear calcium liquid",
+      name: "Avical Liquid",
+      keyword:"Lear Calcium Liquid",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Elemental Calcium,Elemental Phosphorus,Vitamin D3,Proteolysed Liver Extract,Vitamin B12,Choline Chloride",
@@ -397,8 +397,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639510/Gemini_Generated_Image_2pi1dy2pi1dy2pi1_rf2mrh.png"],
     },
     {
-      name: "Cough cure",
-      keyword:"medicine for cough",
+      name: "Cough Cure",
+      keyword:"Medicine for Cough",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Glycerrhyza Glabra ,Adhatoda Vasaka,Ocimum Sanctum,Bansafa Nepitacilliaris ,K.Singli,Somlata,Feniculam Vulgare,Pippermint,Hansraj,Naushadar",
@@ -411,8 +411,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639525/Gemini_Generated_Image_c73r8zc73r8zc73r_mcm2md.png"],
     },
     {
-      name: "Toxocare liquid",
-      keyword:"liver tonic for poultry",
+      name: "Toxocare Liquid",
+      keyword:"Liver Tonic for Poultry",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Tricholine Citrate,Choline Chloride,Methionine,Liver Extract,Protein Hydrolysate,Inositol",
@@ -426,7 +426,7 @@ const productsWithOutId = [
     },
     {
       name: "B - Plex",
-      keyword:"complex for animals",
+      keyword:"Complex for Animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Vitamin B2,Vitamin B6,Vitamin B12,Niacinamide,D Panthenol,Choline Chloride,Lysine HCI",
@@ -440,7 +440,7 @@ const productsWithOutId = [
     },
     {
       name: "Hemoboost Liquid",
-      keyword:"iron tonic for animals",
+      keyword:"Iron Tonic for Animals",
       medicineType: "Poultry Feed Supplement",
       physicalForm: "Liquid",
       ingredients: "Elemental Iron,Folic Acid,Vitamin B12,Vitamin B6,Methionine activity (MHA),Choline chloride,Lysine Hydrochloride,Sodium,Phosphorus,Magnesium,Copper,Cobalt,Manganese",
@@ -454,7 +454,7 @@ const productsWithOutId = [
     },
     {
       name: "Flusher",
-      keyword:"ascitis medicine",
+      keyword:"Ascitis Medicine",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Swait Parpati,Moolichar,Sheetal Chini,Sainda Namak,Sajjikhar,Naushadar,Punerva Ext.,Panchtrin Mool,Ikshu Mool,Gokhru",
@@ -468,7 +468,7 @@ const productsWithOutId = [
     },
     {
       name: "Avitone - C",
-      keyword:"multivitamin liquid for animals",
+      keyword:"Multivitamin Liquid for Animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Vitamin A,Vitamin D3,Vitamin E,Vitamin C,Vitamin B12,Lysine HCI,DL Methonine",
@@ -482,7 +482,7 @@ const productsWithOutId = [
     },
     {
       name: "Ovocare Liquid",
-      keyword:" medicine for prolapse in poultry animals",
+      keyword:"Medicine for Prolapse in Poultry Animals",
       medicineType: "Poultry feed supplement",
       physicalForm: "Liquid",
       ingredients: "Contains aquous extract of Shatavari, Jeevanti, Amla, Bans Patra, Genda Patra, Neem Patra, Majuphal, Chaulai, Priyangu Phool, Nagkesar, Ashwagandha, Aam Beej, Gajpippli, Ghritkumari,Putrajeevak, Chandrashur, Sarivan, Pithivan, Gokshru, Choti Kateli, Badi Kateli, Vata Jata, Vansh Patra, Manjitha, Sounth, Santra Chhilka, Anantmool, Sheetal Chini, Tagar, Ravend Chini, Methi, Giloe, Reetha Massi, Shalmali, Haridra and Shilajeet, Swet Jeerak Ark, Rasaunt, Wheat Germ Oil.",
@@ -495,7 +495,7 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1770915513/file_00000000c7a47206b4bb54cbee347617_lbvnrs.png"],
     },
     {
-      name: "E- Plus powder",
+      name: "E- Plus Powder",
       keyword:"Vitamin E",
       medicineType: "Poultry feed supplement",
       physicalForm: "Powder",
@@ -510,7 +510,7 @@ const productsWithOutId = [
     },
     {
       name: "Ossical - D",
-      keyword:"calcium granules",
+      keyword:"Calcium Granules",
       medicineType: "Poultry feed supplement",
       physicalForm: "Granuels",
       ingredients: " Calcium,Phosphorus,Vitamin D3,Manganese",
@@ -539,7 +539,7 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639543/Generated_Image_November_01_2025_-_10_03AM_ukvcbx.png","https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639542/Generated_Image_November_01_2025_-_10_02AM_gfxhzc.png"],
     },
     {
-      name: "Make Me  Happy Syrup ",
+      name: "Make Me  Happy",
       keyword:"The Ideal Nutritional Supplement for All Animals",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
@@ -582,7 +582,7 @@ const productsWithOutId = [
     },
     {
       name: "U-Rid Syrup",
-      keyword:"Medicine for U.T.I. for pets",
+      keyword:"Medicine for U.T.I. for Pets",
       medicineType: "Herbal Veterinary medicine",
       physicalForm: "Liquid",
       ingredients: "Shudh Shilajeet (Asphaltum punjabinum),Swait parpati,Moolishar (Raphanus Sativas),Sheetal Chini,Saindha Namak,Sajjikhar (Soda bicarb),Punernava (Boerhaviadiffasa),Panchtrin Mool (Trin panch mool),Ikshu Mool (Saccharum officinarum),Gokshru (Tribulus Terrestris),Charilla (Parmelia Perlata),Pashan Bhed (Bergenia ciliata),Varun Twak (Crataeva Nurbala),Kulattha (Bigna Umquicalata),Palashpushp (Butea monosperma),Lajaloomool (Mimosa pundica),Makoj (Solanum nigrum),Kakribeej (Cucumis satibus),**Dacuharidra (Berberis aristata)",
@@ -595,8 +595,8 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639553/Generated_Image_November_01_2025_-_9_51AM_udjbdj.png"],
     },
     {
-      name: "Herbo-Lite pet Syrup",
-      keyword:" Liver tonic and energy booster for pets",
+      name: "Herbo-Lite Pet Syrup",
+      keyword:" Liver Tonic and Energy Booster for Pets",
       medicineType: "Animal feed supplement",
       physicalForm: "Liquid",
       ingredients: "Gluconeogenic Precursors, Sylimarine with Herbs-12,Tephrosia Purpurea,Eclipta Alba,Phyllanthus Niruri,Andrographis Paniculata,Terminalia Chebula,Techomalia Undulata,Emblica,Tinosopora Cordifolia,Berberis Species,Picrohiza Kurroa,Acorus Calamus,Raphanus Sativus",
@@ -609,8 +609,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_55AM_vi8knw.png"],
     },
     {
-      name: "Oyan Antilick pet syrup",
-      keyword:" lick syrup",
+      name: "Oyan Antilick Pet Syrup",
+      keyword:" Anti-Lick Syrup for Pets",
       medicineType: "Herbal Veterinary Medicine",
       physicalForm: "Liquid",
       ingredients: "Contains extract of Andrographis paniculata, Picrorhiza kurror, Azardirachta indica, Caryophyllus aromaticus, Ground oregano leaf, Capsicum annuam, Sesame indicum",
@@ -623,8 +623,8 @@ const productsWithOutId = [
       image:["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639550/Generated_Image_November_01_2025_-_9_48AM_cwawuk.png"],
     },
     {
-      name: "Gset pet powder",
-      keyword:"Prebiotic and Probiotics powder for pets",
+      name: "Gset Pet Powder",
+      keyword:"Prebiotic and Probiotics Powder for Pets",
       medicineType: "Animal feed Supplement",
       physicalForm: "Powder",
       ingredients: "Probiotics (Saccharomyces cervisiae, S. boulardii, Lactobacillus Complex (L. acidophilus, L. casie, L. rahmnosus) 800 million CFU, Prebiotics (Fructo-Oligo- Saccharides) 20 mg, Fortified with enzyme complex containing Protease, Lipase, Amylase, Beta Glucanase, Cellulase, Hemicellulase & Pectinase.",
@@ -638,7 +638,7 @@ const productsWithOutId = [
     },
     {
       name: "Immunity Power Syrup",
-      keyword:"Immunity booster for pets",
+      keyword:"Immunity Booster For Pets",
       medicineType: " Herbal Veterinary Medicine",
       physicalForm: "Liquid",
       ingredients: "Tinospora Cordifolia, Boerhavaia Diffusa, Withania Somifera, Asparagus recemosus, Fenugreek, Pureraia tuberose",
@@ -652,7 +652,7 @@ const productsWithOutId = [
     },
     {
       name: "Plasma Care Syrup",
-      keyword:"platlets booster for pets",
+      keyword:"Platelets Booster For Pets",
       medicineType: "Herbal Veterinary Medicines",
       physicalForm: "Liquid",
       ingredients: "Carica Papaya, Centella Asiatica, Phyllantus Embellica, Tinospora Cordifolla, Boerhavia Diffusa, Ocimum Sanctum, Zingiber Officinale, Piper Longum, Piper Nigrum, Trigonella Foenum, Aloevera, Terminalla Chebula",
@@ -665,8 +665,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639557/Generated_Image_November_01_2025_-_9_54AM_loavyq.png"],
     },
     {
-      name: "Oyan pet bath Spray" ,
-      keyword:"dry shampoo for pets",
+      name: "Oyan Pet Bath Spray" ,
+      keyword:"Dry Shampoo for Pets",
       medicineType: "Pet spray",
       physicalForm: "Spray",
       ingredients: "Neem Leaf Extracts, fragrance with solvent base",
@@ -679,8 +679,8 @@ const productsWithOutId = [
       image: ["https://res.cloudinary.com/djxxk3hkp/image/upload/v1767639546/Generated_Image_November_01_2025_-_5_30PM_petvft.png"],
     },
     {
-      name: "Oyan pet mouth Freshner Spray ",
-      keyword:"mouth freshener",
+      name: "Oyan Pet Mouth Freshner Spray ",
+      keyword:"Mouth Freshener",
       medicineType: "Herbal Veterinary Drug",
       physicalForm: "Spray",
       ingredients: "Tulsi, aloevera, sauf, ajwain, sorbitol, glycerin, pipermint",
@@ -694,7 +694,7 @@ const productsWithOutId = [
     },
     {
       name: "OyanCal Plus Tablets",
-      keyword:" Calcium chewable tablets for dogs",
+      keyword:" Calcium Chewable Tablets For Dogs",
       medicineType: "Animal feed supplement",
       physicalForm: "Chewable Tablets",
       ingredients: "Elemental calcium,Elemental phosphorus, Magnesium, Vitamin D3, Vitamin B12, Iron",

@@ -13,12 +13,13 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
+        <div className="absolute  inset-0 z-0">
+          {/* <img
             src={Lab || "/placeholder.svg"}
             alt="Laboratory"
             className="w-full h-full object-cover brightness-[0.3]"
-          />
+          /> */}
+          <div className="w-full h-full object-cover bg-emerald-400 brightness-[0.3]"></div>
           <div className="absolute inset-0 bg-linear-to-b from-transparent to-white" />
         </div>
 

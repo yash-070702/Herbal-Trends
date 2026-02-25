@@ -195,7 +195,7 @@ export default function ProductPage() {
                     : "text-white hover:text-white hover:bg-white/5"
                 }`}
               >
-                {product.name}
+                {product.keyword}
               </button>
             ))}
           </div>
@@ -261,7 +261,7 @@ export default function ProductPage() {
 
                   <section>
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">Recommended For</h3>
-                    <p className="text-lg text-slate-600">{selectedProduct.recommendedFor}</p>
+                    <p className="text-lg text-slate-600">USE FOR VETERINARY USE ONLY , NOT FOR HUMAN</p>
                   </section>
 
                   <section>
