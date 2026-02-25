@@ -19,7 +19,7 @@ const navigate = useNavigate()
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full aspect-video bg-linear-to-br from-green-50 to-green-100 flex items-center justify-center overflow-hidden">
+      <div className="relative w-full aspect-video bg-white shadow-[0_8px_10px_-5px_rgba(0,0,0,0.1)] flex items-center justify-center overflow-hidden">
         <img
           src={image}
           alt={name}

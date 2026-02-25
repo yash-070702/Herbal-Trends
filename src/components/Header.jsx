@@ -20,7 +20,7 @@ export default function Header() {
     { label: "About", to: "/about-us" },
     { label: "Product", to: "/categories" },
     { label: "Contact", to: "/contact-us" },
-    { label: "ThirdParty", to: "/blog" },
+    { label: "ThirdParty", to: "/third-party" },
   ]
 
   const closeMenu = () => setIsOpen(false)

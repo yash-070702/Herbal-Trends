@@ -3,6 +3,7 @@ import { lazy} from "react"
 import { useState, useEffect } from "react"
 
 import Header from "./components/Header.jsx"
+import ScrollToTop from "./components/ScrollToTop.jsx"
 import Footer from "./components/Footer.jsx"
 
 const HomePage = lazy(() => import("./Pages/HomePage.jsx"))
@@ -13,6 +14,7 @@ const ProductCarousel = lazy(() => import("./Pages/Product-carasouelPage.jsx"))
 const ContactUs = lazy(() => import("./Pages/ContactUs.jsx"))
 const AboutUs = lazy(() => import("./Pages/AboutUs.jsx"))
 const NotFound = lazy(() => import("./Pages/NotFound.jsx"))
+const ThirdParty = lazy(() => import("./Pages/ThirdParty.jsx"))
 import { Toaster } from "react-hot-toast"
 
 const App = () => {
@@ -39,6 +41,7 @@ useEffect(() => {
   return (
 
     <BrowserRouter>
+    <ScrollToTop />
       <Toaster  reverseOrder={false} />
       <Header />
         <Routes>
@@ -49,6 +52,7 @@ useEffect(() => {
           <Route path="/categories" element={<ProductCarousel />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/third-party" element={<ThirdParty />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

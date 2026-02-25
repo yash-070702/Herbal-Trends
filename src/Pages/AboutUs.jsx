@@ -102,15 +102,15 @@ export default function AboutUs() {
                 icon: BookOpen,
               },
             ].map((item, idx) => (
-              <div
-                key={idx}
-                className="p-8 bg-white rounded-4xl hover:shadow-2xl hover:shadow-green-950/5 transition-all duration-500 border border-green-950/5 group"
-              >
+             <div
+              key={idx}
+              className="group p-10 bg-green-100 rounded-[2.5rem] hover:bg-green-950 hover:-translate-y-2 transition-all duration-500"
+            >
                 <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-black mb-4 tracking-tight">{item.title}</h3>
-                <p className="text-green-950/60 font-medium leading-relaxed mb-6">{item.desc}</p>
+               <h3 className="text-2xl font-black text-green-950 group-hover:text-white mb-4">{item.title}</h3>
+                 <p className="text-green-950/60 group-hover:text-white/70 font-medium leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -123,7 +123,7 @@ export default function AboutUs() {
           <p className="text-xl text-green-950/60 font-medium">Guiding principles that shape our journey.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {[
             {
               id: 1,
@@ -148,20 +148,20 @@ export default function AboutUs() {
             },
           ].map((item, idx) => (
             <div
-              key={item.id}
-              className="group relative overflow-hidden rounded-[2.5rem] border border-green-950/10 hover:border-emerald-500/30 transition-all duration-500"
-            >
+  key={item.id}
+  className="group relative overflow-hidden rounded-[2.5rem] border border-green-950/10 hover:border-emerald-500/30 transition-all duration-500 h-full flex"
+>
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-linear-to-br from-emerald-500/0 via-emerald-500/0 to-emerald-500/0 group-hover:from-emerald-500/5 group-hover:via-emerald-500/3 group-hover:to-emerald-500/5 transition-all duration-500" />
 
-              <div className="relative p-8 md:p-10 bg-white/50 backdrop-blur-sm">
+              <div className="relative p-8 md:p-10 bg-white/50 backdrop-blur-sm flex flex-col h-full">
                 {/* Card number badge */}
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-600 font-black text-lg mb-6 group-hover:bg-emerald-500/20 transition-all duration-500">
                   {item.id}
                 </div>
 
                 {/* Mission Section */}
-                <div className="mb-8 pb-8 border-b border-green-950/10">
+                <div className="mb-8 pb-8 border-b border-green-950/10 h-45  md:min-h-45">
                   <h3 className="text-sm font-black uppercase tracking-widest text-emerald-600 mb-3">Mission</h3>
                   <p className="text-base md:text-lg text-green-950/80 font-medium leading-relaxed">{item.mission}</p>
                 </div>
@@ -187,71 +187,11 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* History Section */}
-      {/* <section className="py-24 px-4 max-w-7xl mx-auto overflow-hidden">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-6">Our Legacy.</h2>
-          <p className="text-xl text-green-950/60 font-medium">A timeline of innovation and commitment.</p>
-        </div> */}
-
-        {/* <div className="relative"> */}
-          {/* Timeline Line */}
-          {/* <div className="absolute left-1/2 top-0 bottom-0 w-px bg-green-950/10 hidden md:block" />
-
-          {[
-            {
-              year: "2010",
-              title: "The Genesis",
-              desc: "Founded with a vision to standardize herbal veterinary treatments.",
-              align: "left",
-            },
-            {
-              year: "2015",
-              title: "Clinical Breakthrough",
-              desc: "First patent granted for our proprietary extraction process.",
-              align: "right",
-            },
-            {
-              year: "2018",
-              title: "Global Expansion",
-              desc: "Established our international headquarters and manufacturing hub.",
-              align: "left",
-            },
-            {
-              year: "2024",
-              title: "Future-Proofing",
-              desc: "Launching our AI-driven diagnostic integration for personalized care.",
-              align: "right",
-            },
-          ].map((item, idx) => (
-            <div
-              key={idx}
-              className={`flex flex-col md:flex-row items-center mb-16 last:mb-0 ${
-                item.align === "left" ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              <div className="flex-1 w-full md:w-auto" />
-              <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-green-950 rounded-full border-4 border-white shadow-xl text-white font-black my-4 md:my-0 md:mx-8">
-                <History className="w-5 h-5" />
-              </div>
-              <div
-                className={`flex-1 w-full md:w-auto p-8 bg-green-50 rounded-[2.5rem] ${
-                  item.align === "left" ? "text-left md:text-right" : "text-left"
-                }`}
-              >
-                <span className="text-emerald-600 font-black text-2xl mb-2 block">{item.year}</span>
-                <h3 className="text-2xl font-black mb-3 tracking-tight">{item.title}</h3>
-                <p className="text-green-950/60 font-medium leading-relaxed">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
 
       {/* Achievements Section */}
       <section className="py-24 bg-green-950 rounded-[5rem] mx-4 mb-12 text-white">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
             <div>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-[0.9]">
                 Excellence <br />
@@ -262,14 +202,15 @@ export default function AboutUs() {
                 certifications.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
+                { label: "GMP Certified", icon: ShieldCheck },
                 { label: "ISO Certified", icon: ShieldCheck },
                 { label: "100 % Clinical Safety", icon: ShieldCheck },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-8 bg-white/5 backdrop-blur-xl rounded-4xl border border-white/10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500"
+                  className="p-5 bg-white/5 backdrop-blur-xl rounded-4xl border border-white/10 flex flex-col items-center text-center group hover:bg-white/10 transition-all duration-500"
                 >
                   <item.icon className="w-12 h-12 text-emerald-400 mb-6 group-hover:scale-110 transition-transform" />
                   <span className="text-xl font-black tracking-tight">{item.label}</span>

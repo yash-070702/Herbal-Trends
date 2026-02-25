@@ -1,6 +1,5 @@
 "use client"
-
-import { useState, useEffect } from "react"
+import { useRef, useState, useEffect } from "react"
 import { Menu, X, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import products from "../data/products_data"
@@ -11,6 +10,8 @@ import { useParams, useNavigate} from "react-router-dom"
 export default function ProductPage() {
   const { categoryType, id } = useParams()
   const navigate = useNavigate()
+  const asideRef = useRef(null)
+  const [showScrollDown, setShowScrollDown] = useState(true)
 
 
   const categoryMap = {
@@ -85,6 +86,24 @@ export default function ProductPage() {
   }, [selectedProduct])
 
 
+  useEffect(() => {
+  const element = asideRef.current
+
+  const handleScroll = () => {
+    if (!element) return
+
+    const isAtBottom =
+      element.scrollHeight - element.scrollTop <= element.clientHeight + 5
+
+    setShowScrollDown(!isAtBottom)
+  }
+
+  element?.addEventListener("scroll", handleScroll)
+
+  return () => element?.removeEventListener("scroll", handleScroll)
+}, [])
+
+
   const currentCategory = categories.find((c) => c.id === selectedCategory)
 
   const getImagesArray = () => {
@@ -142,10 +161,13 @@ export default function ProductPage() {
 
 
   return (
-    <main className="min-h-screen bg-gray-50 font-sans">
+    <main className="min-h-screen bg-[#e5faeb] font-sans">
       <div className="flex relative">
-        <aside className="hidden lg:block w-72 bg-[#0f431d] h-screen sticky top-0 p-8 overflow-y-auto">
-          <div className="mb-8 relative">
+      <aside className="hidden lg:block w-72 bg-[#0f431d] h-screen sticky top-0 relative">
+       <div
+    ref={asideRef}
+    className="h-full overflow-y-auto p-8"
+  > <div className="mb-8 relative">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="w-full  flex items-center justify-between  transition-all duration-200 text-white text-3xl font-serif mb-8 border-b border-gray-800 pb-4"
@@ -183,8 +205,7 @@ export default function ProductPage() {
               )}
             </AnimatePresence>
           </div>
-
-          <div className="flex flex-col gap-2">
+           <div className="flex flex-col gap-2">
             {categoryProducts.map((product, idx) => (
               <button
                 key={idx}
@@ -199,6 +220,15 @@ export default function ProductPage() {
               </button>
             ))}
           </div>
+          </div>
+         
+
+         
+          {showScrollDown && (
+    <div className="absolute bottom-20 right-6 animate-bounce pointer-events-none">
+      <ChevronDown size={28} className="text-white opacity-70" />
+    </div>
+  )}
         </aside>
 
         {/* Main Content Area */}

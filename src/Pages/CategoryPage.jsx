@@ -28,7 +28,7 @@ const truncate = (text = "", limit = 15) =>
 
 
   return (
-    <section className="bg-gray-50 min-h-screen py-10 sm:py-12 lg:py-10">
+    <section className="bg-[#e5faeb] min-h-screen py-10 sm:py-12 lg:py-10">
        <motion.div
               
               initial={{ opacity: 0, y: 20 }}
