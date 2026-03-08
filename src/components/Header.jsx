@@ -92,12 +92,12 @@ useEffect(() => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-gradient-to-r from-green-950 to-green-900 shadow-2xl">
+      <header className="sticky top-0 z-50 bg-linear-to-r from-green-950 to-green-900 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Header */}
           <div className="hidden md:flex items-center justify-between h-20 gap-6">
             {/* Logo */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="flex items-center gap-3 shrink-0">
               <NavLink to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <img src={logo || "/placeholder.svg"} alt="Logo" className="h-14 w-14 object-contain" />
                 <div className="leading-tight">
@@ -120,7 +120,7 @@ useEffect(() => {
                   end={link.to === "/"}
                   className={({ isActive }) =>
                     `text-green-200 text-sm font-semibold transition-all duration-300 relative px-3 py-2 hover:text-green-300
-                     ${isActive ? "text-green-300 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-gradient-to-r after:from-green-400 after:to-green-300 after:rounded-full" : ""}`
+                     ${isActive ? "text-green-300 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-linear-to-r after:from-green-400 after:to-green-300 after:rounded-full" : ""}`
                   }
                 >
                   {link.label}
@@ -137,7 +137,7 @@ useEffect(() => {
                       <button
                         key={idx}
                         onClick={() => handleCategoryClick(category.value, idx + 1)}
-                        className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 hover:text-green-700 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-green-400"
+                        className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-linear-to-r hover:from-green-50 hover:to-green-100 hover:text-green-700 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-green-400"
                       >
                         {category.label}
                       </button>
@@ -148,7 +148,7 @@ useEffect(() => {
             </nav>
 
             {/* Desktop Search & WhatsApp */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="flex items-center gap-3 shrink-0">
               <div className="relative w-64" ref={searchRef}>
                 <div className="relative">
                   <input
@@ -163,12 +163,12 @@ useEffect(() => {
                   </svg>
                 </div>
                 {results.length > 0 && (
-                  <div className="absolute top-full left-0 w-full bg-white shadow-xl rounded-lg mt-2 max-h-64 overflow-y-auto z-50 border border-green-100">
+                  <div className="hide-scrollbar absolute top-full left-0 w-full bg-white shadow-xl rounded-lg mt-2 max-h-64 scrollbar-hide overflow-y-auto z-50 border border-green-100">
                     {results.map((product) => (
                       <div
                         key={product.id}
                         onClick={() => handleProductClick(product)}
-                        className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 cursor-pointer border-b border-gray-100 transition-all duration-200 last:border-b-0 group"
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-linear-to-r hover:from-green-50 hover:to-green-100 cursor-pointer border-b border-gray-100 transition-all duration-200 last:border-b-0 group"
                       >
                         <img src={product.image[0]} alt={product.name} className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-200" />
                         <div>
@@ -186,7 +186,7 @@ useEffect(() => {
           {/* Mobile Header */}
           <div className="md:hidden flex items-center justify-between h-16">
             {/* Mobile Logo */}
-            <NavLink to="/" className="flex items-center gap-2 flex-shrink-0">
+            <NavLink to="/" className="flex items-center gap-2 shrink-0">
               <img src={logo || "/placeholder.svg"} alt="Logo" className="h-12 w-12 object-contain" />
               <div className="leading-tight">
                 <p className="text-white text-sm font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -231,7 +231,7 @@ useEffect(() => {
                           handleProductClick(product)
                           setIsOpen(false)
                         }}
-                        className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 cursor-pointer border-b border-gray-100 transition-all duration-200 last:border-b-0"
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-linear-to-r hover:from-green-50 hover:to-green-100 cursor-pointer border-b border-gray-100 transition-all duration-200 last:border-b-0"
                       >
                         <img src={product.image[0]} alt={product.name} className="w-10 h-10 object-contain" />
                         <div>

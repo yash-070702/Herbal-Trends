@@ -1,17 +1,24 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function ProductCard({id,displayName, name,keyword, form, image,categoryType }) {
-const [isHovered, setIsHovered] = useState(false)
-const navigate = useNavigate()
- 
+export default function ProductCard({
+  id,
+  displayName,
+  name,
+  keyword,
+  form,
+  image,
+  categoryType,
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+
   function formatString(input) {
-  if (typeof input !== "string") return "";
-  
-  const beforeSlash = input.toLowerCase().split("/")[0];
-  return beforeSlash.trim().replace(/\s+/g, "-");
-}
+    if (typeof input !== "string") return "";
 
+    const beforeSlash = input.toLowerCase().split("/")[0];
+    return beforeSlash.trim().replace(/\s+/g, "-");
+  }
 
   return (
     <div
@@ -32,21 +39,30 @@ const navigate = useNavigate()
       {/* Product Info */}
       <div className="flex justify-between items-center p-4 sm:p-6">
         <div className="mb-3">
-          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{displayName}</h3>
-          <p className="text-sm sm:text-base text-gray-600">Physical Form : {form}</p>
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+            {displayName}
+          </h3>
+          <p className="text-sm sm:text-base text-gray-600">
+            Physical Form : {form}
+          </p>
         </div>
 
         {/* More Info Button */}
         <button
           className={`w-auto px-4 sm:px-6 py-2 rounded-md font-medium text-sm sm:text-base transition-all duration-300 ${
-            isHovered ? "bg-[#2d5016] text-white shadow-md" : "bg-[#0f4523] text-white"
+            isHovered
+              ? "bg-[#2d5016] text-white shadow-md"
+              : "bg-[#0f4523] text-white"
           }`}
-            onClick={() => navigate(`/product-page/${categoryType}/${formatString(keyword)}/${id}`)}
+          onClick={() =>
+            navigate(
+              `/product-page/${categoryType}/${formatString(keyword)}/${id}`,
+            )
+          }
         >
           More Info
-        </button> 
+        </button>
       </div>
     </div>
-  )
+  );
 }
-

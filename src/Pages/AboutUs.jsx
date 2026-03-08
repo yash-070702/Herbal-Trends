@@ -1,5 +1,3 @@
-"use client"
-
 import { ChevronRight, ShieldCheck, History, Award, BookOpen, Microscope, Globe, Users } from "lucide-react"
 import picture1 from "../assets/pic1.png"
 import picture2 from "../assets/pic2.png"
@@ -23,13 +21,56 @@ export default function AboutUs() {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest uppercase bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">
             About Herbal Trends
           </span>
-          <h1 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9] text-balance">
-            Rooted in Science. <br />
-            <span className="text-emerald-400">Driven by Care.</span>
+          <h1 className="text-3xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9] text-balance">
+            Innovation Driven by Nature <br />
+            <span className="text-emerald-400"> Quality Backed by Science.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/80 font-medium max-w-2xl mx-auto text-pretty">
             Transforming animal health through the synergy of nature's wisdom and advanced clinical manufacturing.
           </p>
+        </div>
+      </section>
+
+
+           {/* Heritage Section */}
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest uppercase bg-emerald-500/10 text-emerald-600 rounded-full border border-emerald-500/20">
+              Since 2003
+            </span>
+            <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-8 leading-[0.9]">
+              Our Heritage <br />
+              of Quality.
+            </h2>
+            <div className="space-y-6 text-lg text-green-950/70 font-medium leading-relaxed">
+              <p>
+                Since 2003, Herbal Trends has been at the forefront of the veterinary pharmaceutical industry. With over 20 years of dedicated experience, we specialize in the research, development, and manufacturing of high-potency herbal medicines and nutritional supplements for pets and livestock.
+              </p>
+              <p>
+                We believe that the best healthcare for animals comes from the perfect synergy of ancient botanical wisdom and modern manufacturing technology. As a GMP (Good Manufacturing Practices) licensed company, we adhere to the most stringent international quality standards. Every batch produced in our facility undergoes rigorous testing to ensure safety, purity, and clinical efficacy.
+              </p>
+            </div>
+          </div>
+          <div className="space-y-8">
+            {[
+              { icon: History, title: "20+ Years Experience", desc: "Over two decades of proven excellence in veterinary pharmaceuticals." },
+              { icon: ShieldCheck, title: "GMP Licensed", desc: "Adherence to the most stringent international quality standards." },
+              { icon: Microscope, title: "Rigorous Testing", desc: "Every batch undergoes comprehensive testing for safety and efficacy." },
+            ].map((item, idx) => (
+              <div key={idx} className="flex gap-6 group">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-500/20 transition-all duration-500">
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-black text-green-950 mb-2">{item.title}</h3>
+                  <p className="text-green-950/60 font-medium leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -187,6 +228,8 @@ export default function AboutUs() {
         </div>
       </section>
 
+
+ 
 
       {/* Achievements Section */}
       <section className="py-24 bg-green-950 rounded-[5rem] mx-4 mb-12 text-white">
