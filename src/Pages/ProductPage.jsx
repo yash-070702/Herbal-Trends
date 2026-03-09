@@ -303,7 +303,14 @@ export default function ProductPage() {
                     <h3 className="text-[#1b4313] font-bold uppercase tracking-wider text-sm mb-2">
                       Directions To Use
                     </h3>
-                    <p className="text-lg text-slate-600 leading-relaxed">{selectedProduct.directionsToUse}</p>
+                    <p className="text-lg text-slate-600 leading-relaxed">
+                    {selectedProduct.directionsToUse.split(",").map((treatment, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="text-[#377024] font-bold mt-1">•</span>
+                          <span>{treatment.trim()}</span>
+                        </li>
+                      ))}
+                    </p>
                   </section>
                 </div>
               </div>
