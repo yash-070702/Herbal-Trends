@@ -131,12 +131,12 @@ useEffect(() => {
                   <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
                 <div className="absolute left-0 top-full pt-3 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
-                  <div className="bg-white rounded-lg shadow-xl py-2 min-w-max border border-green-100">
+                  <div className="bg-white rounded-lg shadow-2xl py-3 w-72 border border-green-100">
                     {categories.map((category, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleCategoryClick(category.value, idx + 1)}
-                        className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-linear-to-r hover:from-green-50 hover:to-green-100 hover:text-green-700 transition-all duration-200 font-medium border-l-4 border-transparent hover:border-green-400"
+                        className="block w-full text-left px-5 py-4 text-sm text-gray-800 hover:bg-linear-to-r hover:from-green-50 hover:to-green-100 hover:text-green-700 transition-all duration-200 font-semibold border-l-4 border-transparent hover:border-green-500 hover:pl-6"
                       >
                         {category.label}
                       </button>
@@ -268,14 +268,14 @@ useEffect(() => {
             <div>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="text-green-200 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-green-800 transition-all duration-200 flex items-center gap-2 w-full"
+                className="text-green-200 text-sm font-semibold px-4 py-3 rounded-lg hover:bg-green-800 transition-all duration-200 flex items-center gap-2 w-full"
               >
                 Categories
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
               {isDropdownOpen && (
-                <div className="mt-2 ml-4 flex flex-col gap-1">
+                <div className="mt-3 ml-0 flex flex-col gap-2 bg-green-800/50 rounded-lg p-2 border border-green-700">
                   {categories.map((category, idx) => (
                     <button
                       key={idx}
@@ -283,7 +283,7 @@ useEffect(() => {
                         handleCategoryClick(category.value, idx + 1)
                         setIsDropdownOpen(false)
                       }}
-                      className="text-green-200 text-xs px-4 py-2 hover:text-green-300 hover:bg-green-800 rounded-lg transition-colors text-left"
+                      className="text-green-100 text-sm px-4 py-3 hover:text-green-300 hover:bg-green-700 rounded-lg transition-all duration-200 text-left font-medium border-l-4 border-transparent hover:border-green-400"
                     >
                       {category.label}
                     </button>
