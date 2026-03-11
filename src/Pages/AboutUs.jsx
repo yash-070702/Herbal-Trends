@@ -1,9 +1,58 @@
 import {  ShieldCheck, History, Award, BookOpen, Microscope, Globe, Users, Heart, Leaf } from "lucide-react"
 import picture2 from "../assets/pic2.png"
 import { useNavigate } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 export default function AboutUs() {
   const navigate = useNavigate()
   return (
+    <>
+    <Helmet>
+
+{/* Page Title */}
+<title>About Herbal Trends | Veterinary Herbal Products Manufacturer in India Since 2003</title>
+
+{/* Primary SEO */}
+<meta
+name="description"
+content="Herbal Trends is a Gurugram-based veterinary herbal products manufacturer since 2003. We specialize in natural veterinary medicines and supplements for cattle, poultry and pet healthcare."
+/>
+
+<meta
+name="keywords"
+content="Herbal Trends company, veterinary herbal medicine manufacturer India, veterinary company Gurugram Haryana, herbal animal healthcare products, cattle and poultry supplements manufacturer, veterinary pharmaceutical company India"
+/>
+
+<meta name="robots" content="index, follow" />
+
+{/* Canonical */}
+<link rel="canonical" href="https://yourdomain.com/about-us" />
+
+{/* Open Graph (Social Media) */}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="About Herbal Trends | Veterinary Herbal Medicine Manufacturer" />
+<meta
+property="og:description"
+content="Discover the story of Herbal Trends, a trusted veterinary herbal medicine manufacturer delivering innovative animal healthcare solutions since 2003."
+/>
+<meta property="og:image" content="/preview.jpg" />
+<meta property="og:url" content="https://yourdomain.com/about-us" />
+<meta property="og:site_name" content="Herbal Trends" />
+<meta property="og:locale" content="en_IN" />
+
+{/* Twitter SEO */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About Herbal Trends | Veterinary Herbal Medicine Manufacturer" />
+<meta
+name="twitter:description"
+content="Learn about Herbal Trends, a veterinary herbal medicine manufacturer providing natural healthcare products for livestock and pets."
+/>
+<meta name="twitter:image" content="/preview.jpg" />
+
+{/* Local SEO Signals */}
+<meta name="geo.region" content="IN-HR" />
+<meta name="geo.placename" content="Gurugram, Haryana" />
+
+    </Helmet>
     <main className="min-h-screen bg-[#e5faeb] font-sans antialiased text-green-950">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
@@ -394,5 +443,6 @@ export default function AboutUs() {
           </div>
       </section>
     </main>
+    </>
   )
 }

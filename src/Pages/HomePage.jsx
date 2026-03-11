@@ -2,12 +2,68 @@ import { Plus, Microscope, ShieldCheck, Factory, Leaf, Beaker, Heart, X } from "
 import man from "../assets/high-tech-veterinary-manufacturing-facility.jpg"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 
 export default function Home() {
   const navigate = useNavigate()
   const [expandedCard, setExpandedCard] = useState(null)
 
   return (
+    
+    <>
+
+<Helmet>
+  {/* Title */}
+  <title>Herbal Trends | Veterinary Herbal Products Manufacturer in India</title>
+
+  {/* Basic SEO */}
+  <meta
+    name="description"
+    content="Herbal Trends is a trusted veterinary herbal products manufacturer in Gurugram, India since 2003. We develop natural veterinary medicines and supplements for pets, cattle and poultry to improve animal health and productivity."
+  />
+
+  <meta
+    name="keywords"
+    content="veterinary herbal products, veterinary medicine manufacturer India, herbal veterinary medicines, cattle health supplements, poultry health supplements, herbal livestock medicine, veterinary pharma company Gurugram"
+  />
+
+  <meta name="author" content="Herbal Trends" />
+
+  {/* Robots */}
+  <meta name="robots" content="index, follow" />
+
+  {/* Canonical (add when domain exists) */}
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  {/* Open Graph (Facebook / LinkedIn sharing) */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Herbal Trends | Natural Veterinary & Animal Health Products" />
+  <meta
+    property="og:description"
+    content="Discover premium herbal veterinary products for livestock, pets and poultry designed for improved animal health and productivity."
+  />
+  <meta property="og:image" content="/preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+
+  {/* Twitter SEO */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Herbal Trends | Veterinary Herbal Products Manufacturer" />
+  <meta
+    name="twitter:description"
+    content="Premium herbal veterinary supplements and medicines for livestock productivity and pet wellness."
+  />
+  <meta name="twitter:image" content="/preview.jpg" />
+
+  {/* Geo Tags (Local SEO) */}
+  <meta name="geo.region" content="IN-HR" />
+  <meta name="geo.placename" content="Gurugram" />
+  <meta name="geo.position" content="28.4595;77.0266" />
+  <meta name="ICBM" content="28.4595, 77.0266" />
+
+  {/* Theme Color */}
+  <meta name="theme-color" content="#2E7D32" />
+</Helmet>
+
     <main className="min-h-screen bg-[#e5faeb]">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
@@ -350,5 +406,6 @@ export default function Home() {
         </button>
       </section>
     </main>
+    </>
   )
 }

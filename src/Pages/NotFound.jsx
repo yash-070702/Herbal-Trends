@@ -1,7 +1,44 @@
 import { ChevronRight, Home, Search } from "lucide-react"
 import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 export default function NotFound() {
   return (
+    <>
+    <Helmet>
+
+{/* Page Title */}
+<title>404 Page Not Found | Herbal Trends</title>
+
+{/* SEO Description */}
+<meta
+name="description"
+content="The page you are looking for cannot be found. Return to Herbal Trends to explore herbal veterinary products, supplements and animal healthcare solutions."
+/>
+
+{/* Prevent Indexing */}
+<meta name="robots" content="noindex, follow" />
+
+{/* Canonical */}
+<link rel="canonical" href="https://yourdomain.com/404" />
+
+{/* OpenGraph */}
+<meta property="og:title" content="404 Page Not Found | Herbal Trends" />
+<meta
+property="og:description"
+content="This page doesn't exist. Visit Herbal Trends to explore our veterinary herbal healthcare solutions."
+/>
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/preview.jpg" />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="404 Page Not Found | Herbal Trends" />
+<meta
+name="twitter:description"
+content="Oops! This page cannot be found. Return to Herbal Trends for veterinary herbal products."
+/>
+
+</Helmet>
     <main className="min-h-screen bg-white text-green-950 flex flex-col">
       {/* Hero Section */}
       <section className="flex-1 flex items-center justify-center px-4  -translate-y-12 sm:translate-y-16 md:-translate-y-14 ">
@@ -56,5 +93,6 @@ export default function NotFound() {
         </div>
       </section>
   </main>
+    </>
   )
 }

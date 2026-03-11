@@ -3,6 +3,8 @@ import { useState } from "react"
 import { Phone, Mail, MapPin, Send, MessageSquare, Clock, Globe } from "lucide-react"
 import { toast } from "react-hot-toast"
 import picture3 from "../assets/pic3.png";
+import { Helmet } from "react-helmet-async"
+
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 export default function ContactUs() {
@@ -69,6 +71,56 @@ export default function ContactUs() {
   }
 
   return (
+
+    <>
+    <Helmet>
+
+{/* Page Title */}
+<title>Contact Herbal Trends | Veterinary Herbal Products Manufacturer in Gurugram</title>
+
+{/* SEO Description */}
+<meta
+name="description"
+content="Contact Herbal Trends, a leading veterinary herbal products manufacturer based in Gurugram, Haryana. Reach our team for product inquiries, third party manufacturing, and veterinary healthcare solutions."
+/>
+
+{/* Keywords */}
+<meta
+name="keywords"
+content="contact herbal trends, veterinary company gurugram contact, veterinary medicine manufacturer india contact, herbal veterinary products company gurugram, veterinary third party manufacturing contact"
+/>
+
+<meta name="robots" content="index, follow" />
+
+{/* Canonical */}
+<link rel="canonical" href="https://yourdomain.com/contact-us" />
+
+{/* Open Graph */}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Contact Herbal Trends | Veterinary Herbal Products Company" />
+<meta
+property="og:description"
+content="Get in touch with Herbal Trends for veterinary herbal products, third party manufacturing and animal healthcare solutions."
+/>
+<meta property="og:image" content="/preview.jpg" />
+<meta property="og:url" content="https://yourdomain.com/contact-us" />
+<meta property="og:site_name" content="Herbal Trends" />
+<meta property="og:locale" content="en_IN" />
+
+{/* Twitter SEO */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Herbal Trends | Veterinary Herbal Products Manufacturer" />
+<meta
+name="twitter:description"
+content="Reach Herbal Trends in Gurugram for veterinary herbal medicines, supplements and third party manufacturing services."
+/>
+<meta name="twitter:image" content="/preview.jpg" />
+
+{/* Local SEO */}
+<meta name="geo.region" content="IN-HR" />
+<meta name="geo.placename" content="Gurugram, Haryana" />
+
+</Helmet>
     <div className="min-h-screen bg-[#fcfdfc] text-[#1a2e1e] font-sans">
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-100 flex items-center justify-center overflow-hidden">
@@ -291,6 +343,7 @@ export default function ContactUs() {
         }
       `}</style>
     </div>
+    </>
   )
 }
 

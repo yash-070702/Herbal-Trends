@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import products from "../data/products_data"
 import { useParams, useNavigate} from "react-router-dom"
-
+import { Helmet } from "react-helmet-async"
 
 
 export default function ProductPage() {
@@ -160,7 +160,105 @@ export default function ProductPage() {
    if (!selectedProduct) return null
 
 
+const pageTitle = selectedProduct
+  ? `${selectedProduct.name} | ${categoryType.replace("-", " ")} Veterinary Medicine | Herbal Trends`
+  : "Veterinary Product | Herbal Trends"
+
+const pageDescription = selectedProduct
+  ? `${selectedProduct.name} is a herbal veterinary medicine used for ${selectedProduct.treatmentsAndFunctions}. Manufactured by Herbal Trends for cattle, poultry and pet healthcare.`
+  : "Herbal veterinary medicines and animal healthcare products by Herbal Trends."
+
+const canonicalURL = `https://yourdomain.com/product-page/${categoryType}/${createSlug(selectedProduct?.keyword)}/${createSlug(selectedProduct?.name)}`
+
   return (
+    <>
+    <Helmet>
+
+{/* Title */}
+<title>{pageTitle}</title>
+
+{/* Primary SEO */}
+<meta name="description" content={pageDescription} />
+
+<meta
+  name="keywords"
+  content={`${selectedProduct?.name}, ${categoryType} veterinary medicine, herbal veterinary medicine, cattle supplements, poultry veterinary medicine, pet healthcare products`}
+/>
+
+<meta name="author" content="Herbal Trends" />
+<meta name="publisher" content="Herbal Trends" />
+
+<meta name="robots" content="index, follow" />
+
+<meta http-equiv="content-language" content="en-IN" />
+
+{/* Canonical */}
+<link rel="canonical" href={canonicalURL} />
+
+{/* OpenGraph */}
+<meta property="og:type" content="product" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:image" content={getImagesArray()[0]} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content="Herbal Trends" />
+<meta property="og:locale" content="en_IN" />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={getImagesArray()[0]} />
+<meta name="twitter:site" content="@herbaltrends" />
+
+{/* Local SEO */}
+<meta name="geo.region" content="IN-HR" />
+<meta name="geo.placename" content="Gurugram, Haryana" />
+<meta name="geo.position" content="28.4595;77.0266" />
+<meta name="ICBM" content="28.4595,77.0266" />
+
+{/* Theme */}
+<meta name="theme-color" content="#2E7D32" />
+
+{/* Product Structured Data */}
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: selectedProduct?.name,
+  image: getImagesArray(),
+  description: pageDescription,
+  brand: {
+    "@type": "Brand",
+    name: "Herbal Trends"
+  },
+  manufacturer: {
+    "@type": "Organization",
+    name: "Herbal Trends",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      addressCountry: "India"
+    }
+  },
+  category: categoryType,
+  additionalProperty: [
+    {
+      "@type": "PropertyValue",
+      name: "Medicine Type",
+      value: selectedProduct?.medicineType
+    },
+    {
+      "@type": "PropertyValue",
+      name: "Physical Form",
+      value: selectedProduct?.physicalForm
+    }
+  ]
+})}
+</script>
+
+</Helmet>
     <main className="min-h-screen bg-[#e5faeb] font-sans">
       <div className="flex relative">
       <aside className="hidden lg:block w-72 bg-[#0f431d] h-screen sticky top-0 relative">
@@ -501,5 +599,6 @@ export default function ProductPage() {
         {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
       </button>
     </main>
+    </>
   )
 }

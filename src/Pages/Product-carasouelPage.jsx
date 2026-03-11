@@ -7,23 +7,38 @@ const heroSlides = [
   {
     id: 1,
     title: "Cattle Care",
-    description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639613/CattleCare_xyqwff.mp4",
-    imageUrl: "https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917606/1000236156_ooom9l.jpg",
+    description:
+      "Herbal veterinary medicines and supplements designed to improve cattle health, productivity, digestion and immunity.",
+    keyword: "cattle veterinary medicines",
+    backgroundVideo:
+      "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639613/CattleCare_xyqwff.mp4",
+    imageUrl:
+      "https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917606/1000236156_ooom9l.jpg",
+    alt: "Herbal veterinary medicines for cattle health and dairy productivity",
   },
   {
     id: 2,
     title: "Poultry Care",
-    description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo:"https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639612/PoultryCare_galuqj.mp4",
-    imageUrl:"https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917665/1000236154_rutng3.jpg",
+    description:
+      "Herbal veterinary solutions for poultry including growth promoters, immunity boosters and digestive supplements.",
+    keyword: "poultry veterinary medicines",
+    backgroundVideo:
+      "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639612/PoultryCare_galuqj.mp4",
+    imageUrl:
+      "https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917665/1000236154_rutng3.jpg",
+    alt: "Herbal poultry healthcare medicines and growth supplements",
   },
   {
     id: 3,
     title: "Pet Care",
-    description: "Medicines help protect animal health, prevent disease, and keep our food supply safe.",
-    backgroundVideo: "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639600/PetCare_tsdznh.mp4",
-    imageUrl:"https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917586/1000236152.jpg_vdf3uh.jpg",
+    description:
+      "Natural veterinary healthcare products for pets including supplements, grooming solutions and immunity boosters.",
+    keyword: "pet veterinary products",
+    backgroundVideo:
+      "https://res.cloudinary.com/djxxk3hkp/video/upload/v1767639600/PetCare_tsdznh.mp4",
+    imageUrl:
+      "https://res.cloudinary.com/djxxk3hkp/image/upload/v1772917586/1000236152.jpg_vdf3uh.jpg",
+    alt: "Natural herbal veterinary medicines and supplements for pets",
   },
 ]
 
