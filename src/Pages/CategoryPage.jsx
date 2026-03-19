@@ -70,14 +70,14 @@ const descriptionText = categoryDescriptions[categoryType]
 <meta http-equiv="content-language" content="en-IN" />
 
 {/* Canonical URL */}
-<link rel="canonical" href={`https://yourdomain.com/categories/${categoryType}`} />
+<link rel="canonical" href={`https://herbaltrends.in/categories/${categoryType}`} />
 
 {/* OpenGraph (Facebook / LinkedIn) */}
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={descriptionText} />
 <meta property="og:image" content="/preview.jpg" />
-<meta property="og:url" content={`https://yourdomain.com/categories/${categoryType}`} />
+<meta property="og:url" content={`https://herbaltrends.in/categories/${categoryType}`} />
 <meta property="og:site_name" content="Herbal Trends" />
 <meta property="og:locale" content="en_IN" />
 

@@ -39,7 +39,7 @@ content="veterinary third party manufacturing India, veterinary PCD franchise co
 <meta name="robots" content="index, follow, max-image-preview:large" />
 
 {/* Canonical */}
-<link rel="canonical" href="https://yourdomain.com/third-party-manufacturing" />
+<link rel="canonical" href="https://herbaltrends.in/third-party-manufacturing" />
 
 {/* Language */}
 <html lang="en-IN" />
@@ -52,7 +52,7 @@ property="og:description"
 content="Partner with Herbal Trends for veterinary third party manufacturing and PCD franchise services. GMP-certified herbal veterinary medicines and supplements."
 />
 <meta property="og:image" content="/preview.jpg" />
-<meta property="og:url" content="https://yourdomain.com/third-party-manufacturing" />
+<meta property="og:url" content="https://herbaltrends.in/third-party-manufacturing" />
 <meta property="og:site_name" content="Herbal Trends" />
 <meta property="og:locale" content="en_IN" />
 

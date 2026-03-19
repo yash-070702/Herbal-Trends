@@ -33,7 +33,7 @@ export default function Home() {
   <meta name="robots" content="index, follow" />
 
   {/* Canonical (add when domain exists) */}
-  <link rel="canonical" href="https://yourdomain.com/" />
+  <link rel="canonical" href="https://herbaltrends.in/" />
 
   {/* Open Graph (Facebook / LinkedIn sharing) */}
   <meta property="og:type" content="website" />
@@ -43,7 +43,7 @@ export default function Home() {
     content="Discover premium herbal veterinary products for livestock, pets and poultry designed for improved animal health and productivity."
   />
   <meta property="og:image" content="/preview.jpg" />
-  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:url" content="https://herbaltrends.in/" />
 
   {/* Twitter SEO */}
   <meta name="twitter:card" content="summary_large_image" />

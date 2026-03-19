@@ -25,7 +25,7 @@ content="Herbal Trends company, veterinary herbal medicine manufacturer India, v
 <meta name="robots" content="index, follow" />
 
 {/* Canonical */}
-<link rel="canonical" href="https://yourdomain.com/about-us" />
+<link rel="canonical" href="https://herbaltrends.in/about-us" />
 
 {/* Open Graph (Social Media) */}
 <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@ property="og:description"
 content="Discover the story of Herbal Trends, a trusted veterinary herbal medicine manufacturer delivering innovative animal healthcare solutions since 2003."
 />
 <meta property="og:image" content="/preview.jpg" />
-<meta property="og:url" content="https://yourdomain.com/about-us" />
+<meta property="og:url" content="https://herbaltrends.in/about-us" />
 <meta property="og:site_name" content="Herbal Trends" />
 <meta property="og:locale" content="en_IN" />
 

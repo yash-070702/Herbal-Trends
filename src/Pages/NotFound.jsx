@@ -19,7 +19,7 @@ content="The page you are looking for cannot be found. Return to Herbal Trends t
 <meta name="robots" content="noindex, follow" />
 
 {/* Canonical */}
-<link rel="canonical" href="https://yourdomain.com/404" />
+<link rel="canonical" href="https://herbaltrends.in/404" />
 
 {/* OpenGraph */}
 <meta property="og:title" content="404 Page Not Found | Herbal Trends" />

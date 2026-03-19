@@ -168,7 +168,7 @@ const pageDescription = selectedProduct
   ? `${selectedProduct.name} is a herbal veterinary medicine used for ${selectedProduct.treatmentsAndFunctions}. Manufactured by Herbal Trends for cattle, poultry and pet healthcare.`
   : "Herbal veterinary medicines and animal healthcare products by Herbal Trends."
 
-const canonicalURL = `https://yourdomain.com/product-page/${categoryType}/${createSlug(selectedProduct?.keyword)}/${createSlug(selectedProduct?.name)}`
+const canonicalURL = `https://herbaltrends.in/product-page/${categoryType}/${createSlug(selectedProduct?.keyword)}/${createSlug(selectedProduct?.name)}`
 
   return (
     <>

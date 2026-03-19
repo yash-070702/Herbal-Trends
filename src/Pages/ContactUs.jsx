@@ -93,7 +93,7 @@ content="contact herbal trends, veterinary company gurugram contact, veterinary 
 <meta name="robots" content="index, follow" />
 
 {/* Canonical */}
-<link rel="canonical" href="https://yourdomain.com/contact-us" />
+<link rel="canonical" href="https://herbaltrends.in/contact-us" />
 
 {/* Open Graph */}
 <meta property="og:type" content="website" />
@@ -103,7 +103,7 @@ property="og:description"
 content="Get in touch with Herbal Trends for veterinary herbal products, third party manufacturing and animal healthcare solutions."
 />
 <meta property="og:image" content="/preview.jpg" />
-<meta property="og:url" content="https://yourdomain.com/contact-us" />
+<meta property="og:url" content="https://herbaltrends.in/contact-us" />
 <meta property="og:site_name" content="Herbal Trends" />
 <meta property="og:locale" content="en_IN" />
 
