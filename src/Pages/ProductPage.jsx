@@ -45,14 +45,22 @@ export default function ProductPage() {
       .trim()
       .replace(/\s+/g, "-")
 
+  const findProductFromRouteParam = (routeValue) => {
+    if (!routeValue) return null
+
+    return (
+      categoryProducts.find((product) => product.id === routeValue) ||
+      categoryProducts.find((product) => createSlug(product.name) === routeValue) ||
+      null
+    )
+  }
+
 
    useEffect(() => {
     if (!categoryProducts.length) return
 
     if (id) {
-      const matched = categoryProducts.find(
-        (p) => p.id === id
-      )
+      const matched = findProductFromRouteParam(id)
       if (matched) {
         setSelectedProduct(matched)
         setIsIngredientsExpanded(false)
@@ -84,6 +92,10 @@ export default function ProductPage() {
   useEffect(() => {
     setCurrentImageIndex(0)
   }, [selectedProduct])
+
+  useEffect(() => {
+    setSelectedCategory(categoryId)
+  }, [categoryId])
 
 
   useEffect(() => {
@@ -135,9 +147,8 @@ export default function ProductPage() {
 
 
   const handleProductSelect = (product) => {
-  const slug = createSlug(product.name)
-  const keySlug=createSlug(product?.keyword)
-  navigate(`/product-page/${categoryType}/${keySlug}/${slug}`, {
+  const keySlug = createSlug(product?.keyword)
+  navigate(`/product-page/${categoryType}/${keySlug}/${product.id}`, {
     replace: false,
   })
 
@@ -168,7 +179,7 @@ const pageDescription = selectedProduct
   ? `${selectedProduct.name} is a herbal veterinary medicine used for ${selectedProduct.treatmentsAndFunctions}. Manufactured by Herbal Trends for cattle, poultry and pet healthcare.`
   : "Herbal veterinary medicines and animal healthcare products by Herbal Trends."
 
-const canonicalURL = `https://herbaltrends.in/product-page/${categoryType}/${createSlug(selectedProduct?.keyword)}/${createSlug(selectedProduct?.name)}`
+const canonicalURL = `https://herbaltrends.in/product-page/${categoryType}/${createSlug(selectedProduct?.keyword)}/${selectedProduct?.id}`
 
   return (
     <>
